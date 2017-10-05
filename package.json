@@ -2,7 +2,6 @@
   "name": "qingguowebsite",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://HelloQingGuo.github.io/HelloQingGuo.github.io",
   "dependencies": {
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
@@ -10,10 +9,14 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "clean": "rimraf static",
+    "build": "npm run clean && react-scripts build",
+    "deploy": "npm run build && cp -a build/. .",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "deploy": "npm run build && cp -a build/. ."
+    "eject": "react-scripts eject"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "eslint-config-airbnb": "^15.1.0",
+    "rimraf": "^2.6.2"
+  }
 }
