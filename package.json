@@ -3,20 +3,24 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "antd": "^2.13.4",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
+    "react-router": "^4.2.0",
     "react-scripts": "1.0.14"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "react-app-rewired start",
     "clean": "rimraf static",
-    "build": "npm run clean && react-scripts build",
+    "build": "npm run clean && react-app-rewired build",
     "deploy": "npm run build && cp -a build/. .",
-    "test": "react-scripts test --env=jsdom",
+    "test": "react-app-rewired test --env=jsdom",
     "eject": "react-scripts eject"
   },
   "devDependencies": {
+    "babel-plugin-import": "^1.6.0",
     "eslint-config-airbnb": "^15.1.0",
+    "react-app-rewired": "^1.3.1",
     "rimraf": "^2.6.2"
   }
 }

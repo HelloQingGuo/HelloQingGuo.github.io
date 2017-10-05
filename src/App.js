@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Button } from 'antd';
 
 class App extends Component {
   render() {
@@ -6,6 +7,7 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <h1 className="App-title">Welcome</h1>
+          <Button type="primary">Button</Button>
         </header>
       </div>
     );
