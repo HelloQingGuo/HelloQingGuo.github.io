@@ -1,0 +1,33 @@
+/* Animations */
+@keyframes rotate360 {
+  to {
+    transform: rotateZ(360deg); } }
+
+@keyframes pulse {
+  0% {
+    opacity: 0.2; }
+  50% {
+    opacity: 0.6; }
+  100% {
+    opacity: 0.2; } }
+
+@keyframes meteor {
+  0% {
+    opacity: 1;
+    transform: scale(0) translate3d(0, 0, 0); }
+  15% {
+    opacity: 1; }
+  25% {
+    opacity: 0;
+    transform: scale(1) translate3d(180px, 0, 0); }
+  100% {
+    opacity: 0;
+    transform: scale(0) translate3d(180px, 0, 0); } }
+
+@keyframes cursorAnim {
+  0%,
+  50% {
+    opacity: 1; }
+  100%,
+  50.1% {
+    opacity: 0; } }
