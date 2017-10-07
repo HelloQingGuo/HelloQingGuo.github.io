@@ -8,6 +8,8 @@ class Home extends Component {
     super(props);
 
     this.state = {
+      desc: 'I am a ',
+      counter: 0,
       randomPosition: [
         {
           top: 58,
@@ -20,8 +22,10 @@ class Home extends Component {
       ],
     };
   }
+
   componentDidMount() {
-    setInterval(() => {
+    const roles = ['Front-end Developer', 'Graduate Student', 'Blue Crab'];
+    this.meteorTimer = setInterval(() => {
       const top = Math.floor(Math.random() * 101); // [0, 100]
       const rotate = Math.floor(Math.random() * 361); // [0, 360]
       const top2 = Math.floor(Math.random() * 101); // [0, 100]
@@ -39,10 +43,80 @@ class Home extends Component {
         ],
       });
     }, 2500);
+    const initialFrozenCounterForForwarding = 7;
+    const initialFrozenCounterForBacking = 10;
+    let wordCounter = 0;
+    let charCounter = 0;
+    let frozenCounterForForwarding = initialFrozenCounterForForwarding;
+    let frozenCounterForBacking = initialFrozenCounterForBacking;
+    let goBack = false;
+    this.backPrinterTimer = setInterval(() => {
+      const { desc } = this.state;
+      if (goBack && frozenCounterForBacking === initialFrozenCounterForBacking) {
+        // backing mode, non frozen mode
+        this.setState(
+          {
+            desc: desc.substring(0, desc.length - 1),
+          },
+          () => {
+            charCounter -= 1;
+            if (charCounter === -1) {
+              frozenCounterForBacking -= 1; // let it into frozen mode;
+            }
+          },
+        );
+      } else if (goBack && frozenCounterForBacking !== initialFrozenCounterForBacking) {
+        // backing mode, frozen mode
+        if (frozenCounterForBacking === 0) {
+          // frozen mode ends, switch to forwarding mode now
+          frozenCounterForBacking = initialFrozenCounterForBacking;
+          goBack = !goBack;
+          wordCounter += 1;
+          wordCounter = wordCounter === roles.length ? 0 : wordCounter;
+          charCounter = 0;
+        } else {
+          frozenCounterForBacking -= 1;
+        }
+      }
+    }, 75);
+    this.printerTimer = setInterval(() => {
+      const { desc } = this.state;
+      const role = roles[wordCounter];
+      if (!goBack && frozenCounterForForwarding === initialFrozenCounterForForwarding) {
+        // forwarding mode, non-frozen mode
+        this.setState(
+          {
+            desc: `${desc}${role.charAt(charCounter)}`,
+          },
+          () => {
+            charCounter += 1;
+            if (charCounter === role.length) {
+              frozenCounterForForwarding -= 1; // let it into frozen mode;
+            }
+          },
+        );
+      } else if (!goBack && frozenCounterForForwarding !== initialFrozenCounterForForwarding) {
+        // forwarding mode, frozen mode
+        if (frozenCounterForForwarding === 0) {
+          // frozen mode ends, switch to back mode now
+          frozenCounterForForwarding = initialFrozenCounterForForwarding;
+          goBack = !goBack;
+          charCounter = role.length - 1;
+        } else {
+          frozenCounterForForwarding -= 1;
+        }
+      }
+    }, 200);
+  }
+
+  componentWillUnMount() {
+    clearInterval(this.meteorTimer);
+    clearInterval(this.backPrinterTimer);
+    clearInterval(this.printerTimer);
   }
 
   render() {
-    const { randomPosition } = this.state;
+    const { randomPosition, desc } = this.state;
     const meteorStyles = randomPosition.map(each => ({
       top: `${each.top}%`,
       transform: `rotate(${each.rotate}deg)`,
@@ -58,7 +132,9 @@ class Home extends Component {
               <span className="slogan-left">
                 <img className="hi" src={hi} alt="hi" />
               </span>
-              <span className="slogan-right">I AM A FRONT-END DEVELOPER</span>
+              <span className="slogan-right">
+                {desc}
+              </span>
               <span className="cursor" />
             </h2>
           </div>

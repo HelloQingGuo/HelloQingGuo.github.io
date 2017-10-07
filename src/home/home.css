@@ -69,8 +69,8 @@
       margin-left: 10px;
       width: 5px;
       height: 34px;
-      background: #fff;
+      background: yellow;
       display: inline-block;
       margin-left: 3px;
       vertical-align: middle;
-      animation: cursorAnim 1.25s infinite ease-out; }
+      animation: cursorAnim 1s infinite ease-out; }
