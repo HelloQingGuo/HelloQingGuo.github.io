@@ -7,7 +7,9 @@
   position: relative;
   z-index: 2;
   height: 100vh;
-  min-height: 500px; }
+  min-height: 500px;
+  /* iphone 6 */
+  /* iphone 5 */ }
   .home .wrapper .container {
     text-align: center;
     color: white;
@@ -66,7 +68,18 @@
       font-size: 36px;
       letter-spacing: 4px;
       line-height: 50px;
-      font-weight: lighter; }
+      font-weight: lighter;
+      text-transform: uppercase;
+      color: #fba145; }
+      .home .wrapper .slogan .slogan-right .default-desc {
+        color: #fff; }
+    .home .wrapper .slogan .cursor {
+      margin-left: 3px;
+      width: 4px;
+      height: 34px;
+      background: #fba145;
+      display: inline-block;
+      animation: cursorAnim 1s infinite ease-out; }
     @media (max-width: 991px) {
       .home .wrapper .slogan .slogan-left,
       .home .wrapper .slogan .slogan-right {
@@ -78,21 +91,44 @@
     @media (max-width: 440px) {
       .home .wrapper .slogan .slogan-right {
         font-size: 28px;
-        line-height: 42px; } }
+        line-height: 42px; }
+      .home .wrapper .slogan .cursor {
+        height: 28px; } }
     @media (max-width: 375px) {
       .home .wrapper .slogan .slogan-right {
         font-size: 24px;
-        line-height: 36px; } }
+        line-height: 36px; }
+      .home .wrapper .slogan .cursor {
+        height: 24px; }
+      .home .wrapper .slogan .navigation {
+        font-size: 18px;
+        width: 80%; } }
     @media (max-width: 320px) {
       .home .wrapper .slogan .slogan-right {
         font-size: 22px;
-        line-height: 30px; } }
-    .home .wrapper .slogan .cursor {
-      margin-left: 10px;
-      width: 5px;
-      height: 34px;
-      background: yellow;
-      display: inline-block;
-      margin-left: 3px;
-      vertical-align: middle;
-      animation: cursorAnim 1s infinite ease-out; }
+        line-height: 30px; }
+      .home .wrapper .slogan .cursor {
+        height: 22px; }
+      .home .wrapper .slogan .navigation {
+        font-size: 16px; } }
+  .home .wrapper .navigation {
+    height: auto;
+    cursor: pointer;
+    margin: 80px auto;
+    font-size: 22px;
+    font-weight: lighter;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-around;
+    width: 50%; }
+    .home .wrapper .navigation span {
+      margin: auto 30px; }
+    .home .wrapper .navigation .project {
+      color: #7ed321; }
+  @media (max-width: 375px) {
+    .home .wrapper .navigation {
+      font-size: 18px;
+      width: 80%; } }
+  @media (max-width: 320px) {
+    .home .wrapper .navigation {
+      font-size: 16px; } }

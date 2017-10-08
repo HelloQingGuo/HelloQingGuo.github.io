@@ -84,6 +84,19 @@
         letter-spacing: 4px;
         line-height: 50px;
         font-weight: lighter;
+        text-transform: uppercase;
+        color: #fba145;
+        .default-desc {
+          color: #fff;
+        }
+      }
+      .cursor {
+        margin-left: 3px;
+        width: 4px;
+        height: 34px;
+        background: #fba145;
+        display: inline-block;
+        animation: cursorAnim 1s infinite ease-out;
       }
 
       @media (max-width: 991px) {
@@ -106,12 +119,22 @@
           font-size: 28px;
           line-height: 42px;
         }
+        .cursor {
+          height: 28px;
+        }
       }
       /* iphone 6 */
       @media (max-width: 375px) {
         .slogan-right {
           font-size: 24px;
           line-height: 36px;
+        }
+        .cursor {
+          height: 24px;
+        }
+        .navigation {
+          font-size: 18px;
+          width: 80%;
         }
       }
       /* iphone 5 */
@@ -120,17 +143,46 @@
           font-size: 22px;
           line-height: 30px;
         }
+        .cursor {
+          height: 22px;
+        }
+        .navigation {
+          font-size: 16px;
+        }
       }
-
-      .cursor {
-        margin-left: 10px;
-        width: 5px;
-        height: 34px;
-        background: yellow;
-        display: inline-block;
-        margin-left: 3px;
-        vertical-align: middle;
-        animation: cursorAnim 1s infinite ease-out;
+    }
+    .navigation {
+      height: auto;
+      cursor: pointer;
+      margin: 80px auto;
+      font-size: 22px;
+      font-weight: lighter;
+      text-transform: uppercase;
+      display: flex;
+      justify-content: space-around;
+      width: 50%;
+      span {
+        margin: auto 30px;
+      }
+      .resume {
+      }
+      .project {
+        color: #7ed321;
+      }
+      .me {
+      }
+    }
+    /* iphone 6 */
+    @media (max-width: 375px) {
+      .navigation {
+        font-size: 18px;
+        width: 80%;
+      }
+    }
+    /* iphone 5 */
+    @media (max-width: 320px) {
+      .navigation {
+        font-size: 16px;
       }
     }
   }

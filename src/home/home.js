@@ -9,7 +9,7 @@ class Home extends Component {
     super(props);
 
     this.state = {
-      desc: "I'm a ",
+      desc: '',
       counter: 0,
       randomPosition: [
         {
@@ -134,10 +134,15 @@ class Home extends Component {
                 <img className="hi" src={hi} alt="hi" />
               </Col>
               <Col md={12} className="slogan-right">
-                {desc}
+                <span className="default-desc">I&#39;M A</span> {desc}
                 <span className="cursor" />
               </Col>
             </Row>
+            <div className="navigation">
+              <span className="resume">RESUME</span>
+              <span className="project">PROJECT</span>
+              <span className="me">ME</span>
+            </div>
           </div>
           <div className="stars" />
           <div className="stars-lg" />
