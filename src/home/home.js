@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Row, Col } from 'antd';
 import './home.css';
 import meteor from '../assets/meteor.svg';
 import hi from '../assets/hi.svg';
@@ -8,7 +9,7 @@ class Home extends Component {
     super(props);
 
     this.state = {
-      desc: 'I am a ',
+      desc: "I'm a ",
       counter: 0,
       randomPosition: [
         {
@@ -24,7 +25,7 @@ class Home extends Component {
   }
 
   componentDidMount() {
-    const roles = ['Front-end Developer', 'Graduate Student', 'Blue Crab'];
+    const roles = ['Front-end Developer', 'Graduate Student', 'Good Chef'];
     this.meteorTimer = setInterval(() => {
       const top = Math.floor(Math.random() * 101); // [0, 100]
       const rotate = Math.floor(Math.random() * 361); // [0, 360]
@@ -128,15 +129,15 @@ class Home extends Component {
             <h2>
               <img src="http://via.placeholder.com/90x120" alt="logo" />
             </h2>
-            <h2 className="slogan">
-              <span className="slogan-left">
+            <Row gutter={16} className="slogan">
+              <Col md={12} className="slogan-left">
                 <img className="hi" src={hi} alt="hi" />
-              </span>
-              <span className="slogan-right">
+              </Col>
+              <Col md={12} className="slogan-right">
                 {desc}
-              </span>
-              <span className="cursor" />
-            </h2>
+                <span className="cursor" />
+              </Col>
+            </Row>
           </div>
           <div className="stars" />
           <div className="stars-lg" />
