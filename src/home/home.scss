@@ -1,14 +1,16 @@
 .home {
   .wrapper {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    padding-bottom: 20%;
     background: #22292c;
     overflow: hidden;
     position: relative;
     z-index: 2;
     height: 100vh;
     min-height: 500px;
+    padding-bottom: 20px;
+    padding-top: 30px;
 
     .container {
       text-align: center;
@@ -70,7 +72,7 @@
     }
 
     .slogan {
-      margin-top: 15px;
+      margin-top: 30px;
       .slogan-left {
         text-align: right;
         img {
@@ -106,7 +108,7 @@
         }
 
         .slogan-left > img {
-          width: 100%;
+          width: 90%;
         }
 
         .slogan-right {
@@ -121,6 +123,13 @@
         }
         .cursor {
           height: 28px;
+        }
+      }
+      /* iphone 6 plus */
+      @media (max-width: 414px) {
+        .navigation {
+          font-size: 20px;
+          width: 60%;
         }
       }
       /* iphone 6 */
@@ -162,14 +171,47 @@
       justify-content: space-around;
       width: 50%;
       span {
-        margin: auto 30px;
+        transition: all .2s ease-in-out;
+      }
+      span:hover {
+        transform: translateY(-5px);
+        .linethrough {
+          transform: scaleX(1);
+        }
+      }
+      .linethrough {
+        display: block;
+        content: '';
+        position: relative;
+        top: 2px;
+        border-bottom-width: 2px;
+        border-bottom-style: solid;
+        transform: scaleX(0);
       }
       .resume {
       }
       .project {
-        color: #7ed321;
       }
       .me {
+        color: #7ed321;
+      }
+    }
+
+    .footer {
+      margin: 0 auto 10px;
+      align-self: flex-end;
+      font-size: 24px;
+      height: 30px;
+      width: 25%;
+      min-width: 300px;
+      display: flex;
+      justify-content: space-around;
+    }
+    /* iphone 6 plus */
+    @media (max-width: 414px) {
+      .navigation {
+        font-size: 20px;
+        width: 60%;
       }
     }
     /* iphone 6 */

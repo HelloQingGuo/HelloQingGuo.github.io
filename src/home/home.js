@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
-import { Row, Col } from 'antd';
+import { Row, Col, Icon } from 'antd';
 import './home.css';
 import meteor from '../assets/meteor.svg';
+import ReactVivus from '../widgets/react_vivus';
 import hi from '../assets/hi.svg';
+import svg from '../assets/logo.svg';
 
 class Home extends Component {
   constructor(props) {
@@ -126,9 +128,13 @@ class Home extends Component {
       <main className="home">
         <div className="wrapper">
           <div className="container">
-            <h2>
-              <img src="http://via.placeholder.com/90x120" alt="logo" />
-            </h2>
+            <ReactVivus
+              id="logo"
+              width="91px"
+              height="122px"
+              style={{ margin: 'auto' }}
+              file={svg}
+            />
             <Row gutter={16} className="slogan">
               <Col md={12} className="slogan-left">
                 <img className="hi" src={hi} alt="hi" />
@@ -139,10 +145,33 @@ class Home extends Component {
               </Col>
             </Row>
             <div className="navigation">
-              <span className="resume">RESUME</span>
-              <span className="project">PROJECT</span>
-              <span className="me">ME</span>
+              <span className="project">
+                PROJECT<span className="linethrough" />
+              </span>
+              <span className="me">
+                ME<span className="linethrough" />
+              </span>
+              <span className="resume">
+                RESUME<span className="linethrough" />
+              </span>
             </div>
+          </div>
+          <div className="footer">
+            <a href="#" target="_blank">
+              <span className="github">
+                <Icon type="windows-o" />
+              </span>
+            </a>
+            <a href="#" target="_blank">
+              <span className="linkedin">
+                <Icon type="aliwangwang-o" />
+              </span>
+            </a>
+            <a href="#" target="_blank">
+              <span className="email">
+                <Icon type="mail" />
+              </span>
+            </a>
           </div>
           <div className="stars" />
           <div className="stars-lg" />

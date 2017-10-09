@@ -1,13 +1,16 @@
 .home .wrapper {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  padding-bottom: 20%;
   background: #22292c;
   overflow: hidden;
   position: relative;
   z-index: 2;
   height: 100vh;
   min-height: 500px;
+  padding-bottom: 20px;
+  padding-top: 30px;
+  /* iphone 6 plus */
   /* iphone 6 */
   /* iphone 5 */ }
   .home .wrapper .container {
@@ -56,7 +59,8 @@
     animation: meteor 6s 3s infinite ease-out;
     animation-delay: 2.5s; }
   .home .wrapper .slogan {
-    margin-top: 15px;
+    margin-top: 30px;
+    /* iphone 6 plus */
     /* iphone 6 */
     /* iphone 5 */ }
     .home .wrapper .slogan .slogan-left {
@@ -85,7 +89,7 @@
       .home .wrapper .slogan .slogan-right {
         text-align: center; }
       .home .wrapper .slogan .slogan-left > img {
-        width: 100%; }
+        width: 90%; }
       .home .wrapper .slogan .slogan-right {
         font-size: 34px; } }
     @media (max-width: 440px) {
@@ -94,6 +98,10 @@
         line-height: 42px; }
       .home .wrapper .slogan .cursor {
         height: 28px; } }
+    @media (max-width: 414px) {
+      .home .wrapper .slogan .navigation {
+        font-size: 20px;
+        width: 60%; } }
     @media (max-width: 375px) {
       .home .wrapper .slogan .slogan-right {
         font-size: 24px;
@@ -122,9 +130,34 @@
     justify-content: space-around;
     width: 50%; }
     .home .wrapper .navigation span {
-      margin: auto 30px; }
-    .home .wrapper .navigation .project {
+      transition: all .2s ease-in-out; }
+    .home .wrapper .navigation span:hover {
+      transform: translateY(-5px); }
+      .home .wrapper .navigation span:hover .linethrough {
+        transform: scaleX(1); }
+    .home .wrapper .navigation .linethrough {
+      display: block;
+      content: '';
+      position: relative;
+      top: 2px;
+      border-bottom-width: 2px;
+      border-bottom-style: solid;
+      transform: scaleX(0); }
+    .home .wrapper .navigation .me {
       color: #7ed321; }
+  .home .wrapper .footer {
+    margin: 0 auto 10px;
+    align-self: flex-end;
+    font-size: 24px;
+    height: 30px;
+    width: 25%;
+    min-width: 300px;
+    display: flex;
+    justify-content: space-around; }
+  @media (max-width: 414px) {
+    .home .wrapper .navigation {
+      font-size: 20px;
+      width: 60%; } }
   @media (max-width: 375px) {
     .home .wrapper .navigation {
       font-size: 18px;
