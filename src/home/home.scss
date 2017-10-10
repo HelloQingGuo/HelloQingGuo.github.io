@@ -76,7 +76,6 @@
     }
 
     .slogan {
-      margin-top: 30px;
       .slogan-left {
         text-align: right;
         img {
@@ -209,7 +208,7 @@
       align-self: flex-end;
       font-size: 24px;
       height: 30px;
-      min-width: 300px;
+      min-width: 170px;
       display: flex;
       justify-content: space-around;
       align-items: baseline;
@@ -243,7 +242,7 @@
       display: flex;
       justify-content: center;
       width: 100%;
-      margin: 10px auto;
+      margin: 10px auto 0;
       color: #fff;
       padding-left: 5%;
       padding-right: 5%;
@@ -254,8 +253,11 @@
         font-size: 20px;
         width: 60%;
       }
-      .footer a img {
-        width: 80%;
+      .footer {
+        width: 50%;
+        a img {
+          width: 80%;
+        }
       }
     }
     /* iphone 6 */
@@ -264,8 +266,11 @@
         font-size: 18px;
         width: 80%;
       }
-      .footer a img {
-        width: 75%;
+      .footer {
+        width: 40%;
+        a img {
+          width: 75%;
+        }
       }
     }
     /* iphone 5 */
@@ -273,8 +278,11 @@
       .navigation {
         font-size: 16px;
       }
-      .footer a img {
-        width: 65%;
+      .footer {
+        width: 40%;
+        a img {
+          width: 80%;
+        }
       }
     }
   }

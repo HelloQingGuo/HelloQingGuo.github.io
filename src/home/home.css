@@ -63,7 +63,6 @@
     animation: meteor 6s 3s infinite ease-out;
     animation-delay: 2.5s; }
   .home .wrapper .slogan {
-    margin-top: 30px;
     /* iphone 6 plus */
     /* iphone 6 */
     /* iphone 5 */ }
@@ -157,7 +156,7 @@
     align-self: flex-end;
     font-size: 24px;
     height: 30px;
-    min-width: 300px;
+    min-width: 170px;
     display: flex;
     justify-content: space-around;
     align-items: baseline;
@@ -182,7 +181,7 @@
     display: flex;
     justify-content: center;
     width: 100%;
-    margin: 10px auto;
+    margin: 10px auto 0;
     color: #fff;
     padding-left: 5%;
     padding-right: 5%; }
@@ -190,16 +189,22 @@
     .home .wrapper .navigation {
       font-size: 20px;
       width: 60%; }
-    .home .wrapper .footer a img {
-      width: 80%; } }
+    .home .wrapper .footer {
+      width: 50%; }
+      .home .wrapper .footer a img {
+        width: 80%; } }
   @media (max-width: 375px) {
     .home .wrapper .navigation {
       font-size: 18px;
       width: 80%; }
-    .home .wrapper .footer a img {
-      width: 75%; } }
+    .home .wrapper .footer {
+      width: 40%; }
+      .home .wrapper .footer a img {
+        width: 75%; } }
   @media (max-width: 320px) {
     .home .wrapper .navigation {
       font-size: 16px; }
-    .home .wrapper .footer a img {
-      width: 65%; } }
+    .home .wrapper .footer {
+      width: 40%; }
+      .home .wrapper .footer a img {
+        width: 80%; } }
