@@ -20,7 +20,11 @@
       padding-left: 5%;
       padding-right: 5%;
     }
-
+    .logo {
+      width: 100%;
+      margin-left: 0;
+      animation: 25s spaceship infinite linear;
+    }
     .stars,
     .stars-lg {
       position: absolute;
@@ -172,6 +176,7 @@
       width: 50%;
       span {
         transition: all .2s ease-in-out;
+        letter-spacing: 2px;
       }
       span:hover {
         transform: translateY(-5px);

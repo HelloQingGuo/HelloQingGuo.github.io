@@ -7,27 +7,51 @@ class ReactVivus extends Component {
     super(props);
 
     this.state = {
-      style: {},
+      builtInAnimTimingFunction: {
+        EASE: Vivus.EASE,
+        EASE_IN: Vivus.EASE_IN,
+        EASE_OUT: Vivus.EASE_OUT,
+        EASE_OUT_BOUNCE: Vivus.EASE_OUT_BOUNCE,
+      },
     };
   }
 
   componentDidMount() {
     const { file, callBack, duration, type, reverseStack, animTimingFunction } = this.props;
-    new Vivus(this.props.id, { duration, file, type, reverseStack, animTimingFunction }, callBack);
+    const { builtInAnimTimingFunction } = this.state;
+    new Vivus(
+      this.props.id,
+      {
+        duration,
+        file,
+        type,
+        reverseStack,
+        animTimingFunction: builtInAnimTimingFunction[animTimingFunction],
+      },
+      callBack,
+    );
   }
 
   render() {
-    const { id, type, style, height, width, callback } = this.props;
-    return <div id={id} style={Object.assign(style || {}, { height, width })} />;
+    const { id, style, height, width, className } = this.props;
+    return (
+      <div
+        id={id}
+        className={className}
+        style={Object.assign(style || {}, { height, width })}
+        type
+      />
+    );
   }
 }
 
 ReactVivus.defaultProps = {
   duration: 200,
-  type: 'oneByOne',
+  type: 'delayed',
   callback: null,
-  animTimingFunction: Vivus.EASE_OUT_BOUNCE, // EASE, EASE_IN, EASE_OUT and EASE_OUT_BOUNCE
+  animTimingFunction: 'EASE', // EASE, EASE_IN, EASE_OUT and EASE_OUT_BOUNCE
   reverseStack: false,
+  className: '',
 };
 
 ReactVivus.propTypes = {
@@ -36,9 +60,10 @@ ReactVivus.propTypes = {
   width: PropTypes.string.isRequired,
   callback: PropTypes.func,
   duration: PropTypes.number,
+  className: PropTypes.string,
   type: PropTypes.string,
-  reverseStack: PropTypes.string,
-  animTimingFunction: PropTypes.func,
+  reverseStack: PropTypes.bool,
+  animTimingFunction: PropTypes.string,
 };
 
 export default ReactVivus;

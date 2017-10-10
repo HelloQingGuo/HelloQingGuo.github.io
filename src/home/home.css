@@ -20,6 +20,10 @@
     margin: 0 auto;
     padding-left: 5%;
     padding-right: 5%; }
+  .home .wrapper .logo {
+    width: 100%;
+    margin-left: 0;
+    animation: 25s spaceship infinite linear; }
   .home .wrapper .stars,
   .home .wrapper .stars-lg {
     position: absolute;
@@ -130,7 +134,8 @@
     justify-content: space-around;
     width: 50%; }
     .home .wrapper .navigation span {
-      transition: all .2s ease-in-out; }
+      transition: all .2s ease-in-out;
+      letter-spacing: 2px; }
     .home .wrapper .navigation span:hover {
       transform: translateY(-5px); }
       .home .wrapper .navigation span:hover .linethrough {

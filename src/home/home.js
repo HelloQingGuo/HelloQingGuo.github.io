@@ -4,7 +4,7 @@ import './home.css';
 import meteor from '../assets/meteor.svg';
 import ReactVivus from '../widgets/react_vivus';
 import hi from '../assets/hi.svg';
-import svg from '../assets/logo.svg';
+import svg from '../assets/spaceship.svg';
 
 class Home extends Component {
   constructor(props) {
@@ -128,13 +128,16 @@ class Home extends Component {
       <main className="home">
         <div className="wrapper">
           <div className="container">
-            <ReactVivus
-              id="logo"
-              width="91px"
-              height="122px"
-              style={{ margin: 'auto' }}
-              file={svg}
-            />
+            <div className="logo">
+              <ReactVivus
+                id="logo"
+                width="91px"
+                height="122px"
+                file={svg}
+                animTimingFunction="EASE"
+                type="oneByOne"
+              />
+            </div>
             <Row gutter={16} className="slogan">
               <Col md={12} className="slogan-left">
                 <img className="hi" src={hi} alt="hi" />
