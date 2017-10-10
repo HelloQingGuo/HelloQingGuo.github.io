@@ -17,7 +17,7 @@ class ReactVivus extends Component {
   }
 
   componentDidMount() {
-    const { file, callBack, duration, type, reverseStack, animTimingFunction } = this.props;
+    const { file, callback, duration, type, reverseStack, animTimingFunction } = this.props;
     const { builtInAnimTimingFunction } = this.state;
     new Vivus(
       this.props.id,
@@ -28,18 +28,18 @@ class ReactVivus extends Component {
         reverseStack,
         animTimingFunction: builtInAnimTimingFunction[animTimingFunction],
       },
-      callBack,
+      callback,
     );
   }
 
   render() {
-    const { id, style, height, width, className } = this.props;
+    const { id, style, height, width, className, type } = this.props;
     return (
       <div
         id={id}
         className={className}
         style={Object.assign(style || {}, { height, width })}
-        type
+        type={type}
       />
     );
   }
@@ -52,12 +52,15 @@ ReactVivus.defaultProps = {
   animTimingFunction: 'EASE', // EASE, EASE_IN, EASE_OUT and EASE_OUT_BOUNCE
   reverseStack: false,
   className: '',
+  style: undefined,
 };
 
 ReactVivus.propTypes = {
   id: PropTypes.string.isRequired,
   height: PropTypes.string.isRequired,
   width: PropTypes.string.isRequired,
+  file: PropTypes.string.isRequired,
+  style: PropTypes.shape({}),
   callback: PropTypes.func,
   duration: PropTypes.number,
   className: PropTypes.string,

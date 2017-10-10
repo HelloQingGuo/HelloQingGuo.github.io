@@ -1,10 +1,16 @@
 import React, { Component } from 'react';
-import { Row, Col, Icon } from 'antd';
+import { Row, Col } from 'antd';
 import './home.css';
 import meteor from '../assets/meteor.svg';
 import ReactVivus from '../widgets/react_vivus';
 import hi from '../assets/hi.svg';
 import svg from '../assets/spaceship.svg';
+import github from '../assets/github.svg';
+import githubColored from '../assets/github_colored.svg';
+import linkedin from '../assets/linkedin.svg';
+import linkedinColored from '../assets/linkedin_colored.svg';
+import email from '../assets/email.svg';
+import emailColored from '../assets/email_colored.svg';
 
 class Home extends Component {
   constructor(props) {
@@ -160,22 +166,26 @@ class Home extends Component {
             </div>
           </div>
           <div className="footer">
-            <a href="#" target="_blank">
+            <a href="https://github.com/HelloQingGuo" target="_blank">
               <span className="github">
-                <Icon type="windows-o" />
+                <img src={github} alt="github" />
+                <img src={githubColored} alt="github" />
               </span>
             </a>
-            <a href="#" target="_blank">
+            <a href="https://www.linkedin.com/in/helloqingguo/?locale=en_US" target="_blank">
               <span className="linkedin">
-                <Icon type="aliwangwang-o" />
+                <img src={linkedin} alt="linkedin" />
+                <img src={linkedinColored} alt="linkedin" />
               </span>
             </a>
-            <a href="#" target="_blank">
+            <a href="mailto:guoqing1001@hotmail.com">
               <span className="email">
-                <Icon type="mail" />
+                <img src={email} alt="email" />
+                <img src={emailColored} alt="email" />
               </span>
             </a>
           </div>
+          <h4 className="footer-desc">Code with love by Qing Guo</h4>
           <div className="stars" />
           <div className="stars-lg" />
           <figure className="meteor" style={meteorStyles[0]}>

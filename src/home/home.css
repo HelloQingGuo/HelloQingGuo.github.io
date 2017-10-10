@@ -134,20 +134,22 @@
     justify-content: space-around;
     width: 50%; }
     .home .wrapper .navigation span {
-      transition: all .2s ease-in-out;
+      transition: all .3s ease-in-out;
       letter-spacing: 2px; }
     .home .wrapper .navigation span:hover {
       transform: translateY(-5px); }
       .home .wrapper .navigation span:hover .linethrough {
         transform: scaleX(1); }
     .home .wrapper .navigation .linethrough {
-      display: block;
       content: '';
+      display: block;
       position: relative;
       top: 2px;
-      border-bottom-width: 2px;
-      border-bottom-style: solid;
-      transform: scaleX(0); }
+      width: 100%;
+      height: 2px;
+      transform: scaleX(0);
+      transform-origin: center;
+      background: linear-gradient(to right, #4ad7e3 0%, #97a2ee 50%, #b28ff2 100%); }
     .home .wrapper .navigation .me {
       color: #7ed321; }
   .home .wrapper .footer {
@@ -155,18 +157,49 @@
     align-self: flex-end;
     font-size: 24px;
     height: 30px;
-    width: 25%;
     min-width: 300px;
     display: flex;
-    justify-content: space-around; }
+    justify-content: space-around;
+    align-items: baseline;
+    text-align: center; }
+    .home .wrapper .footer a:active img {
+      transform: scale(0.9); }
+    .home .wrapper .footer a img {
+      width: 90%; }
+    .home .wrapper .footer .linkedin img:last-child,
+    .home .wrapper .footer .email img:last-child,
+    .home .wrapper .footer .github img:last-child {
+      display: none; }
+    .home .wrapper .footer .linkedin:hover img:first-child,
+    .home .wrapper .footer .email:hover img:first-child,
+    .home .wrapper .footer .github:hover img:first-child {
+      display: none; }
+    .home .wrapper .footer .linkedin:hover img:last-child,
+    .home .wrapper .footer .email:hover img:last-child,
+    .home .wrapper .footer .github:hover img:last-child {
+      display: block; }
+  .home .wrapper .footer-desc {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 10px auto;
+    color: #fff;
+    padding-left: 5%;
+    padding-right: 5%; }
   @media (max-width: 414px) {
     .home .wrapper .navigation {
       font-size: 20px;
-      width: 60%; } }
+      width: 60%; }
+    .home .wrapper .footer a img {
+      width: 80%; } }
   @media (max-width: 375px) {
     .home .wrapper .navigation {
       font-size: 18px;
-      width: 80%; } }
+      width: 80%; }
+    .home .wrapper .footer a img {
+      width: 75%; } }
   @media (max-width: 320px) {
     .home .wrapper .navigation {
-      font-size: 16px; } }
+      font-size: 16px; }
+    .home .wrapper .footer a img {
+      width: 65%; } }
