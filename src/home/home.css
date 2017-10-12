@@ -24,44 +24,6 @@
     width: 100%;
     margin-left: 0;
     animation: 25s spaceship infinite linear; }
-  .home .wrapper .stars,
-  .home .wrapper .stars-lg {
-    position: absolute;
-    z-index: -1;
-    opacity: 0.3;
-    width: 2000px;
-    min-height: 2000px;
-    height: 100%;
-    left: calc(50% - 1000px);
-    top: 0;
-    transform-origin: center;
-    background: url("../assets/stars-sm.svg") center/800px auto repeat;
-    animation: 1000s rotate360 infinite linear; }
-  .home .wrapper .stars-lg {
-    opacity: 0.2;
-    background: url("../assets/stars-lg.svg") center/1100px auto repeat;
-    animation: 10s pulse infinite linear; }
-  .home .wrapper .meteor {
-    position: absolute;
-    left: 10%;
-    top: 10%;
-    transform: rotate(30deg);
-    pointer-events: none; }
-  .home .wrapper .meteor img {
-    opacity: 0;
-    animation-delay: 0;
-    animation: meteor 6s infinite ease-out; }
-  .home .wrapper .meteor-right {
-    position: absolute;
-    left: 80%;
-    top: 80%;
-    width: 130px;
-    transform: rotate(-235deg);
-    pointer-events: none; }
-  .home .wrapper .meteor-right img {
-    opacity: 0;
-    animation: meteor 6s 3s infinite ease-out;
-    animation-delay: 2.5s; }
   .home .wrapper .slogan {
     /* iphone 6 plus */
     /* iphone 6 */

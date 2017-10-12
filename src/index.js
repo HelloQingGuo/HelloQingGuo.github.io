@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-// import useScroll from 'react-router-scroll/lib/useScroll';
 import { Route, BrowserRouter, Switch, Redirect } from 'react-router-dom';
 
 import Home from './home/home';

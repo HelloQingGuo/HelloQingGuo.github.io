@@ -1,0 +1,15 @@
+.dashboard {
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+  background: #000;
+  min-height: 100vh;
+  .sidebar {
+    min-width: 300px;
+  }
+  .content {
+    width: 100%;
+  }
+}
