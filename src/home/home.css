@@ -133,22 +133,27 @@
     justify-content: space-around;
     width: 50%; }
     .home .wrapper .navigation span {
-      transition: all .3s ease-in-out;
+      transition: all .2s ease;
       letter-spacing: 2px; }
-    .home .wrapper .navigation span:hover {
-      transform: translateY(-5px); }
-      .home .wrapper .navigation span:hover .linethrough {
-        transform: scaleX(1); }
+    .home .wrapper .navigation span:active {
+      transform: translateY(3px); }
+    @media (min-width: 769px) {
+      .home .wrapper .navigation span:hover {
+        transform: translateY(-5px); }
+        .home .wrapper .navigation span:hover .linethrough {
+          transform: scaleX(1); }
+      .home .wrapper .navigation span:active {
+        transform: translateY(-2px); } }
     .home .wrapper .navigation .linethrough {
       content: '';
       display: block;
       position: relative;
       top: 2px;
       width: 100%;
-      height: 2px;
+      border-bottom-width: 2px;
+      border-bottom-style: solid;
       transform: scaleX(0);
-      transform-origin: center;
-      background: linear-gradient(to right, #4ad7e3 0%, #97a2ee 50%, #b28ff2 100%); }
+      transform-origin: center; }
     .home .wrapper .navigation .me {
       color: #7ed321; }
   .home .wrapper .footer {
@@ -170,14 +175,15 @@
     .home .wrapper .footer .email img:last-child,
     .home .wrapper .footer .github img:last-child {
       display: none; }
-    .home .wrapper .footer .linkedin:hover img:first-child,
-    .home .wrapper .footer .email:hover img:first-child,
-    .home .wrapper .footer .github:hover img:first-child {
-      display: none; }
-    .home .wrapper .footer .linkedin:hover img:last-child,
-    .home .wrapper .footer .email:hover img:last-child,
-    .home .wrapper .footer .github:hover img:last-child {
-      display: block; }
+    @media (min-width: 769px) {
+      .home .wrapper .footer .linkedin:hover img:first-child,
+      .home .wrapper .footer .email:hover img:first-child,
+      .home .wrapper .footer .github:hover img:first-child {
+        display: none; }
+      .home .wrapper .footer .linkedin:hover img:last-child,
+      .home .wrapper .footer .email:hover img:last-child,
+      .home .wrapper .footer .github:hover img:last-child {
+        display: block; } }
   .home .wrapper .footer-desc {
     display: flex;
     justify-content: center;
