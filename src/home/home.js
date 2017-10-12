@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Row, Col } from 'antd';
+import { Link } from 'react-router-dom';
 import './home.css';
 import meteor from '../assets/meteor.svg';
 import ReactVivus from '../widgets/react_vivus';
@@ -118,7 +119,7 @@ class Home extends Component {
     }, 200);
   }
 
-  componentWillUnMount() {
+  componentWillUnmount() {
     clearInterval(this.meteorTimer);
     clearInterval(this.backPrinterTimer);
     clearInterval(this.printerTimer);
@@ -154,25 +155,29 @@ class Home extends Component {
               </Col>
             </Row>
             <div className="navigation">
-              <span className="project">
+              <Link className="project" to="/dashboard/projects">
                 PROJECT<span className="linethrough" />
-              </span>
-              <span className="me">
+              </Link>
+              <Link className="me" to="/dashboard/me">
                 ME<span className="linethrough" />
-              </span>
-              <span className="resume">
+              </Link>
+              <Link className="resume" to="/dashboard/resume">
                 RESUME<span className="linethrough" />
-              </span>
+              </Link>
             </div>
           </div>
           <div className="footer">
-            <a href="https://github.com/HelloQingGuo" target="_blank">
+            <a href="https://github.com/HelloQingGuo" target="_blank" rel="noopener noreferrer">
               <span className="github">
                 <img src={github} alt="github" />
                 <img src={githubColored} alt="github" />
               </span>
             </a>
-            <a href="https://www.linkedin.com/in/helloqingguo/?locale=en_US" target="_blank">
+            <a
+              href="https://www.linkedin.com/in/helloqingguo/?locale=en_US"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <span className="linkedin">
                 <img src={linkedin} alt="linkedin" />
                 <img src={linkedinColored} alt="linkedin" />

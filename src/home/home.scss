@@ -173,26 +173,27 @@
       display: flex;
       justify-content: space-around;
       width: 50%;
-      span {
+      a {
         transition: all .2s ease;
         letter-spacing: 2px;
       }
-      span:active {
+      a:active {
         transform: translateY(3px);
       }
       @media (min-width: 769px) {
-        span:hover {
+        a:hover {
           transform: translateY(-5px);
           .linethrough {
             transform: scaleX(1);
           }
         }
-        span:active {
+        a:active {
           transform: translateY(-2px);
         }
       }
 
       .linethrough {
+        transition: all .2s ease;
         content: '';
         display: block;
         position: relative;
@@ -204,8 +205,10 @@
         transform-origin: center;
       }
       .resume {
+        color: #fff;
       }
       .project {
+        color: #fff;
       }
       .me {
         color: #7ed321;
