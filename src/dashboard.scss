@@ -1,6 +1,4 @@
 .dashboard {
-  display: flex;
-  flex-wrap: wrap;
   overflow: hidden;
   position: relative;
   z-index: 2;
@@ -8,8 +6,24 @@
   min-height: 100vh;
   .sidebar {
     min-width: 300px;
+    padding: 24px;
+    position: fixed;
+    border: 1px solid #fff;
+    height: 100vh;
   }
   .content {
-    width: 100%;
+    margin-left: 300px;
+    padding: 40px 14px;
+  }
+
+  /* iphone 6 plus */
+  @media (max-width: 414px) {
+    .sidebar {
+      display: none;
+    }
+    .content {
+      margin: auto;
+      padding: 24px 14px;
+    }
   }
 }

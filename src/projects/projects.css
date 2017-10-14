@@ -1,7 +1,11 @@
 .projects {
-  padding: 24px; }
-  .projects ul li {
+  /* iphone 6 plus */ }
+  .projects .project > div {
     min-height: 240px;
-    width: 100%;
-    margin: 14px 20px;
-    border: 1px solid #fff; }
+    border-bottom: 1px solid #fff;
+    border-top: 1px solid #fff;
+    padding: 14px;
+    margin: 14px auto; }
+  @media (max-width: 414px) {
+    .projects .project > div {
+      min-height: 440px; } }

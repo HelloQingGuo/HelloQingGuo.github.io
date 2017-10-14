@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Row, Col } from 'antd';
+import QueueAnim from 'rc-queue-anim';
 import { Link } from 'react-router-dom';
 import './home.css';
 import meteor from '../assets/meteor.svg';
@@ -133,8 +134,24 @@ class Home extends Component {
     }));
     return (
       <main className="home">
-        <div className="wrapper">
-          <div className="container">
+        <QueueAnim
+          component="div"
+          className="wrapper"
+          key="wrapper"
+          type="top"
+          interval={50}
+          ease="easeInSine"
+          duration={850}
+        >
+          <QueueAnim
+            component="div"
+            className="container"
+            key="container"
+            type="top"
+            interval={250}
+            ease="easeInSine"
+            duration={375}
+          >
             <div className="logo">
               <ReactVivus
                 id="logo"
@@ -145,7 +162,7 @@ class Home extends Component {
                 type="oneByOne"
               />
             </div>
-            <Row gutter={16} className="slogan">
+            <Row gutter={16} className="slogan" key="slogan">
               <Col md={12} className="slogan-left">
                 <img className="hi" src={hi} alt="hi" />
               </Col>
@@ -154,7 +171,7 @@ class Home extends Component {
                 <span className="cursor" />
               </Col>
             </Row>
-            <div className="navigation">
+            <div className="navigation" key="navigation">
               <Link className="project" to="/dashboard/projects">
                 PROJECT<span className="linethrough" />
               </Link>
@@ -165,8 +182,8 @@ class Home extends Component {
                 RESUME<span className="linethrough" />
               </Link>
             </div>
-          </div>
-          <div className="footer">
+          </QueueAnim>
+          <div className="footer" key="footer">
             <a href="https://github.com/HelloQingGuo" target="_blank" rel="noopener noreferrer">
               <span className="github">
                 <img src={github} alt="github" />
@@ -190,7 +207,9 @@ class Home extends Component {
               </span>
             </a>
           </div>
-          <h4 className="footer-desc">Code with love by Qing Guo</h4>
+          <h4 className="footer-desc" key="footer-desc">
+            Code with love by Qing Guo
+          </h4>
           <div className="stars" />
           <div className="stars-lg" />
           <figure className="meteor" style={meteorStyles[0]}>
@@ -199,7 +218,7 @@ class Home extends Component {
           <figure className="meteor-right" style={meteorStyles[1]}>
             <img src={meteor} alt="meteor" />
           </figure>
-        </div>
+        </QueueAnim>
       </main>
     );
   }

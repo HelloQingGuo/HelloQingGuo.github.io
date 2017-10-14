@@ -1,12 +1,22 @@
 .dashboard {
-  display: flex;
-  flex-wrap: wrap;
   overflow: hidden;
   position: relative;
   z-index: 2;
   background: #000;
-  min-height: 100vh; }
+  min-height: 100vh;
+  /* iphone 6 plus */ }
   .dashboard .sidebar {
-    min-width: 300px; }
+    min-width: 300px;
+    padding: 24px;
+    position: fixed;
+    border: 1px solid #fff;
+    height: 100vh; }
   .dashboard .content {
-    width: 100%; }
+    margin-left: 300px;
+    padding: 40px 14px; }
+  @media (max-width: 414px) {
+    .dashboard .sidebar {
+      display: none; }
+    .dashboard .content {
+      margin: auto;
+      padding: 24px 14px; } }
