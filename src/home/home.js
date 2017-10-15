@@ -163,10 +163,10 @@ class Home extends Component {
               />
             </div>
             <Row gutter={16} className="slogan" key="slogan">
-              <Col md={12} className="slogan-left">
+              <Col md={11} className="slogan-left">
                 <img className="hi" src={hi} alt="hi" />
               </Col>
-              <Col md={12} className="slogan-right">
+              <Col md={13} className="slogan-right">
                 <span className="default-desc">I&#39;M A</span> {desc}
                 <span className="cursor" />
               </Col>
