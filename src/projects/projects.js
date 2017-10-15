@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ScrollAnim from 'rc-scroll-anim';
 import TweenOne from 'rc-tween-one';
 import { Link } from 'react-router-dom';
-// import ScrollToTopOnMount from '../widgets/scrollToTopOnMount';
+import ScrollToTopOnMount from '../widgets/scrollToTopOnMount';
 import './projects.css';
 
 const ScrollOverPack = ScrollAnim.OverPack;
@@ -11,6 +11,7 @@ class Projects extends Component {
   render() {
     return (
       <div className="projects">
+        <ScrollToTopOnMount />
         <ScrollOverPack playScale={['10vh', '90vh']} className="project" replay>
           <TweenOne
             key="youplea"
