@@ -35,7 +35,7 @@ class Home extends Component {
   }
 
   componentDidMount() {
-    const roles = ['Front-end Developer', 'Graduate Student', 'Good Chef'];
+    const roles = ['Developer.', 'Graduate Student.', 'Good Chef !'];
     this.meteorTimer = setInterval(() => {
       const top = Math.floor(Math.random() * 101); // [0, 100]
       const rotate = Math.floor(Math.random() * 361); // [0, 360]

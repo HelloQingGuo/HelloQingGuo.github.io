@@ -46,7 +46,7 @@
       .cursor {
         margin-left: 3px;
         width: 4px;
-        height: 34px;
+        height: 32px;
         background: #fba145;
         display: inline-block;
         animation: cursorAnim 1s infinite ease-out;
@@ -73,7 +73,7 @@
           line-height: 42px;
         }
         .cursor {
-          height: 28px;
+          height: 25px;
         }
       }
       /* iphone 6 plus */
@@ -90,7 +90,7 @@
           line-height: 36px;
         }
         .cursor {
-          height: 24px;
+          height: 22px;
         }
         .navigation {
           font-size: 18px;
@@ -100,11 +100,11 @@
       /* iphone 5 */
       @media (max-width: 320px) {
         .slogan-right {
-          font-size: 22px;
-          line-height: 30px;
+          font-size: 20px;
+          line-height: 28px;
         }
         .cursor {
-          height: 22px;
+          height: 18px;
         }
         .navigation {
           font-size: 16px;
