@@ -1,15 +1,12 @@
 .home .wrapper {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
   background: #22292c;
   overflow: hidden;
   position: relative;
   z-index: 2;
-  height: 100vh;
-  min-height: 500px;
-  padding-bottom: 20px;
-  padding-top: 30px;
+  min-height: 100vh;
   /* iphone 6 plus */
   /* iphone 6 */
   /* iphone 5 */ }
