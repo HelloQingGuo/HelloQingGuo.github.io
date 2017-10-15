@@ -17,113 +17,57 @@
       padding-left: 5%;
       padding-right: 5%;
     }
+
     .logo {
       width: 100%;
       margin-left: 0;
       animation: 25s spaceship infinite linear;
     }
 
-    .slogan {
-      .slogan-left {
-        text-align: right;
-        img {
-          height: 50px;
-        }
-      }
-
-      .slogan-right {
-        text-align: left;
-        font-size: 36px;
-        letter-spacing: 4px;
-        line-height: 50px;
-        font-weight: lighter;
-        text-transform: uppercase;
-        color: #fba145;
-        .default-desc {
-          color: #fff;
-        }
-      }
-      .cursor {
-        margin-left: 3px;
-        width: 4px;
-        height: 32px;
-        background: #fba145;
-        display: inline-block;
-        animation: cursorAnim 1s infinite ease-out;
-      }
-
-      @media (max-width: 991px) {
-        .slogan-left,
-        .slogan-right {
-          text-align: center;
-        }
-
-        .slogan-left > img {
-          width: 90%;
-        }
-
-        .slogan-right {
-          font-size: 34px;
-        }
-      }
-
-      @media (max-width: 440px) {
-        .slogan-right {
-          font-size: 28px;
-          line-height: 42px;
-        }
-        .cursor {
-          height: 25px;
-        }
-      }
-      /* iphone 6 plus */
-      @media (max-width: 414px) {
-        .navigation {
-          font-size: 20px;
-          width: 60%;
-        }
-      }
-      /* iphone 6 */
-      @media (max-width: 375px) {
-        .slogan-right {
-          font-size: 24px;
-          line-height: 36px;
-        }
-        .cursor {
-          height: 22px;
-        }
-        .navigation {
-          font-size: 18px;
-          width: 80%;
-        }
-      }
-      /* iphone 5 */
-      @media (max-width: 320px) {
-        .slogan-right {
-          font-size: 20px;
-          line-height: 28px;
-        }
-        .cursor {
-          height: 18px;
-        }
-        .navigation {
-          font-size: 16px;
-        }
+    .slogan-left {
+      text-align: right;
+      img {
+        height: 50px;
       }
     }
+    .slogan-right {
+      text-align: left;
+      font-size: 36px;
+      letter-spacing: 4px;
+      line-height: 50px;
+      font-family: 'Anton', sans-serif;
+      text-transform: uppercase;
+      color: #fba145;
+      .default-desc {
+        color: #fff;
+      }
+    }
+    .cursor {
+      margin-left: 3px;
+      width: 4px;
+      height: 32px;
+      background: #fba145;
+      display: inline-block;
+      animation: cursorAnim 1s infinite ease-out;
+    }
+
     .navigation {
       height: auto;
-      cursor: pointer;
+      width: 65%;
       margin: 80px auto;
       font-size: 22px;
-      font-weight: lighter;
-      text-transform: uppercase;
+      cursor: pointer;
       display: flex;
+      text-transform: uppercase;
       justify-content: space-around;
-      width: 50%;
       a {
         transition: all .2s ease;
         letter-spacing: 2px;
+        margin: auto 5px;
+        color: #fff;
+      }
+      a.curNav {
+        color: #7ed321;
       }
       a:active {
         transform: translateY(3px);
@@ -152,20 +96,19 @@
         transform: scaleX(0);
         transform-origin: center;
       }
-      .resume {
-        color: #fff;
-      }
-      .project {
-        color: #fff;
-      }
-      .me {
-        color: #7ed321;
-      }
+      // .resume {
+      //   color: #fff;
+      // }
+      // .project {
+      //   color: #fff;
+      // }
+      // .me {
+      //   color: #7ed321;
+      // }
     }
 
     .footer {
       margin: 0 auto 10px;
-      align-self: flex-end;
       font-size: 24px;
       height: 30px;
       width: 30%;
@@ -218,12 +161,46 @@
       padding-left: 5%;
       padding-right: 5%;
     }
+
+    @media (max-width: 991px) {
+      .slogan-left,
+      .slogan-right {
+        text-align: center;
+      }
+
+      .slogan-left > img {
+        width: 90%;
+      }
+
+      .slogan-right {
+        font-size: 34px;
+      }
+    }
+    // small devices
+    @media (max-width: 767px) {
+      .container {
+        margin-top: -30px;
+      }
+      .navigation {
+        display: none;
+      }
+      .footer-desc {
+        margin-bottom: 30px;
+      }
+    }
+
+    @media (max-width: 440px) {
+      .slogan-right {
+        font-size: 26px;
+        line-height: 40px;
+      }
+      .cursor {
+        height: 25px;
+      }
+    }
+
     /* iphone 6 plus */
     @media (max-width: 414px) {
-      .navigation {
-        font-size: 20px;
-        width: 60%;
-      }
       .footer {
         width: 50%;
         a img {
@@ -231,11 +208,15 @@
         }
       }
     }
+
     /* iphone 6 */
     @media (max-width: 375px) {
-      .navigation {
-        font-size: 18px;
-        width: 80%;
+      .slogan-right {
+        font-size: 24px;
+        line-height: 36px;
+      }
+      .cursor {
+        height: 22px;
       }
       .footer {
         width: 40%;
@@ -244,10 +225,15 @@
         }
       }
     }
+
     /* iphone 5 */
     @media (max-width: 320px) {
-      .navigation {
-        font-size: 16px;
+      .slogan-right {
+        font-size: 20px;
+        line-height: 28px;
+      }
+      .cursor {
+        height: 18px;
       }
       .footer {
         width: 40%;

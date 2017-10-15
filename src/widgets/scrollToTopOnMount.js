@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 
 class ScrollToTopOnMount extends Component {
-  componentDidMount(prevProps) {
+  componentDidMount() {
     window.scrollTo(0, 0);
   }
 

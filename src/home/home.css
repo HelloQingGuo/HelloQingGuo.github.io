@@ -21,79 +21,43 @@
     width: 100%;
     margin-left: 0;
     animation: 25s spaceship infinite linear; }
-  .home .wrapper .slogan {
-    /* iphone 6 plus */
-    /* iphone 6 */
-    /* iphone 5 */ }
-    .home .wrapper .slogan .slogan-left {
-      text-align: right; }
-      .home .wrapper .slogan .slogan-left img {
-        height: 50px; }
-    .home .wrapper .slogan .slogan-right {
-      text-align: left;
-      font-size: 36px;
-      letter-spacing: 4px;
-      line-height: 50px;
-      font-weight: lighter;
-      text-transform: uppercase;
-      color: #fba145; }
-      .home .wrapper .slogan .slogan-right .default-desc {
-        color: #fff; }
-    .home .wrapper .slogan .cursor {
-      margin-left: 3px;
-      width: 4px;
-      height: 32px;
-      background: #fba145;
-      display: inline-block;
-      animation: cursorAnim 1s infinite ease-out; }
-    @media (max-width: 991px) {
-      .home .wrapper .slogan .slogan-left,
-      .home .wrapper .slogan .slogan-right {
-        text-align: center; }
-      .home .wrapper .slogan .slogan-left > img {
-        width: 90%; }
-      .home .wrapper .slogan .slogan-right {
-        font-size: 34px; } }
-    @media (max-width: 440px) {
-      .home .wrapper .slogan .slogan-right {
-        font-size: 28px;
-        line-height: 42px; }
-      .home .wrapper .slogan .cursor {
-        height: 25px; } }
-    @media (max-width: 414px) {
-      .home .wrapper .slogan .navigation {
-        font-size: 20px;
-        width: 60%; } }
-    @media (max-width: 375px) {
-      .home .wrapper .slogan .slogan-right {
-        font-size: 24px;
-        line-height: 36px; }
-      .home .wrapper .slogan .cursor {
-        height: 22px; }
-      .home .wrapper .slogan .navigation {
-        font-size: 18px;
-        width: 80%; } }
-    @media (max-width: 320px) {
-      .home .wrapper .slogan .slogan-right {
-        font-size: 20px;
-        line-height: 28px; }
-      .home .wrapper .slogan .cursor {
-        height: 18px; }
-      .home .wrapper .slogan .navigation {
-        font-size: 16px; } }
+  .home .wrapper .slogan-left {
+    text-align: right; }
+    .home .wrapper .slogan-left img {
+      height: 50px; }
+  .home .wrapper .slogan-right {
+    text-align: left;
+    font-size: 36px;
+    letter-spacing: 4px;
+    line-height: 50px;
+    font-family: 'Anton', sans-serif;
+    text-transform: uppercase;
+    color: #fba145; }
+    .home .wrapper .slogan-right .default-desc {
+      color: #fff; }
+  .home .wrapper .cursor {
+    margin-left: 3px;
+    width: 4px;
+    height: 32px;
+    background: #fba145;
+    display: inline-block;
+    animation: cursorAnim 1s infinite ease-out; }
   .home .wrapper .navigation {
     height: auto;
-    cursor: pointer;
+    width: 65%;
     margin: 80px auto;
     font-size: 22px;
-    font-weight: lighter;
-    text-transform: uppercase;
+    cursor: pointer;
     display: flex;
-    justify-content: space-around;
-    width: 50%; }
+    text-transform: uppercase;
+    justify-content: space-around; }
     .home .wrapper .navigation a {
       transition: all .2s ease;
-      letter-spacing: 2px; }
+      letter-spacing: 2px;
+      margin: auto 5px;
+      color: #fff; }
+    .home .wrapper .navigation a.curNav {
+      color: #7ed321; }
     .home .wrapper .navigation a:active {
       transform: translateY(3px); }
     @media (min-width: 769px) {
@@ -114,15 +78,8 @@
       border-bottom-style: solid;
       transform: scaleX(0);
       transform-origin: center; }
-    .home .wrapper .navigation .resume {
-      color: #fff; }
-    .home .wrapper .navigation .project {
-      color: #fff; }
-    .home .wrapper .navigation .me {
-      color: #7ed321; }
   .home .wrapper .footer {
     margin: 0 auto 10px;
-    align-self: flex-end;
     font-size: 24px;
     height: 30px;
     width: 30%;
@@ -164,25 +121,48 @@
     color: #fff;
     padding-left: 5%;
     padding-right: 5%; }
-  @media (max-width: 414px) {
+  @media (max-width: 991px) {
+    .home .wrapper .slogan-left,
+    .home .wrapper .slogan-right {
+      text-align: center; }
+    .home .wrapper .slogan-left > img {
+      width: 90%; }
+    .home .wrapper .slogan-right {
+      font-size: 34px; } }
+  @media (max-width: 767px) {
+    .home .wrapper .container {
+      margin-top: -30px; }
     .home .wrapper .navigation {
-      font-size: 20px;
-      width: 60%; }
+      display: none; }
+    .home .wrapper .footer-desc {
+      margin-bottom: 30px; } }
+  @media (max-width: 440px) {
+    .home .wrapper .slogan-right {
+      font-size: 26px;
+      line-height: 40px; }
+    .home .wrapper .cursor {
+      height: 25px; } }
+  @media (max-width: 414px) {
     .home .wrapper .footer {
       width: 50%; }
       .home .wrapper .footer a img {
         width: 80%; } }
   @media (max-width: 375px) {
-    .home .wrapper .navigation {
-      font-size: 18px;
-      width: 80%; }
+    .home .wrapper .slogan-right {
+      font-size: 24px;
+      line-height: 36px; }
+    .home .wrapper .cursor {
+      height: 22px; }
     .home .wrapper .footer {
       width: 40%; }
       .home .wrapper .footer a img {
         width: 75%; } }
   @media (max-width: 320px) {
-    .home .wrapper .navigation {
-      font-size: 16px; }
+    .home .wrapper .slogan-right {
+      font-size: 20px;
+      line-height: 28px; }
+    .home .wrapper .cursor {
+      height: 18px; }
     .home .wrapper .footer {
       width: 40%; }
       .home .wrapper .footer a img {

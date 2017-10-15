@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 import meteor from './assets/meteor.svg';
+import Sidebar from './widgets/sidebar/sidebar';
 import Me from './me/me';
 import Projects from './projects/projects';
 import Resume from './resume/resume';
@@ -50,15 +51,19 @@ class Dashboard extends Component {
 
   render() {
     const { randomPosition } = this.state;
+    const { curNav, navItems, handleClickOnNavbutton, setCurNav } = this.props;
     const meteorStyles = randomPosition.map(each => ({
       top: `${each.top}%`,
       transform: `rotate(${each.rotate}deg)`,
     }));
     return (
       <div className="dashboard">
-        <div className="sidebar">
-          <h1 style={{ color: 'red' }}>Sidebar</h1>
-        </div>
+        <Sidebar
+          curNav={curNav}
+          navItems={navItems}
+          handleClickOnNavbutton={handleClickOnNavbutton}
+          setCurNav={setCurNav}
+        />
         <div className="content">
           <Route path="/dashboard/projects" component={Projects} />
           <Route path="/dashboard/me" component={Me} />

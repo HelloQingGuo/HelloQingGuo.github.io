@@ -128,6 +128,7 @@ class Home extends Component {
 
   render() {
     const { randomPosition, desc } = this.state;
+    const { curNav, navItems, setCurNav, handleClickOnNavbutton } = this.props;
     const meteorStyles = randomPosition.map(each => ({
       top: `${each.top}%`,
       transform: `rotate(${each.rotate}deg)`,
@@ -172,13 +173,29 @@ class Home extends Component {
               </Col>
             </Row>
             <div className="navigation" key="navigation">
-              <Link className="project" to="/dashboard/projects">
+              {/* {navItems.map((navItem) => {
+                if (navItem.id === 0) {
+                  return null;
+                }
+                return (
+                  <Link
+                to={navItem.num}
+                className={navItem.id === curNav ? 'curNav' : ''}
+                key={navItem.name}
+                onClick={() => setCurNav(navItem.id)}
+                  >
+                {navItem.name}
+                <span className="linethrough" />
+                  </Link>
+                );
+              })} */}
+              <Link className="project" to="/dashboard/projects" onClick={() => setCurNav(2)}>
                 PROJECT<span className="linethrough" />
               </Link>
-              <Link className="me" to="/dashboard/me">
+              <Link className="me" to="/dashboard/me" onClick={() => setCurNav(1)}>
                 ME<span className="linethrough" />
               </Link>
-              <Link className="resume" to="/dashboard/resume">
+              <Link className="resume" to="/dashboard/resume" onClick={() => setCurNav(3)}>
                 RESUME<span className="linethrough" />
               </Link>
             </div>

@@ -1,0 +1,25 @@
+.sidebar {
+  min-width: 300px;
+  padding: 24px;
+  position: fixed;
+  border: 1px solid #fff;
+  height: 100vh; }
+  .sidebar .navlist {
+    position: absolute;
+    transition: opacity 0.3s ease;
+    top: calc(100% - 90px - 260px);
+    right: 50px;
+    font-size: 26px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    cursor: pointer; }
+    .sidebar .navlist li {
+      height: 65px; }
+      .sidebar .navlist li a {
+        color: #fff; }
+    .sidebar .navlist li.curNav a {
+      color: #7ed321; }
+
+@media (max-width: 767px) {
+  .sidebar {
+    display: none; } }
