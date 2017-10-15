@@ -50,7 +50,7 @@ h6 {
 .meteor img {
   opacity: 0;
   animation-delay: 0;
-  animation: meteor 6s infinite ease-out; }
+  animation: meteor 5s 1.5s infinite ease-out; }
 
 .meteor-right {
   position: absolute;
@@ -62,5 +62,4 @@ h6 {
 
 .meteor-right img {
   opacity: 0;
-  animation: meteor 6s 3s infinite ease-out;
-  animation-delay: 2.5s; }
+  animation: meteor 5s 1s infinite ease-out; }
