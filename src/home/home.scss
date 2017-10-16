@@ -56,6 +56,7 @@
       width: 65%;
       margin: 80px auto;
       font-size: 22px;
+      font-weight: bold;
       cursor: pointer;
       display: flex;
       text-transform: uppercase;
@@ -69,23 +70,21 @@
       a.curNav {
         color: #7ed321;
       }
-      a:active {
-        transform: translateY(3px);
-      }
-      @media (min-width: 769px) {
-        a:hover {
-          transform: translateY(-5px);
-          .linethrough {
-            transform: scaleX(1);
-          }
-        }
-        a:active {
-          transform: translateY(-2px);
+
+      a:hover {
+        transform: translateY(-5px);
+        color: #7ed321;
+        .linethrough {
+          transform: scaleX(1);
         }
       }
 
+      a:active {
+        transform: translateY(-2px);
+      }
+
       .linethrough {
-        transition: all .2s ease;
+        transition: transform .2s ease;
         content: '';
         display: block;
         position: relative;
@@ -96,15 +95,6 @@
         transform: scaleX(0);
         transform-origin: center;
       }
-      // .resume {
-      //   color: #fff;
-      // }
-      // .project {
-      //   color: #fff;
-      // }
-      // .me {
-      //   color: #7ed321;
-      // }
     }
 
     .footer {

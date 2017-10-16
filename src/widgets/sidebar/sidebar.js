@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import QueueAnim from 'rc-queue-anim';
+import logo from '../../assets/logo.svg';
 import './sidebar.css';
 
 class Sidebar extends Component {
@@ -8,6 +9,7 @@ class Sidebar extends Component {
     const { curNav, navItems, setCurNav, handleClickOnNavbutton } = this.props;
     return (
       <div className="sidebar">
+        <img src={logo} alt="logo" className="logo" />
         <QueueAnim
           component="ul"
           className="navlist"
@@ -24,6 +26,7 @@ class Sidebar extends Component {
             >
               <Link to={navItem.num}>
                 {navItem.name}
+                <span className="linethrough" />
               </Link>
             </li>),
           )}

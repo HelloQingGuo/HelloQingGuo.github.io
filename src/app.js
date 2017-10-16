@@ -52,6 +52,7 @@ class App extends Component {
     this.setState({ bgShown: !this.state.bgShown });
   }
   render() {
+    const { curNav, navItems } = this.state;
     const DashboardWithProps = props =>
       (<Dashboard
         {...this.state}
@@ -61,7 +62,8 @@ class App extends Component {
       />);
     const HomeWithProps = props =>
       (<Home
-        {...this.state}
+        curNav={curNav}
+        navItems={navItems}
         {...props}
         handleClickOnNavbutton={this.handleClickOnNavbutton}
         setCurNav={this.setCurNav}
