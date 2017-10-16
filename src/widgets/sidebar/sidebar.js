@@ -8,16 +8,16 @@ class Sidebar extends Component {
   render() {
     const { curNav, navItems, setCurNav, handleClickOnNavbutton } = this.props;
     return (
-      <div className="sidebar">
-        <img src={logo} alt="logo" className="logo" />
-        <QueueAnim
-          component="ul"
-          className="navlist"
-          type="right"
-          interval={50}
-          duration={90}
-          ease="easeInSine"
-        >
+      <QueueAnim
+        component="div"
+        className="sidebar"
+        type="right"
+        interval={25}
+        duration={200}
+        ease="easeInSine"
+      >
+        <img src={logo} alt="logo" className="logo" key="logo" />
+        <ul className="navlist" key="navList">
           {navItems.map(navItem =>
             (<li
               key={navItem.name}
@@ -30,8 +30,8 @@ class Sidebar extends Component {
               </Link>
             </li>),
           )}
-        </QueueAnim>
-      </div>
+        </ul>
+      </QueueAnim>
     );
   }
 }
