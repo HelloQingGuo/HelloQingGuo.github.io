@@ -5,7 +5,7 @@
   background: #000;
   min-height: 100vh; }
   .dashboard .content {
-    margin-left: 300px;
+    margin-left: 25%;
     padding: 40px 14px; }
   @media (max-width: 767px) {
     .dashboard .content {

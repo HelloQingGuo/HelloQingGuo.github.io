@@ -1,16 +1,64 @@
 .projects {
-  .project > div {
-    min-height: 240px;
-    border-bottom: 1px solid #fff;
-    border-top: 1px solid #fff;
-    padding: 14px;
-    margin: 14px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: -14%;
+  & > div {
+    max-width: 700px;
+    width: 80%;
+  }
+
+  .project {
+    .youplea {
+      background-color: #9a85ff;
+    }
+
+    .hearful {
+      background-color: #ff5b5b;
+    }
+    .fanalytical {
+      background-color: #ffd221;
+    }
+    .taxonomy {
+      background-color: #63aaff;
+    }
+    a {
+      display: flex;
+      flex-flow: wrap;
+      align-items: center;
+      justify-content: space-around;
+      padding: 0 14px;
+      border-radius: 14px;
+      img {
+        margin: 14px;
+        max-width: 300px;
+        max-height: 300px;
+        width: 100%;
+      }
+      .desc {
+        text-align: center;
+        margin: 0 14px 28px 14px;
+      }
+    }
+    background-color: #eaeaea;
+    margin-bottom: 40px;
+    border-radius: 14px;
+  }
+
+  @media (max-width: 767px) {
+    margin-left: 0;
+    & > div {
+      width: 100%;
+    }
+    .project {
+      margin: 14px 4px;
+    }
   }
 
   /* iphone 6 plus */
   @media (max-width: 414px) {
-    .project > div {
-      min-height: 440px;
+    .project {
+      // min-height: 400px;
     }
   }
 }

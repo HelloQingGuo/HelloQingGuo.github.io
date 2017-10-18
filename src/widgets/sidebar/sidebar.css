@@ -1,7 +1,7 @@
 .sidebar {
   min-width: 300px;
-  padding: 24px;
-  padding-left: 95px;
+  width: 25%;
+  padding-left: calc(12.5% - 53px);
   position: fixed;
   height: 100vh;
   display: flex;
@@ -18,19 +18,18 @@
     margin-top: 50px;
     font-size: 20px;
     letter-spacing: 4px;
-    text-transform: uppercase;
-    cursor: pointer; }
+    text-transform: uppercase; }
     .sidebar .navlist li {
       height: 45px; }
       .sidebar .navlist li a {
         color: #fff;
         display: inline-block; }
-      .sidebar .navlist li:hover a {
+      .sidebar .navlist li a.curNav {
         color: #7ed321; }
-        .sidebar .navlist li:hover a .linethrough {
+      .sidebar .navlist li a:hover {
+        color: #7ed321; }
+        .sidebar .navlist li a:hover .linethrough {
           transform: scaleX(1); }
-    .sidebar .navlist li.curNav a {
-      color: #7ed321; }
     .sidebar .navlist .linethrough {
       transition: transform .2s ease;
       content: '';

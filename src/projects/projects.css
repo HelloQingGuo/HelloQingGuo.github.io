@@ -1,11 +1,43 @@
 .projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: -14%;
   /* iphone 6 plus */ }
-  .projects .project > div {
-    min-height: 240px;
-    border-bottom: 1px solid #fff;
-    border-top: 1px solid #fff;
-    padding: 14px;
-    margin: 14px auto; }
-  @media (max-width: 414px) {
-    .projects .project > div {
-      min-height: 440px; } }
+  .projects > div {
+    max-width: 700px;
+    width: 80%; }
+  .projects .project {
+    background-color: #eaeaea;
+    margin-bottom: 40px;
+    border-radius: 14px; }
+    .projects .project .youplea {
+      background-color: #9a85ff; }
+    .projects .project .hearful {
+      background-color: #ff5b5b; }
+    .projects .project .fanalytical {
+      background-color: #ffd221; }
+    .projects .project .taxonomy {
+      background-color: #63aaff; }
+    .projects .project a {
+      display: flex;
+      flex-flow: wrap;
+      align-items: center;
+      justify-content: space-around;
+      padding: 0 14px;
+      border-radius: 14px; }
+      .projects .project a img {
+        margin: 14px;
+        max-width: 300px;
+        max-height: 300px;
+        width: 100%; }
+      .projects .project a .desc {
+        text-align: center;
+        margin: 0 14px 28px 14px; }
+  @media (max-width: 767px) {
+    .projects {
+      margin-left: 0; }
+      .projects > div {
+        width: 100%; }
+      .projects .project {
+        margin: 14px 4px; } }

@@ -19,12 +19,12 @@ class Sidebar extends Component {
         <img src={logo} alt="logo" className="logo" key="logo" />
         <ul className="navlist" key="navList">
           {navItems.map(navItem =>
-            (<li
-              key={navItem.name}
-              className={navItem.id === curNav ? 'curNav' : ''}
-              onClick={() => setCurNav(navItem.id)}
-            >
-              <Link to={navItem.num}>
+            (<li key={navItem.name}>
+              <Link
+                to={navItem.num}
+                onClick={() => setCurNav(navItem.id)}
+                className={navItem.id === curNav ? 'curNav' : ''}
+              >
                 {navItem.name}
                 <span className="linethrough" />
               </Link>

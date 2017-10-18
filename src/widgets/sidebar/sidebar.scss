@@ -1,7 +1,7 @@
 .sidebar {
   min-width: 300px;
-  padding: 24px;
-  padding-left: 95px;
+  width: 25%;
+  padding-left: calc(12.5% - 53px);
   position: fixed;
   height: 100vh;
   display: flex;
@@ -20,22 +20,21 @@
     font-size: 20px;
     letter-spacing: 4px;
     text-transform: uppercase;
-    cursor: pointer;
     li {
       height: 45px;
       a {
         color: #fff;
         display: inline-block;
       }
-      &:hover a {
+      a.curNav {
+        color: #7ed321;
+      }
+      a:hover {
         color: #7ed321;
         .linethrough {
           transform: scaleX(1);
         }
       }
-    }
-    li.curNav a {
-      color: #7ed321;
     }
 
     .linethrough {

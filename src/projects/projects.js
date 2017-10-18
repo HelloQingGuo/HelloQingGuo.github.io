@@ -12,40 +12,71 @@ class Projects extends Component {
     return (
       <div className="projects">
         <ScrollToTopOnMount />
-        <ScrollOverPack playScale={['10vh', '90vh']} className="project" replay>
+        <ScrollOverPack playScale="50px">
           <TweenOne
             key="youplea"
-            animation={{ x: 0, opacity: 1, duration: 500 }}
-            style={{ transform: 'translateX(100px)', opacity: 0 }}
+            className="project"
+            animation={{ y: 0, opacity: 1, duration: 600 }}
+            style={{ transform: 'translateY(25px)', opacity: 0.25 }}
           >
-            <Link to="/dashboard/projects/youplea">Youplea</Link>
+            <Link to="/dashboard/projects/youplea" className="youplea">
+              <img src="http://kyledecker.me/content/1-work/1-swiftype/preview.svg" alt="youplea" />
+              <span className="desc">
+                <h2>Youplea</h2>
+                <span>Lorem Ipsum Lorem Ipsum Ipsum</span>
+              </span>
+            </Link>
           </TweenOne>
         </ScrollOverPack>
-        <ScrollOverPack playScale={['10vh', '90vh']} className="project" replay>
+        <ScrollOverPack playScale="50px">
           <TweenOne
             key="hearful"
-            animation={{ x: 0, opacity: 1, duration: 500 }}
-            style={{ transform: 'translateX(100px)', opacity: 0 }}
+            className="project"
+            animation={{ y: 0, opacity: 1, duration: 600 }}
+            style={{ transform: 'translateY(25px)', opacity: 0.25 }}
           >
-            <Link to="/dashboard/projects/hearful">Hearful</Link>
+            <Link to="/dashboard/projects/hearful" className="hearful">
+              <img src="http://kyledecker.me/content/1-work/2-wintr-mx/preview.svg" alt="hearful" />
+              <span className="desc">
+                <h2>Hearful</h2>
+                <span>Lorem Ipsum Lorem Ipsum Ipsum</span>
+              </span>
+            </Link>
           </TweenOne>
         </ScrollOverPack>
-        <ScrollOverPack playScale={['10vh', '90vh']} className="project" replay>
+        <ScrollOverPack playScale="50px">
           <TweenOne
             key="fanalytical"
-            animation={{ x: 0, opacity: 1, duration: 500 }}
-            style={{ transform: 'translateX(100px)', opacity: 0 }}
+            className="project"
+            animation={{ y: 0, opacity: 1, duration: 600 }}
+            style={{ transform: 'translateY(25px)', opacity: 0.25 }}
           >
-            <Link to="/dashboard/projects/fanalytical">Fanalytical</Link>
+            <Link to="/dashboard/projects/fanalytical" className="fanalytical">
+              <img
+                src="http://kyledecker.me/content/1-work/3-catnap/preview.svg"
+                alt="fanalytical"
+              />
+              <span className="desc">
+                <h2>fanalytical</h2>
+                <span>Lorem Ipsum Lorem Ipsum Ipsum</span>
+              </span>
+            </Link>
           </TweenOne>
         </ScrollOverPack>
-        <ScrollOverPack playScale={['10vh', '90vh']} className="project" replay>
+        <ScrollOverPack playScale="50px">
           <TweenOne
             key="taxonomy"
-            animation={{ x: 0, opacity: 1, duration: 500 }}
-            style={{ transform: 'translateX(100px)', opacity: 0 }}
+            className="project"
+            animation={{ y: 0, opacity: 1, duration: 600 }}
+            style={{ transform: 'translateY(25px)', opacity: 0.25 }}
           >
-            <Link to="/dashboard/projects/taxonomy">Taxonomy</Link>
+            <Link to="/dashboard/projects/taxonomy" className="taxonomy">
+              <img src="http://kyledecker.me/content/1-work/4-misc/preview.svg" alt="taxonomy" />
+              <span className="desc">
+                <h2>taxonomy</h2>
+                <span>Lorem Ipsum Lorem Ipsum Ipsum</span>
+              </span>
+            </Link>
           </TweenOne>
         </ScrollOverPack>
       </div>
