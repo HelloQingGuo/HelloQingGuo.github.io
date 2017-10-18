@@ -35,6 +35,9 @@
           transform: scaleX(1);
         }
       }
+      a:focus {
+        text-decoration: none;
+      }
     }
 
     .linethrough {

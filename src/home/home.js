@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 import { Row, Col } from 'antd';
 import QueueAnim from 'rc-queue-anim';
 import { Link } from 'react-router-dom';
@@ -13,6 +15,7 @@ import linkedin from '../assets/linkedin.svg';
 import linkedinColored from '../assets/linkedin_colored.svg';
 import email from '../assets/email.svg';
 import emailColored from '../assets/email_colored.svg';
+import { setCurNav } from '../actions/action_ui';
 
 class Home extends Component {
   constructor(props) {
@@ -128,7 +131,8 @@ class Home extends Component {
 
   render() {
     const { randomPosition, desc } = this.state;
-    const { curNav, navItems, setCurNav, handleClickOnNavbutton } = this.props;
+    const { curNavId, navItemsForHome } = this.props;
+
     const meteorStyles = randomPosition.map(each => ({
       top: `${each.top}%`,
       transform: `rotate(${each.rotate}deg)`,
@@ -173,31 +177,26 @@ class Home extends Component {
               </Col>
             </Row>
             <div className="navigation" key="navigation">
-              {/* {navItems.map((navItem) => {
-                if (navItem.id === 0) {
-                  return null;
-                }
-                return (
-                  <Link
-                to={navItem.num}
-                className={navItem.id === curNav ? 'curNav' : ''}
-                key={navItem.name}
-                onClick={() => setCurNav(navItem.id)}
-                  >
-                {navItem.name}
-                <span className="linethrough" />
-                  </Link>
-                );
-              })} */}
-              <Link className="project" to="/dashboard/projects" onClick={() => setCurNav(2)}>
+              {navItemsForHome.map(navItem =>
+                (<Link
+                  to={navItem.link}
+                  className={navItem.id === curNavId ? 'curNav' : ''}
+                  key={navItem.name}
+                  onClick={() => this.props.setCurNav(navItem.id)}
+                >
+                  {navItem.name}
+                  <span className="linethrough" />
+                </Link>),
+              )}
+              {/* <Link to="/dashboard/projects" onClick={() => setCurNav(2)}>
                 PROJECT<span className="linethrough" />
-              </Link>
-              <Link className="me" to="/dashboard/me" onClick={() => setCurNav(1)}>
+                </Link>
+                <Link to="/dashboard/me" onClick={() => setCurNav(1)}>
                 ME<span className="linethrough" />
-              </Link>
-              <Link className="resume" to="/dashboard/resume" onClick={() => setCurNav(3)}>
+                </Link>
+                <Link to="/dashboard/resume" onClick={() => setCurNav(3)}>
                 RESUME<span className="linethrough" />
-              </Link>
+              </Link> */}
             </div>
           </QueueAnim>
           <div className="footer" key="footer">
@@ -240,5 +239,23 @@ class Home extends Component {
     );
   }
 }
+function mapStateToProps(state) {
+  return {
+    curNavId: state.ui.curNavId,
+    navItemsForHome: state.ui.navItemsForHome,
+  };
+}
 
-export default Home;
+Home.propTypes = {
+  setCurNav: PropTypes.func.isRequired,
+  curNavId: PropTypes.number.isRequired,
+  navItemsForHome: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      id: PropTypes.number.isRequired,
+      link: PropTypes.string.isRequired,
+    }),
+  ).isRequired,
+};
+
+export default connect(mapStateToProps, { setCurNav })(Home);
