@@ -1,0 +1,120 @@
+.me {
+  padding: 24px;
+  padding-top: 48px;
+  color: #333;
+  hr {
+    margin: 14px 0;
+    height: 1px;
+    background: linear-gradient(
+      to right,
+      transparent,
+      rgba(102, 119, 136, .2) 20%,
+      rgba(102, 119, 136, .2) 80%,
+      transparent
+    );
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #333;
+  }
+  h3 {
+    line-height: 1.3;
+  }
+  .profile-img {
+    position: absolute;
+    top: -50px;
+    left: calc(50% - 50px);
+    box-shadow: 1px 2px 4px #777;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+  }
+
+  .company {
+    line-height: 2;
+    font-size: 14px;
+  }
+
+  .address {
+    color: #888;
+    // padding-bottom: 16px;
+    position: relative;
+    // border-bottom: 1px solid #d3d3d3;
+    // &:after {
+    //   content: "";
+    //   display: block;
+    //   position: absolute;
+    //   bottom: 0;
+    //   right: -10px;
+    //   left: -10px;
+    //   height: 1px;
+    //   background: linear-gradient(
+    //     to right,
+    //     transparent,
+    //     rgba(102, 119, 136, .2) 20%,
+    //     rgba(102, 119, 136, .2) 80%,
+    //     transparent
+    //   );
+    // }
+    i {
+      color: #666;
+      margin-right: 8px;
+    }
+  }
+
+  .numbers {
+    margin-top: -8px;
+    & > div {
+      transition: 0.2s all ease;
+      border-radius: 4px;
+      h1,
+      span {
+        transition: 0.2s all ease;
+      }
+    }
+    & > div:hover {
+      transition: 0.2s all ease;
+      background: hsla(0, 0%, 7%, .05);
+      border-color: hsla(0, 0%, 7%, .05);
+      h1,
+      span {
+        transition: 0.2s all ease;
+        transform: translateY(-4px);
+      }
+    }
+  }
+
+  .monitorParamNum {
+    height: 60px;
+    font-size: 50px;
+  }
+
+  .monitorParamText {
+    font-size: 13px;
+    margin-top: 4px;
+    margin-bottom: 10px;
+    display: block;
+    text-transform: capitalize;
+  }
+  .footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    margin-top: 14px;
+    img {
+      width: 75%;
+    }
+  }
+}
+
+// small devices
+@media (max-width: 767px) {
+  .me {
+    padding: 12px;
+    padding-top: 48px;
+  }
+}

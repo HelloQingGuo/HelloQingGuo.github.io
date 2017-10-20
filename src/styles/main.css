@@ -21,6 +21,9 @@ h5,
 h6 {
   color: #fff; }
 
+.mr-10 {
+  margin-right: 10px; }
+
 .stars,
 .stars-lg {
   position: absolute;

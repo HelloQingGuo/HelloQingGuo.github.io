@@ -1,0 +1,71 @@
+.me {
+  padding: 24px;
+  padding-top: 48px;
+  color: #333; }
+  .me hr {
+    margin: 14px 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(102, 119, 136, 0.2) 20%, rgba(102, 119, 136, 0.2) 80%, transparent); }
+  .me h1,
+  .me h2,
+  .me h3,
+  .me h4,
+  .me h5,
+  .me h6 {
+    color: #333; }
+  .me h3 {
+    line-height: 1.3; }
+  .me .profile-img {
+    position: absolute;
+    top: -50px;
+    left: calc(50% - 50px);
+    box-shadow: 1px 2px 4px #777;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px; }
+  .me .company {
+    line-height: 2;
+    font-size: 14px; }
+  .me .address {
+    color: #888;
+    position: relative; }
+    .me .address i {
+      color: #666;
+      margin-right: 8px; }
+  .me .numbers {
+    margin-top: -8px; }
+    .me .numbers > div {
+      transition: 0.2s all ease;
+      border-radius: 4px; }
+      .me .numbers > div h1,
+      .me .numbers > div span {
+        transition: 0.2s all ease; }
+    .me .numbers > div:hover {
+      transition: 0.2s all ease;
+      background: rgba(18, 18, 18, 0.05);
+      border-color: rgba(18, 18, 18, 0.05); }
+      .me .numbers > div:hover h1,
+      .me .numbers > div:hover span {
+        transition: 0.2s all ease;
+        transform: translateY(-4px); }
+  .me .monitorParamNum {
+    height: 60px;
+    font-size: 50px; }
+  .me .monitorParamText {
+    font-size: 13px;
+    margin-top: 4px;
+    margin-bottom: 10px;
+    display: block;
+    text-transform: capitalize; }
+  .me .footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    margin-top: 14px; }
+    .me .footer img {
+      width: 75%; }
+
+@media (max-width: 767px) {
+  .me {
+    padding: 12px;
+    padding-top: 48px; } }
