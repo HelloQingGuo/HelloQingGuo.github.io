@@ -1,134 +1,116 @@
-import _ from 'lodash';
-import echarts from 'echarts';
+// 56 - 70 Familiar
+// 71 - 85 Proficient
+// 86 - 100 Master
+const scoreMapping = [
+  {
+    level: 'Familiar',
+    color: '#519c9c',
+    scoreRange: [56, 70],
+  },
+  {
+    level: 'Proficient',
+    color: '#e2aa69',
+    scoreRange: [71, 85],
+  },
+  {
+    level: 'Master',
+    color: '#e17768',
+    scoreRange: [86, 100],
+  },
+];
 
-let dottedBase = [];
-const lineData = [];
-const barData = [];
-const category = [];
-for (let i = 0; i < 20; i++) {
-  const date = new Date((dottedBase += 3600 * 24 * 1000));
-  category.push([date.getFullYear(), date.getMonth() + 1, date.getDate()].join('-'));
-  const b = Math.random() * 200;
-  const d = Math.random() * 200;
-  barData.push(b);
-  lineData.push(d + b);
-}
-
-const config = {
-  title: {
-    text: 'Skills',
-    x: 'center',
-    top: 0,
-    textStyle: {
-      color: 'rgba(0, 0, 0, 0.70)',
-      fontSize: '18',
-    },
-  },
-  tooltip: {
-    trigger: 'axis',
-    axisPointer: {
-      type: 'cross',
-      label: {
-        formatter: params => `${_.round(params.value, 2)}%`,
-        backgroundColor: '#D14A61',
-        shadowBlur: 6,
-        shadowColor: '#999',
-      },
-    },
-    formatter: '{b}: {c}%',
-  },
-  xAxis: [
-    {
-      type: 'category',
-      data: category,
-      axisTick: {
-        alignWithLabel: true,
-      },
-      axisPointer: {
-        triggerTooltip: false,
-        label: {
-          formatter: params => params.value,
-          backgroundColor: '#D14A61',
-          shadowBlur: 6,
-          shadowColor: '#333',
-        },
-      },
-      axisLine: {
-        lineStyle: {
-          color: '#333',
-        },
-      },
-    },
-  ],
-  yAxis: [
-    {
-      type: 'value',
-      splitLine: { show: false },
-      axisLabel: {
-        formatter: '{value}%',
-      },
-      axisLine: {
-        lineStyle: {
-          color: '#333',
-        },
-      },
-    },
-  ],
-  toolbox: {
-    show: true,
-    showTitle: true,
-    right: 4,
-    top: 0,
-    itemGap: 10,
-    itemSize: 14,
-    feature: {
-      magicType: { show: true, type: ['line', 'bar'], title: { line: 'Line', bar: 'Bar' } },
-      restore: { show: true, title: 'Refresh' },
-      saveAsImage: { show: true, title: 'Save' },
-    },
-  },
-  grid: {
-    left: 24,
-    right: 24,
-    top: 54,
-    bottom: 6,
-    containLabel: true,
-  },
-  series: [
-    {
-      name: 'bar',
-      type: 'bar',
-      barWidth: 10,
-      itemStyle: {
-        normal: {
-          barBorderRadius: 5,
-          color: echarts.graphic.LinearGradient(0, 0, 0, 1, [
-            { offset: 0, color: '#14c8d4' },
-            { offset: 1, color: '#43eec6' },
-          ]),
-        },
-      },
-      data: barData,
-    },
-    {
-      name: 'dotted',
-      type: 'pictorialBar',
-      symbol: 'rect',
-      itemStyle: {
-        normal: {
-          color: '#0f375f',
-        },
-      },
-      symbolRepeat: true,
-      symbolSize: [12, 4],
-      symbolMargin: 1,
-      z: -10,
-      data: lineData,
-    },
-  ],
-  color: ['#00D7B6', '#7F7C77'],
-  backgroundColor: '#fff',
-  animationEasing: 'elasticOut',
+const identifyProficiency = (score) => {
+  for (let i = 0; i < scoreMapping.length; i += 1) {
+    if (score >= scoreMapping[i].scoreRange[0] && score <= scoreMapping[i].scoreRange[1]) {
+      return scoreMapping[i];
+    }
+  }
+  return null;
 };
 
-export default config;
+const skillScores = [
+  { value: 82, name: 'HTML' },
+  { value: 81, name: 'CSS (SASS)' },
+  { value: 83, name: 'Javascript' },
+  { value: 90, name: 'React / Redux' },
+  { value: 71, name: 'Webpack' },
+  { value: 75, name: 'CMS' },
+  { value: 85, name: 'Data Visualization' },
+  { value: 72, name: 'Ant UI' },
+  { value: 77, name: 'Bootstrap' },
+];
+
+const findMin = (skills) => {
+  let min = Number.MAX_VALUE;
+  skills.forEach((skill) => {
+    min = skill.value < min ? skill.value : min;
+  });
+  return min;
+};
+
+const localize = (skills) => {
+  const min = findMin(skills);
+  return skills.map(skill => ({
+    value: (skill.value - min + 5) * 2,
+    name: skill.name,
+    // itemStyle: {
+    //   normal: {
+    //     color: identifyProficiency(skill.value).color,
+    //   },
+    // },
+  }));
+};
+
+export const seriesData = localize(skillScores);
+
+export const config = {
+  tooltip: {
+    trigger: 'item',
+    hideDelay: 99999,
+    formatter: (params) => {
+      const skillObj = skillScores.find(skill => skill.name === params.name);
+      const skillProficiency = identifyProficiency(skillObj.value);
+      return `${skillObj.name} - <strong>${skillProficiency.level}</strong> - ${skillObj.value}`;
+    },
+  },
+  legend: {
+    x: 'center',
+    y: 'bottom',
+    show: false,
+    data: [
+      'HTML',
+      'CSS (SASS)',
+      'Javascript',
+      'React / Redux',
+      'Webpack',
+      'CMS',
+      'Data Visualization',
+      'Ant UI',
+      'Bootstrap',
+    ],
+  },
+  toolbox: {
+    show: false,
+    feature: {
+      mark: { show: true },
+      dataView: { show: true, readOnly: false },
+      magicType: {
+        show: true,
+        type: ['pie', 'funnel'],
+      },
+      restore: { show: true },
+      saveAsImage: { show: true },
+    },
+  },
+  calculable: true,
+  series: [
+    {
+      name: 'Front End Skill Proficiency',
+      type: 'pie',
+      radius: ['15%', '65%'],
+      center: ['50%', '45%'],
+      roseType: 'radius',
+      data: seriesData,
+    },
+  ],
+};

@@ -2,7 +2,7 @@
   padding: 24px;
   padding-top: 48px;
   color: #333;
-  hr {
+  hr.horizontal-divider {
     margin: 14px 0;
     height: 1px;
     background: linear-gradient(
@@ -13,6 +13,7 @@
       transparent
     );
   }
+
   h1,
   h2,
   h3,
@@ -24,6 +25,7 @@
   h3 {
     line-height: 1.3;
   }
+
   .profile-img {
     position: absolute;
     top: -50px;
@@ -100,6 +102,7 @@
     display: block;
     text-transform: capitalize;
   }
+
   .footer {
     display: flex;
     justify-content: space-around;
@@ -109,10 +112,130 @@
       width: 75%;
     }
   }
+
+  .skill-set {
+    margin-top: -14px;
+    text-align: center;
+  }
+
+  .skill-set-score {
+    text-align: center;
+    margin-bottom: 2px;
+  }
+
+  .color-block {
+    display: inline-block;
+    border-radius: 2px;
+    width: 20px;
+    height: 14px;
+    vertical-align: text-top;
+    margin-right: 6px;
+  }
+
+  .familiar-color {
+    background-color: #519c9c;
+  }
+
+  .proficient-color {
+    background-color: #e2aa69;
+  }
+
+  .master-color {
+    background-color: #e17768;
+  }
+
+  .vertical-divider {
+    display: inline-block;
+    margin: auto 10px;
+    width: 2px;
+    height: 24px;
+    vertical-align: middle;
+    background: linear-gradient(
+      0deg,
+      transparent,
+      rgba(102, 119, 136, .2) 40%,
+      rgba(102, 119, 136, .2) 60%,
+      transparent
+    );
+  }
+
+  .tags {
+    .ant-tag {
+      letter-spacing: 1px;
+      font-size: 11px;
+      line-height: 18px;
+      height: 20px;
+    }
+    &:before {
+      content: 'learning list:';
+      display: block;
+      font-size: 12px;
+      color: #888;
+      letter-spacing: 2px;
+      margin-bottom: 4px;
+      text-transform: uppercase;
+    }
+  }
+
+  .frontend {
+    min-height: 350px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  .backend {
+    min-height: 350px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    .top {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      & > div {
+        margin: 14px 4px;
+        & > div {
+          margin-bottom: 14px;
+        }
+        & > h1 {
+          text-align: center;
+          color: #555;
+        }
+      }
+    }
+    .ant-progress-circle-path {
+      stroke: rgb(36, 225, 221);
+    }
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1072px) {
+  .me .monitorParamNum {
+    height: 44px;
+    font-size: 40px;
+  }
+
+  .me .monitorParamText {
+    font-size: 12px;
+    margin-bottom: 4px;
+  }
+}
+
+@media only screen and (max-width: 336px) {
+  .me .monitorParamNum {
+    height: 50px;
+    font-size: 40px;
+  }
+
+  .me .monitorParamText {
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
 }
 
 // small devices
-@media (max-width: 767px) {
+@media only screen and (max-width: 767px) {
   .me {
     padding: 12px;
     padding-top: 48px;

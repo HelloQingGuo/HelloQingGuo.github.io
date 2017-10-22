@@ -1,123 +1,126 @@
-import _ from 'lodash';
+const dataStyle = {
+  normal: {
+    label: {
+      show: false,
+    },
+    labelLine: {
+      show: false,
+    },
+    shadowBlur: 20,
+    shadowColor: 'rgba(40, 40, 40, 0.5)',
+  },
+};
+
+const placeHolderStyle = {
+  normal: {
+    color: 'rgba(44, 59, 70, 0.5)',
+    label: {
+      show: false,
+    },
+    labelLine: {
+      show: false,
+    },
+  },
+};
 
 const config = {
+  title: {
+    text: '南丁格尔玫瑰图',
+    subtext: '纯属虚构',
+    x: 'center',
+    textStyle: {
+      fontWeight: 'normal',
+      color: '#b697cd',
+    },
+  },
+  tooltip: {
+    show: false,
+  },
+  toolbox: {
+    show: false,
+  },
+  // color : ['#3dd4de','#b697cd','#a6f08f'],
   series: [
     {
-      type: 'wordCloud',
-      gridSize: 2,
-      sizeRange: [12, 50],
-      rotationRange: [-90, 90],
-      shape: 'pentagon',
-      width: 600,
-      height: 400,
-      drawOutOfBound: true,
-      textStyle: {
-        normal: {
-          color() {
-            return (
-              `rgb(${
-                [
-                  Math.round(Math.random() * 160),
-                  Math.round(Math.random() * 160),
-                  Math.round(Math.random() * 160),
-                ].join(',')
-              })`
-            );
-          },
-        },
-        emphasis: {
-          shadowBlur: 10,
-          shadowColor: '#333',
-        },
-      },
+      name: 'Pie1',
+      type: 'pie',
+      clockWise: false,
+      radius: [90, 100],
+      itemStyle: dataStyle,
+      hoverAnimation: false,
+      center: ['25%', '45%'],
       data: [
         {
-          name: 'Sam S Club',
-          value: 10000,
-          textStyle: {
+          value: 65,
+          name: 'Java',
+          label: {
             normal: {
-              color: 'black',
+              formatter: '{d}%',
+              position: 'center',
+              show: true,
+              textStyle: {
+                fontSize: '35',
+                fontWeight: 'normal',
+                color: '#3dd4de',
+              },
             },
-            emphasis: {
-              color: 'red',
+          },
+          itemStyle: {
+            normal: {
+              color: '#3dd4de',
+              shadowColor: '#3dd4de',
+              shadowBlur: 10,
             },
           },
         },
         {
-          name: 'Macys',
-          value: 6181,
+          value: 35,
+          name: 'invisible',
+          itemStyle: placeHolderStyle,
+          label: {
+            normal: {
+              show: false,
+            },
+          },
+        },
+      ],
+    },
+    {
+      name: 'Pie2',
+      type: 'pie',
+      clockWise: false,
+      radius: [90, 100],
+      itemStyle: dataStyle,
+      hoverAnimation: false,
+      center: ['75%', '45%'],
+      data: [
+        {
+          value: 50,
+          name: 'SQL',
+          label: {
+            normal: {
+              formatter: '{d}%',
+              position: 'center',
+              show: true,
+              textStyle: {
+                fontSize: '35',
+                fontWeight: 'normal',
+                color: '#b697cd',
+              },
+            },
+          },
+          itemStyle: {
+            normal: {
+              color: '#b697cd',
+              shadowColor: '#b697cd',
+              shadowBlur: 10,
+            },
+          },
         },
         {
-          name: 'Amy Schumer',
-          value: 4386,
-        },
-        {
-          name: 'Jurassic World',
-          value: 4055,
-        },
-        {
-          name: 'Charter Communications',
-          value: 2467,
-        },
-        {
-          name: 'Chick Fil A',
-          value: 2244,
-        },
-        {
-          name: 'Planet Fitness',
-          value: 1898,
-        },
-        {
-          name: 'Pitch Perfect',
-          value: 1484,
-        },
-        {
-          name: 'Express',
-          value: 1112,
-        },
-        {
-          name: 'Home',
-          value: 965,
-        },
-        {
-          name: 'Johnny Depp',
-          value: 847,
-        },
-        {
-          name: 'Lena Dunham',
-          value: 582,
-        },
-        {
-          name: 'Lewis Hamilton',
-          value: 555,
-        },
-        {
-          name: 'KXAN',
-          value: 550,
-        },
-        {
-          name: 'Mary Ellen Mark',
-          value: 462,
-        },
-        {
-          name: 'Farrah Abraham',
-          value: 366,
-        },
-        {
-          name: 'Rita Ora',
-          value: 360,
-        },
-        {
-          name: 'Serena Williams',
-          value: 282,
-        },
-        {
-          name: 'NCAA baseball tournament',
-          value: 273,
-        },
-        {
-          name: 'Point Break',
-          value: 265,
+          value: 50,
+          name: 'invisible',
+          itemStyle: placeHolderStyle,
         },
       ],
     },

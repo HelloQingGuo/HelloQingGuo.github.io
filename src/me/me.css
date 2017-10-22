@@ -2,7 +2,7 @@
   padding: 24px;
   padding-top: 48px;
   color: #333; }
-  .me hr {
+  .me hr.horizontal-divider {
     margin: 14px 0;
     height: 1px;
     background: linear-gradient(to right, transparent, rgba(102, 119, 136, 0.2) 20%, rgba(102, 119, 136, 0.2) 80%, transparent); }
@@ -64,8 +64,86 @@
     margin-top: 14px; }
     .me .footer img {
       width: 75%; }
+  .me .skill-set {
+    margin-top: -14px;
+    text-align: center; }
+  .me .skill-set-score {
+    text-align: center;
+    margin-bottom: 2px; }
+  .me .color-block {
+    display: inline-block;
+    border-radius: 2px;
+    width: 20px;
+    height: 14px;
+    vertical-align: text-top;
+    margin-right: 6px; }
+  .me .familiar-color {
+    background-color: #519c9c; }
+  .me .proficient-color {
+    background-color: #e2aa69; }
+  .me .master-color {
+    background-color: #e17768; }
+  .me .vertical-divider {
+    display: inline-block;
+    margin: auto 10px;
+    width: 2px;
+    height: 24px;
+    vertical-align: middle;
+    background: linear-gradient(0deg, transparent, rgba(102, 119, 136, 0.2) 40%, rgba(102, 119, 136, 0.2) 60%, transparent); }
+  .me .tags .ant-tag {
+    letter-spacing: 1px;
+    font-size: 11px;
+    line-height: 18px;
+    height: 20px; }
+  .me .tags:before {
+    content: 'learning list:';
+    display: block;
+    font-size: 12px;
+    color: #888;
+    letter-spacing: 2px;
+    margin-bottom: 4px;
+    text-transform: uppercase; }
+  .me .frontend {
+    min-height: 350px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column; }
+  .me .backend {
+    min-height: 350px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column; }
+    .me .backend .top {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around; }
+      .me .backend .top > div {
+        margin: 14px 4px; }
+        .me .backend .top > div > div {
+          margin-bottom: 14px; }
+        .me .backend .top > div > h1 {
+          text-align: center;
+          color: #555; }
+    .me .backend .ant-progress-circle-path {
+      stroke: #24e1dd; }
 
-@media (max-width: 767px) {
+@media only screen and (min-width: 992px) and (max-width: 1072px) {
+  .me .monitorParamNum {
+    height: 44px;
+    font-size: 40px; }
+  .me .monitorParamText {
+    font-size: 12px;
+    margin-bottom: 4px; } }
+
+@media only screen and (max-width: 336px) {
+  .me .monitorParamNum {
+    height: 50px;
+    font-size: 40px; }
+  .me .monitorParamText {
+    font-size: 12px;
+    margin-bottom: 8px; } }
+
+@media only screen and (max-width: 767px) {
   .me {
     padding: 12px;
     padding-top: 48px; } }
