@@ -5,6 +5,7 @@ export const seriesData = localize(skillScoresOfFE, findMin(skillScoresOfFE));
 export const config = {
   tooltip: {
     trigger: 'item',
+    position: 'inside',
     formatter: (params) => {
       const skillObj = skillScoresOfFE.find(skill => skill.name === params.name);
       const skillProficiency = identifyProficiency(skillObj.value, scoreMapping);
@@ -48,6 +49,13 @@ export const config = {
       radius: ['15%', '65%'],
       center: ['50%', '45%'],
       roseType: 'radius',
+      labelLine: {
+        normal: {
+          length: 2,
+          length2: 10,
+          // smooth: true,
+        },
+      },
       data: seriesData,
     },
   ],

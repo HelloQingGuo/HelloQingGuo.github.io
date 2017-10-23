@@ -1,11 +1,29 @@
 import React, { Component } from 'react';
 import { Tag } from 'antd';
 import ReactEcharts from 'echarts-for-react';
+import echarts from 'echarts';
 import { config as config1, seriesData as seriesData1 } from './config1';
 import './me.css';
 
 class TabFE extends Component {
+  componentWillMount() {
+    echarts.registerTheme('theme_FE', {
+      // color: colorPalette,
+      tooltip: {
+        textStyle: {
+          fontSize: 12,
+        },
+        backgroundColor: 'rgba(0, 0, 0, 0.75)',
+      },
+      textStyle: {
+        fontFamily: 'SF Pro Text, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif',
+      },
+    });
+  }
+
   componentDidMount() {
+    // const colorPalette = ['#dd6b66','#759aa0','#e69d87','#8dc1a9','#ea7e53','#eedd78','#73a373','#73b9bc','#7289ab', '#91ca8c','#f49f42'];
+
     let currentIndex = 0;
     const maxDataLen = seriesData1.length;
     // execute once at the beginning
@@ -14,6 +32,7 @@ class TabFE extends Component {
       this.chart.dispatchAction({
         type: 'showTip',
         seriesIndex: 0,
+        position: 'inside',
         dataIndex: currentIndex,
       });
     }, 0);
@@ -34,6 +53,7 @@ class TabFE extends Component {
       this.chart.dispatchAction({
         type: 'showTip',
         seriesIndex: 0,
+        position: 'inside',
         dataIndex: currentIndex,
       });
     }, 1500);
@@ -54,6 +74,7 @@ class TabFE extends Component {
           notMerge
           lazyUpdate={false}
           onChartReady={this.onChartReadyCallback}
+          theme="theme_FE"
           style={{ height: '300px' }}
         />
         <div className="tags">

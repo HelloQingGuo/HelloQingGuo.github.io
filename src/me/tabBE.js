@@ -3,15 +3,6 @@ import { Tag, Progress } from 'antd';
 import { identifyProficiency, scoreMapping } from './util';
 import './me.css';
 
-// const identifyProficiency = (score, mapping) => {
-//   for (let i = 0; i < mapping.length; i += 1) {
-//     if (score >= mapping[i].scoreRange[0] && score <= mapping[i].scoreRange[1]) {
-//       return mapping[i];
-//     }
-//   }
-//   return null;
-// };
-
 const TabBE = ({ skills }) =>
   (<div className="backend">
     <div className="top">
@@ -23,7 +14,15 @@ const TabBE = ({ skills }) =>
               type="circle"
               percent={skill.value}
               width={140}
-              format={() => skillProficiency.level}
+              format={() =>
+                (<div>
+                  <h4 className="progress-text">
+                    {skillProficiency.level}
+                  </h4>
+                  <h5 className="progress-value">
+                    {skill.value}
+                  </h5>
+                </div>)}
             />
             <h1>
               {skill.name}

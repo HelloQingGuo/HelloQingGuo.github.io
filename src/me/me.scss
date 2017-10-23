@@ -113,6 +113,10 @@
     }
   }
 
+  .ant-tabs {
+    overflow: visible;
+  }
+
   .skill-set {
     margin-top: -14px;
     text-align: center;
@@ -165,6 +169,7 @@
       font-size: 11px;
       line-height: 18px;
       height: 20px;
+      margin-bottom: 6px;
     }
     &:before {
       content: 'learning list:';
@@ -193,6 +198,7 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: space-around;
+      margin-top: 40px;
       & > div {
         margin: 14px 4px;
         & > div {
@@ -206,6 +212,17 @@
     }
     .ant-progress-circle-path {
       stroke: rgb(36, 225, 221);
+    }
+    .progress-text {
+      margin-bottom: 10px;
+      color: #444;
+      letter-spacing: 1px;
+      font-size: 20px;
+    }
+    .progress-value {
+      color: #555;
+      font-size: 18px;
+      letter-spacing: 1px;
     }
   }
 }

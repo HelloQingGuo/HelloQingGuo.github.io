@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Row, Col, Card, Tabs } from 'antd';
+import { Row, Col, Card, Tabs, Tooltip, Icon } from 'antd';
 // import ReactEcharts from 'echarts-for-react';
 // import 'echarts-wordcloud';
 import 'font-awesome/css/font-awesome.css';
@@ -30,9 +30,29 @@ class Me extends Component {
             <Card style={{ minHeight: '500px' }}>
               <h1 className="skill-set">Skill Proficiency</h1>
               <h3 className="skill-set-score">
-                {/* <span className="color-block familiar-color" /> */}56 - 70 Familiar<hr className="vertical-divider" />
-                {/* <span className="color-block proficient-color" /> */}71 - 85 Proficient<hr className="vertical-divider" />
-                {/* <span className="color-block master-color" /> */}86 - 100 Master
+                {/* <span className="color-block familiar-color" /> */}
+                {/* <span className="color-block proficient-color" /> */}
+                {/* <span className="color-block master-color" /> */}
+                <Tooltip placement="top" title="Familiarity implies a modest amount of experience.">
+                  56 - 70 Familiar&nbsp;&nbsp;
+                  <Icon type="question-circle-o" size="small" style={{ color: '#08c' }} />
+                </Tooltip>
+                <hr className="vertical-divider" />
+                <Tooltip
+                  placement="top"
+                  title="Proficiency implies a sufficient level of expertise, to the point where the individual is trusted to do some sort of task."
+                >
+                  71 - 85 Proficient&nbsp;&nbsp;
+                  <Icon type="question-circle-o" size="small" style={{ color: '#08c' }} />
+                </Tooltip>
+                <hr className="vertical-divider" />
+                <Tooltip
+                  placement="top"
+                  title="Mastery implies a level of expertise beyond proficiency."
+                >
+                  86 - 100 Master&nbsp;&nbsp;
+                  <Icon type="question-circle-o" size="small" style={{ color: '#08c' }} />
+                </Tooltip>
               </h3>
               <Tabs defaultActiveKey="1">
                 <Tabs.TabPane tab="Front End" key="1">

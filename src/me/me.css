@@ -64,6 +64,8 @@
     margin-top: 14px; }
     .me .footer img {
       width: 75%; }
+  .me .ant-tabs {
+    overflow: visible; }
   .me .skill-set {
     margin-top: -14px;
     text-align: center; }
@@ -94,7 +96,8 @@
     letter-spacing: 1px;
     font-size: 11px;
     line-height: 18px;
-    height: 20px; }
+    height: 20px;
+    margin-bottom: 6px; }
   .me .tags:before {
     content: 'learning list:';
     display: block;
@@ -116,7 +119,8 @@
     .me .backend .top {
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-around; }
+      justify-content: space-around;
+      margin-top: 40px; }
       .me .backend .top > div {
         margin: 14px 4px; }
         .me .backend .top > div > div {
@@ -126,6 +130,15 @@
           color: #555; }
     .me .backend .ant-progress-circle-path {
       stroke: #24e1dd; }
+    .me .backend .progress-text {
+      margin-bottom: 10px;
+      color: #444;
+      letter-spacing: 1px;
+      font-size: 20px; }
+    .me .backend .progress-value {
+      color: #555;
+      font-size: 18px;
+      letter-spacing: 1px; }
 
 @media only screen and (min-width: 992px) and (max-width: 1072px) {
   .me .monitorParamNum {
