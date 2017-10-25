@@ -5,6 +5,7 @@ import { Row, Col, Card, Tabs, Tooltip, Icon } from 'antd';
 import 'font-awesome/css/font-awesome.css';
 import TabFE from './tabFE';
 import TabBE from './tabBE';
+import TabDevTools from './tabDevTools';
 import Profile from './profile';
 import ScrollToTopOnMount from '../widgets/scrollToTopOnMount';
 // import config2 from './config2';
@@ -27,7 +28,7 @@ class Me extends Component {
             </Card>
           </Col>
           <Col md={14} style={{ marginBottom: '24px' }}>
-            <Card style={{ minHeight: '500px' }}>
+            <Card style={{ minHeight: '500px', overflow: 'hidden' }}>
               <h1 className="skill-set">Skill Proficiency</h1>
               <h3 className="skill-set-score">
                 {/* <span className="color-block familiar-color" /> */}
@@ -73,7 +74,9 @@ class Me extends Component {
                   />
                 </Tabs.TabPane>
                 <Tabs.TabPane tab="DevOps" key="3" />
-                <Tabs.TabPane tab="DevTools" key="4" />
+                <Tabs.TabPane tab="DevTools" key="4">
+                  <TabDevTools />
+                </Tabs.TabPane>
               </Tabs>
             </Card>
           </Col>

@@ -1,6 +1,7 @@
 import { scoreMapping, skillScoresOfFE, findMin, identifyProficiency, localize } from './util';
 
 export const seriesData = localize(skillScoresOfFE, findMin(skillScoresOfFE));
+const xAxisData = skillScoresOfFE.map(skill => skill.name);
 
 export const config = {
   tooltip: {
@@ -16,17 +17,7 @@ export const config = {
     x: 'center',
     y: 'bottom',
     show: false,
-    data: [
-      'HTML',
-      'CSS (SASS)',
-      'Javascript',
-      'React / Redux',
-      'Webpack',
-      'CMS',
-      'Data Visualization',
-      'Ant UI',
-      'Bootstrap',
-    ],
+    data: xAxisData,
   },
   toolbox: {
     show: false,

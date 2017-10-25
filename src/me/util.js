@@ -32,6 +32,17 @@ export const skillScoresOfFE = [
   { value: 77, name: 'Bootstrap' },
 ];
 
+export const skillScoresOfDevTools = [
+  { value: 80, name: 'GIT' },
+  { value: 56, name: 'EMACS' },
+  { value: 69, name: 'VI/VIM' },
+  { value: 85, name: 'ATOM' },
+  { value: 70, name: 'Sublime' },
+  { value: 68, name: 'Eclipse' },
+  { value: 88, name: 'Chrome DevTools' },
+  { value: 75, name: 'Redux DevTools' },
+];
+
 export const identifyProficiency = (score, mapping) => {
   for (let i = 0; i < mapping.length; i += 1) {
     if (score >= mapping[i].scoreRange[0] && score <= mapping[i].scoreRange[1]) {
