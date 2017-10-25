@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Tag } from 'antd';
+import { Tag, Tooltip } from 'antd';
 import ReactEcharts from 'echarts-for-react';
 import echarts from 'echarts';
 import { config as config1, seriesData as seriesData1 } from './config1';
@@ -77,10 +77,17 @@ class TabFE extends Component {
           theme="theme_FE"
           style={{ height: '300px' }}
         />
+
         <div className="tags">
-          <Tag color="#fc4343">ES 7</Tag>
-          <Tag color="#e043b7">Yarn</Tag>
-          <Tag color="#3085de">CSS Animations</Tag>
+          <Tooltip title="ES7 is the evolution of the ECMA-262 standard (commonly referred as Javascript).">
+            <Tag color="#fc4343">ES 7</Tag>
+          </Tooltip>
+          <Tooltip title="Fast, reliable, and secure dependency management.">
+            <Tag color="#e043b7">Yarn</Tag>
+          </Tooltip>
+          <Tooltip title="CSS animations make it possible to animate transitions from one CSS style configuration to another.">
+            <Tag color="#3085de">CSS Animations</Tag>
+          </Tooltip>
         </div>
       </div>
     );

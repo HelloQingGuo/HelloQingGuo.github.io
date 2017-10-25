@@ -35,7 +35,7 @@ export const skillScoresOfFE = [
 export const skillScoresOfDevTools = [
   { value: 80, name: 'GIT' },
   { value: 56, name: 'EMACS' },
-  { value: 69, name: 'VI/VIM' },
+  { value: 69, name: 'VI / VIM' },
   { value: 85, name: 'ATOM' },
   { value: 70, name: 'Sublime' },
   { value: 68, name: 'Eclipse' },

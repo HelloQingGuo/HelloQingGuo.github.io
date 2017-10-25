@@ -55,7 +55,7 @@ class Me extends Component {
                   <Icon type="question-circle-o" size="small" style={{ color: '#08c' }} />
                 </Tooltip>
               </h3>
-              <Tabs defaultActiveKey="1">
+              <Tabs defaultActiveKey="1" style={{ textAlign: 'center' }}>
                 <Tabs.TabPane tab="Front End" key="1">
                   <TabFE />
                 </Tabs.TabPane>

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import { Tag } from 'antd';
+import { Tag, Tooltip } from 'antd';
 import ReactEcharts from 'echarts-for-react';
 import echarts from 'echarts';
 import { config, seriesData } from './config4';
@@ -77,7 +77,13 @@ class TabDevTools extends Component {
           theme="theme_FE"
           style={{ height: '300px' }}
         />
-        <div className="tags" />
+        <div className="tags">
+          <Tooltip title="Balsamiq is a rapid wireframing tool that helps you Work Faster & Smarter.">
+            <Tag color="#fc4343">Balsamiq</Tag>
+          </Tooltip>
+          {/* <Tag color="#e043b7">Yarn</Tag>
+          <Tag color="#3085de">CSS Animations</Tag> */}
+        </div>
       </div>
     );
   }
