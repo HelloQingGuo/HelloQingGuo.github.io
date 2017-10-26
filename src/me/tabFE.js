@@ -75,7 +75,7 @@ class TabFE extends Component {
           lazyUpdate={false}
           onChartReady={this.onChartReadyCallback}
           theme="theme_FE"
-          style={{ height: '300px' }}
+          style={{ height: '286px' }}
         />
 
         <div className="tags">

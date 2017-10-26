@@ -10,6 +10,7 @@ export const config = {
   },
   tooltip: {
     trigger: 'axis',
+    position: 'top',
     axisPointer: {
       type: 'cross',
       label: {
@@ -60,8 +61,8 @@ export const config = {
     orient: 'horizontal',
     right: 'center',
     top: 0,
-    itemGap: 10,
-    itemSize: 14,
+    itemGap: 8,
+    itemSize: 12,
     feature: {
       magicType: { show: true, type: ['line', 'bar'], title: { line: 'Line', bar: 'Bar' } },
       restore: { show: true, title: 'Refresh' },
@@ -69,8 +70,8 @@ export const config = {
     },
   },
   grid: {
-    left: '8%',
-    right: '8%',
+    left: '5%',
+    right: '5%',
     top: 44,
     bottom: 14,
     containLabel: true,

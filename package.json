@@ -24,7 +24,7 @@
   "scripts": {
     "build-css": "node-sass-chokidar src/ -o src/",
     "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
-    "start": "react-app-rewired start",
+    "start": "react-app-rewired start && npm run watch-css",
     "clean": "rimraf static",
     "build": "npm run clean && react-app-rewired build",
     "deploy": "npm run build && cp -a build/. .",

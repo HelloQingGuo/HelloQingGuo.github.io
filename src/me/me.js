@@ -5,8 +5,10 @@ import { Row, Col, Card, Tabs, Tooltip, Icon } from 'antd';
 import 'font-awesome/css/font-awesome.css';
 import TabFE from './tabFE';
 import TabBE from './tabBE';
+import TabDevOps from './tabDevOps';
 import TabDevTools from './tabDevTools';
 import Profile from './profile';
+import Timeline from './timeline';
 import ScrollToTopOnMount from '../widgets/scrollToTopOnMount';
 // import config2 from './config2';
 
@@ -31,9 +33,6 @@ class Me extends Component {
             <Card style={{ minHeight: '500px', overflow: 'hidden' }}>
               <h1 className="skill-set">Skill Proficiency</h1>
               <h3 className="skill-set-score">
-                {/* <span className="color-block familiar-color" /> */}
-                {/* <span className="color-block proficient-color" /> */}
-                {/* <span className="color-block master-color" /> */}
                 <Tooltip placement="top" title="Familiarity implies a modest amount of experience.">
                   56 - 70 Familiar&nbsp;&nbsp;
                   <Icon type="question-circle-o" size="small" style={{ color: '#08c' }} />
@@ -55,7 +54,7 @@ class Me extends Component {
                   <Icon type="question-circle-o" size="small" style={{ color: '#08c' }} />
                 </Tooltip>
               </h3>
-              <Tabs defaultActiveKey="1" style={{ textAlign: 'center' }}>
+              <Tabs defaultActiveKey="1">
                 <Tabs.TabPane tab="Front End" key="1">
                   <TabFE />
                 </Tabs.TabPane>
@@ -73,11 +72,29 @@ class Me extends Component {
                     ]}
                   />
                 </Tabs.TabPane>
-                <Tabs.TabPane tab="DevOps" key="3" />
+                <Tabs.TabPane tab="DevOps" key="3">
+                  <TabDevOps
+                    skills={[
+                      {
+                        name: 'AWS',
+                        value: 60,
+                      },
+                      {
+                        name: 'Heroku',
+                        value: 66,
+                      },
+                    ]}
+                  />
+                </Tabs.TabPane>
                 <Tabs.TabPane tab="DevTools" key="4">
                   <TabDevTools />
                 </Tabs.TabPane>
               </Tabs>
+            </Card>
+          </Col>
+          <Col md={24} style={{ marginBottom: '24px' }}>
+            <Card>
+              <Timeline />
             </Card>
           </Col>
         </Row>

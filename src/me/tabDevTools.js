@@ -32,7 +32,6 @@ class TabDevTools extends Component {
       this.chart.dispatchAction({
         type: 'showTip',
         seriesIndex: 0,
-        position: 'inside',
         dataIndex: currentIndex,
       });
     }, 0);
@@ -53,7 +52,6 @@ class TabDevTools extends Component {
       this.chart.dispatchAction({
         type: 'showTip',
         seriesIndex: 0,
-        position: 'inside',
         dataIndex: currentIndex,
       });
     }, 1500);
@@ -75,7 +73,7 @@ class TabDevTools extends Component {
           lazyUpdate={false}
           onChartReady={this.onChartReadyCallback}
           theme="theme_FE"
-          style={{ height: '300px' }}
+          style={{ height: '286px' }}
         />
         <div className="tags">
           <Tooltip title="Balsamiq is a rapid wireframing tool that helps you Work Faster & Smarter.">
