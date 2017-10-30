@@ -183,7 +183,7 @@ class Home extends Component {
                   className={navItem.id === curNavId ? 'curNav' : ''}
                   key={navItem.name}
                   onClick={() => this.props.setCurNav(navItem.id)}
-                >
+                 >
                   {navItem.name}
                   <span className="linethrough" />
                 </Link>),
@@ -203,7 +203,7 @@ class Home extends Component {
             <a href="https://github.com/HelloQingGuo" target="_blank" rel="noopener noreferrer">
               <span className="github">
                 <img src={github} alt="github" />
-                <img src={githubColored} alt="github" />
+                {/* <img src={githubColored} alt="github" /> */}
               </span>
             </a>
             <a
@@ -213,13 +213,13 @@ class Home extends Component {
             >
               <span className="linkedin">
                 <img src={linkedin} alt="linkedin" />
-                <img src={linkedinColored} alt="linkedin" />
+                {/* <img src={linkedinColored} alt="linkedin" /> */}
               </span>
             </a>
             <a href="mailto:guoqing1001@hotmail.com">
               <span className="email">
                 <img src={email} alt="email" />
-                <img src={emailColored} alt="email" />
+                {/* <img src={emailColored} alt="email" /> */}
               </span>
             </a>
           </div>
