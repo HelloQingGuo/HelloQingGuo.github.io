@@ -86,34 +86,7 @@
     display: flex;
     justify-content: space-around;
     align-items: baseline;
-    text-align: center;
-    /*
-      .linkedin,
-      .email,
-      .github {
-        img:last-child {
-          display: none;
-        }
-        &:active {
-          img:first-child {
-            display: none;
-          }
-          img:last-child {
-            display: block;
-          }
-        }
-        @media (min-width: 769px) {
-          &:hover {
-            img:first-child {
-              display: none;
-            }
-            img:last-child {
-              display: block;
-            }
-          }
-        }
-      }
-      */ }
+    text-align: center; }
     .home .wrapper .footer a:active img {
       transform: scale(0.9); }
     .home .wrapper .footer a img {

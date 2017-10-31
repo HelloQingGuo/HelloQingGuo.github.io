@@ -1,0 +1,25 @@
+.navheader {
+  background: #fff;
+  text-align: center;
+  height: 62px;
+  border-bottom: 1px solid #ddd;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+  position: fixed;
+  width: 100%;
+  top: 0; }
+  .navheader .counter {
+    color: #888;
+    font-size: 12px;
+    letter-spacing: 1px;
+    padding: 8px 0 0 0; }
+  .navheader .arrows {
+    font-size: 28px;
+    position: relative;
+    color: #777;
+    cursor: pointer; }
+    .navheader .arrows .left {
+      position: absolute;
+      left: 5%; }
+    .navheader .arrows .right {
+      position: absolute;
+      right: 5%; }

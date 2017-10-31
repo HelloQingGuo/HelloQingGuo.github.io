@@ -1,4 +1,4 @@
-import { SHOWNBG, SETCURNAV } from '../actions/action_ui';
+import { SHOWNBG, SETCURNAV, SETCURNAVHEADER } from '../actions/action_ui';
 
 const INITIAL_STATE = {
   bgShown: false,
@@ -42,6 +42,7 @@ const INITIAL_STATE = {
       link: '/dashboard/resume',
     },
   ],
+  curNavHeaderIdx: 0,
 };
 
 export default (state = INITIAL_STATE, action) => {
@@ -50,6 +51,8 @@ export default (state = INITIAL_STATE, action) => {
       return { ...state, bgShown: action.payload };
     case SETCURNAV:
       return { ...state, curNavId: action.payload };
+    case SETCURNAVHEADER:
+      return { ...state, curNavHeaderIdx: action.payload };
     default:
       return state;
   }
