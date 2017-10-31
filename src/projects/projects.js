@@ -12,11 +12,6 @@ import './projects.css';
 const ScrollOverPack = ScrollAnim.OverPack;
 
 class Projects extends Component {
-  handleClickOnProject(idx) {
-    console.log('idx', idx);
-    this.props.setCurNavHeaderIdx(idx);
-  }
-
   render() {
     const projectList = navItems.map((project, idx) =>
       (<ScrollOverPack key={project.name} playScale="50px">

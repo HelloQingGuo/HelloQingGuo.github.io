@@ -8,18 +8,26 @@
   width: 100%;
   top: 0; }
   .navheader .counter {
-    color: #888;
+    color: #999;
     font-size: 12px;
     letter-spacing: 1px;
     padding: 8px 0 0 0; }
   .navheader .arrows {
-    font-size: 28px;
+    font-size: 26px;
     position: relative;
-    color: #777;
-    cursor: pointer; }
+    cursor: pointer;
+    margin-top: -6px; }
     .navheader .arrows .left {
       position: absolute;
       left: 5%; }
     .navheader .arrows .right {
       position: absolute;
       right: 5%; }
+    .navheader .arrows i {
+      padding: 4px;
+      border-radius: 50%;
+      color: #777;
+      transition: background 0.3s ease; }
+      .navheader .arrows i:hover {
+        background: #ddd;
+        color: #fff; }

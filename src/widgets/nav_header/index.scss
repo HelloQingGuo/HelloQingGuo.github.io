@@ -8,17 +8,17 @@
   width: 100%;
   top: 0;
   .counter {
-    color: #888;
+    color: #999;
     font-size: 12px;
     letter-spacing: 1px;
     padding: 8px 0 0 0;
   }
 
   .arrows {
-    font-size: 28px;
+    font-size: 26px;
     position: relative;
-    color: #777;
     cursor: pointer;
+    margin-top: -6px;
     .left {
       position: absolute;
       left: 5%;
@@ -26,6 +26,16 @@
     .right {
       position: absolute;
       right: 5%;
+    }
+    i {
+      padding: 4px;
+      border-radius: 50%;
+      color: #777;
+      transition: background 0.3s ease;
+      &:hover {
+        background: #ddd;
+        color: #fff;
+      }
     }
   }
 }
