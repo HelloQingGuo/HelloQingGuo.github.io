@@ -99,6 +99,16 @@
     }
   }
 
+  .custom-image img {
+    display: block;
+  }
+  .custom-card {
+    padding: 10px 16px;
+  }
+  .custom-card p {
+    color: #999;
+  }
+
   .monitorParamNum {
     height: 60px;
     font-size: 50px;

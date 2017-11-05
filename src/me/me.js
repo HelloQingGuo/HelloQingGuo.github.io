@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Row, Col, Card, Tabs, Tooltip, Icon } from 'antd';
+import { Row, Col, Card, Tabs, Tooltip, Icon, Carousel } from 'antd';
 // import QueueAnim from 'rc-queue-anim';
 // import ReactEcharts from 'echarts-for-react';
 // import 'echarts-wordcloud';
@@ -96,6 +96,24 @@ class Me extends Component {
           <Col md={24} style={{ marginBottom: '24px' }} key="c">
             <Card>
               <Timeline />
+            </Card>
+          </Col>
+          <Col md={24} style={{ marginBottom: '24px' }} key="d">
+            <Card bodyStyle={{ padding: 0 }}>
+              <Carousel autoplay>
+                <div className="custom-image">
+                  <img alt="example" width="100%" src="http://via.placeholder.com/800x350" />
+                </div>
+                <div className="custom-image">
+                  <img alt="example" width="100%" src="http://via.placeholder.com/800x350" />
+                </div>
+                <div className="custom-image">
+                  <img alt="example" width="100%" src="http://via.placeholder.com/800x350" />
+                </div>
+              </Carousel>
+              <div className="custom-card">
+                <h2>Beyond The Work</h2>
+              </div>
             </Card>
           </Col>
         </Row>

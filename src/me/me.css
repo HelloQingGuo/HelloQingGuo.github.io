@@ -53,6 +53,12 @@
       .me .numbers > div:hover span {
         transition: 0.2s all ease;
         transform: translateY(-4px); }
+  .me .custom-image img {
+    display: block; }
+  .me .custom-card {
+    padding: 10px 16px; }
+  .me .custom-card p {
+    color: #999; }
   .me .monitorParamNum {
     height: 60px;
     font-size: 50px; }
