@@ -12,7 +12,9 @@
     margin-bottom: 40px;
     border-radius: 14px; }
     .projects .project .youplea {
-      background-color: #9a85ff; }
+      background-color: #6dc6b1; }
+      .projects .project .youplea:hover {
+        background-color: #90d4c4; }
     .projects .project .hearful {
       background-color: #ff5b5b; }
     .projects .project .fanalytical {

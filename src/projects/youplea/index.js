@@ -19,7 +19,10 @@ class Youplea extends Component {
         <ScrollToTopOnMount />
         <NavHeader />
         <div className="first-screen">
-          <h1>Youplea</h1>
+          <div className="logo-wrapper">
+            <img src="http://kyledecker.me/content/1-work/1-swiftype/banner.svg" alt="logo" />
+          </div>
+          <h1 className="title">Youplea</h1>
         </div>
         <h1>sss</h1>
       </div>

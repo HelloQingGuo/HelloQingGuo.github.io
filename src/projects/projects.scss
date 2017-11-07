@@ -10,7 +10,11 @@
 
   .project {
     .youplea {
-      background-color: #9a85ff;
+      // background-color: #9a85ff;
+      background-color: #6dc6b1;
+      &:hover {
+        background-color: #90d4c4;
+      }
     }
 
     .hearful {

@@ -1,3 +1,14 @@
 .nav-menu {
   background: transparent;
-  position: absolute; }
+  position: fixed;
+  display: block;
+  border-bottom: none; }
+  .nav-menu li {
+    letter-spacing: 1px;
+    font-weight: bold;
+    font-size: 16px; }
+  .nav-menu .ant-menu-item > a {
+    color: #fff; }
+  @media (max-width: 767px) {
+    .nav-menu {
+      display: none; } }
