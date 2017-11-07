@@ -44,6 +44,9 @@ class NavHeader extends Component {
           <Link to={navItems[getIdx(-1, curNavHeaderIdx, navItems.length)].link}>
             <Icon type="arrow-left" className="left" onClick={this.handleClickLeft} />
           </Link>
+          <Link to="/dashboard/projects">
+            <Icon type="close" className="middle" />
+          </Link>
           <Link to={navItems[getIdx(1, curNavHeaderIdx, navItems.length)].link}>
             <Icon type="arrow-right" className="right" onClick={this.handleClickRight} />
           </Link>

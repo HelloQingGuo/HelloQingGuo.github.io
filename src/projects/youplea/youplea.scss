@@ -1,21 +1,31 @@
-.code-box-shape {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  width: 50px;
-  height: 50px;
-  border-radius: 4px;
-  background: #019bf0;
-}
-
-.demo {
-  margin: 0 auto;
-  width: 600px;
-  height: 80px;
-  background-color: #133252;
-  margin-bottom: 30px;
-  border-radius: 4px;
+// .code-box-shape {
+//   position: absolute;
+//   top: 0;
+//   bottom: 0;
+//   left: 0;
+//   right: 0;
+//   margin: auto;
+//   width: 50px;
+//   height: 50px;
+//   border-radius: 4px;
+//   background: #019bf0;
+// }
+//
+// .demo {
+//   margin: 0 auto;
+//   width: 600px;
+//   height: 80px;
+//   background-color: #133252;
+//   margin-bottom: 30px;
+//   border-radius: 4px;
+// }
+.youplea {
+  .first-screen {
+    min-height: 500px;
+    height: 100vh;
+    background-color: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }

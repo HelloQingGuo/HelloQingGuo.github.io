@@ -14,19 +14,19 @@
     padding: 8px 0 0 0; }
   .navheader .arrows {
     font-size: 26px;
-    position: relative;
-    cursor: pointer;
-    margin-top: -6px; }
+    margin-top: -6px;
+    display: flex;
+    justify-content: space-between; }
     .navheader .arrows .left {
-      position: absolute;
-      left: 5%; }
+      margin-left: 15%; }
     .navheader .arrows .right {
-      position: absolute;
-      right: 5%; }
+      margin-right: 15%; }
     .navheader .arrows i {
       padding: 4px;
       border-radius: 50%;
       color: #777;
+      cursor: pointer;
+      font-size: 20px;
       transition: background 0.3s ease; }
       .navheader .arrows i:hover {
         background: #ddd;
