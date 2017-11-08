@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import ScrollAnim from 'rc-scroll-anim';
 import TweenOne from 'rc-tween-one';
 import { Link } from 'react-router-dom';
-import { links as navItems } from '../widgets/nav_header/links';
+import { links as navItems } from '../widgets/constants/links';
 import { setCurNavHeaderIdx } from '../actions/action_ui';
 import ScrollToTopOnMount from '../widgets/scrollToTopOnMount';
 import './projects.css';

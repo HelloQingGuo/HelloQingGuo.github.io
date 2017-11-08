@@ -1,0 +1,17 @@
+.hearful .first-screen {
+  min-height: 550px;
+  max-height: 700px;
+  height: 100vh;
+  background-color: #6dc6b1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.hearful .logo-wrapper {
+  padding: 24px; }
+  .hearful .logo-wrapper img {
+    max-width: 100%; }
+
+.hearful .title {
+  margin-bottom: 40px; }

@@ -1,0 +1,21 @@
+.fanalytical {
+  .first-screen {
+    min-height: 550px;
+    max-height: 700px;
+    height: 100vh;
+    background-color: #6dc6b1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .logo-wrapper {
+    padding: 24px;
+    img {
+      max-width: 100%;
+    }
+  }
+  .title {
+    margin-bottom: 40px;
+  }
+}

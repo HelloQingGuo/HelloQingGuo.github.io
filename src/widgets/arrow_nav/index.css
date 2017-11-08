@@ -1,0 +1,18 @@
+.arrow-nav .arrow {
+  position: fixed;
+  top: calc(50% - 20px);
+  width: 40px;
+  height: 40px;
+  border-width: 2px;
+  font-weight: bold;
+  background: transparent;
+  transition: all ease 0.3s; }
+  .arrow-nav .arrow:hover {
+    background: white;
+    border-color: #fff; }
+
+.arrow-nav .left-arrow {
+  left: 15px; }
+
+.arrow-nav .right-arrow {
+  right: 15px; }

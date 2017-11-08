@@ -15,7 +15,7 @@ const INITIAL_STATE = {
       link: '/dashboard/me',
     },
     {
-      name: 'project',
+      name: 'projects',
       id: 2,
       link: '/dashboard/projects',
     },
@@ -27,7 +27,7 @@ const INITIAL_STATE = {
   ],
   navItemsForHome: [
     {
-      name: 'project',
+      name: 'projects',
       id: 2,
       link: '/dashboard/projects',
     },

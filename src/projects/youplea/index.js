@@ -4,7 +4,9 @@ import ScrollAnim from 'rc-scroll-anim';
 import QueueAnim from 'rc-queue-anim';
 import ScrollToTopOnMount from '../../widgets/scrollToTopOnMount';
 import NavHeader from '../../widgets/nav_header_2';
-import './youplea.css';
+import './index.css';
+import { links } from '../../widgets/constants/links';
+import ArrowNav from '../../widgets/arrow_nav';
 
 const ScrollOverPack = ScrollAnim.OverPack;
 
@@ -20,11 +22,12 @@ class Youplea extends Component {
         <NavHeader />
         <div className="first-screen">
           <div className="logo-wrapper">
-            <img src="http://kyledecker.me/content/1-work/1-swiftype/banner.svg" alt="logo" />
+            <img src={links[0].lg_source} alt="logo" />
           </div>
           <h1 className="title">Youplea</h1>
         </div>
         <h1>sss</h1>
+        <ArrowNav />
       </div>
     );
   }

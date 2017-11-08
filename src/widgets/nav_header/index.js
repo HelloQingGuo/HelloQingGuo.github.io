@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { Icon } from 'antd';
-import { links as navItems } from './links';
+import { links as navItems } from '../constants/links';
 import { navigate } from '../../actions/action_ui';
 import './index.css';
 
