@@ -16,6 +16,11 @@
     }
   }
   .title {
-    margin-bottom: 40px;
+    font-size: 40px;
+    font-weight: bold;
+    letter-spacing: 2px;
+  }
+  .subtitle {
+    opacity: 0.75;
   }
 }

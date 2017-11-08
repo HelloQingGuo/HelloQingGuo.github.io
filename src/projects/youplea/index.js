@@ -20,12 +20,25 @@ class Youplea extends Component {
       <div className="youplea">
         <ScrollToTopOnMount />
         <NavHeader />
-        <div className="first-screen">
-          <div className="logo-wrapper">
+        <QueueAnim
+          component="div"
+          className="first-screen"
+          key="wrapper"
+          type="bottom"
+          ease="easeInSine"
+          interval={100}
+          duration={400}
+        >
+          <div className="logo-wrapper" key="logo">
             <img src={links[0].lg_source} alt="logo" />
           </div>
-          <h1 className="title">Youplea</h1>
-        </div>
+          <h1 className="title" key="title">
+            YouPlea
+          </h1>
+          <h2 className="subtitle" key="subtitle">
+            The Automated Adjudication Service
+          </h2>
+        </QueueAnim>
         <h1>sss</h1>
         <ArrowNav />
       </div>

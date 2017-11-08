@@ -1,18 +1,27 @@
 .arrow-nav .arrow {
   position: fixed;
   top: calc(50% - 20px);
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   border-width: 2px;
   font-weight: bold;
   background: transparent;
-  transition: all ease 0.3s; }
+  transition: all ease 0.3s;
+  border: 3px solid rgba(0, 0, 0, 0.1); }
   .arrow-nav .arrow:hover {
     background: white;
-    border-color: #fff; }
+    border-color: #fff;
+    box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1); }
 
 .arrow-nav .left-arrow {
-  left: 15px; }
+  left: 25px; }
+  .arrow-nav .left-arrow i {
+    position: relative;
+    top: 1px; }
 
 .arrow-nav .right-arrow {
-  right: 15px; }
+  right: 25px; }
+  .arrow-nav .right-arrow i {
+    position: relative;
+    top: 1px;
+    left: 2px; }

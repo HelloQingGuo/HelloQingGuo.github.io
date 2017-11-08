@@ -3,7 +3,7 @@
     min-height: 550px;
     max-height: 700px;
     height: 100vh;
-    background-color: #6dc6b1;
+    background-color: #ff5b5b;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -16,6 +16,11 @@
     }
   }
   .title {
-    margin-bottom: 40px;
+    font-size: 40px;
+    font-weight: bold;
+    letter-spacing: 2px;
+  }
+  .subtitle {
+    opacity: 0.75;
   }
 }

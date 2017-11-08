@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import _ from 'lodash';
 import ScrollAnim from 'rc-scroll-anim';
 import TweenOne from 'rc-tween-one';
 import { Link } from 'react-router-dom';
@@ -23,7 +24,7 @@ class Projects extends Component {
         >
           <Link
             to={project.link}
-            className={project.name}
+            className={_.lowerCase(project.name)}
             onClick={() => this.props.setCurNavHeaderIdx(idx)}
           >
             <img src={project.source} alt={project.name} />

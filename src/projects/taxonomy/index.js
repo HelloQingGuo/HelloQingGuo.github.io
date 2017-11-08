@@ -24,7 +24,7 @@ class Taxonomy extends Component {
           <div className="logo-wrapper">
             <img src={links[3].lg_source} alt="logo" />
           </div>
-          <h1 className="title">Taxonomy</h1>
+          <h1 className="title">Taxonomy GUI</h1>
         </div>
         <h1>sss</h1>
         <ArrowNav />

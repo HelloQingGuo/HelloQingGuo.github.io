@@ -20,12 +20,25 @@ class Hearful extends Component {
       <div className="hearful">
         <ScrollToTopOnMount />
         <NavHeader />
-        <div className="first-screen">
-          <div className="logo-wrapper">
+        <QueueAnim
+          component="div"
+          className="first-screen"
+          key="wrapper"
+          type="bottom"
+          ease="easeInSine"
+          interval={250}
+          duration={550}
+        >
+          <div className="logo-wrapper" key="logo">
             <img src={links[1].lg_source} alt="logo" />
           </div>
-          <h1 className="title">Hearful</h1>
-        </div>
+          <h1 className="title" key="title">
+            Hearful
+          </h1>
+          <h2 className="subtitle" key="subtitle">
+            Customer Feedback Analytics
+          </h2>
+        </QueueAnim>
         <h1>sss</h1>
         <ArrowNav />
       </div>

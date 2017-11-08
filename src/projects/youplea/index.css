@@ -14,4 +14,9 @@
     max-width: 100%; }
 
 .youplea .title {
-  margin-bottom: 40px; }
+  font-size: 40px;
+  font-weight: bold;
+  letter-spacing: 2px; }
+
+.youplea .subtitle {
+  opacity: 0.75; }
