@@ -24,7 +24,7 @@ class Projects extends Component {
         >
           <Link
             to={project.link}
-            className={_.lowerCase(project.name)}
+            className={project.name.toLowerCase()}
             onClick={() => this.props.setCurNavHeaderIdx(idx)}
           >
             <img src={project.source} alt={project.name} />

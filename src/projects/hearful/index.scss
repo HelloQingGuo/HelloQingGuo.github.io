@@ -1,3 +1,5 @@
+$font-color: #40445e;
+
 .hearful {
   .first-screen {
     min-height: 550px;
@@ -22,5 +24,69 @@
   }
   .subtitle {
     opacity: 0.75;
+  }
+  .overview-wrapper {
+    color: $font-color;
+    border-bottom: 1px solid #ddd;
+  }
+  .overview {
+    max-width: 700px;
+    margin: 0 auto;
+    h2 {
+      color: $font-color;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 14px;
+    }
+  }
+  .overview:after {
+    clear: both;
+    content: " ";
+    display: table;
+  }
+  .left {
+    width: 50%;
+    padding: 24px 48px 24px 12px;
+    float: left;
+    border-right: 1px solid #ddd;
+    text-align: right;
+  }
+  .right {
+    width: 50%;
+    padding: 24px 12px 24px 48px;
+    float: left;
+    box-shadow: -1px 0 0 #ddd;
+  }
+
+  .detail-wrapper {
+    padding: 24px;
+    padding-top: 0;
+    h1,
+    p {
+      color: $font-color;
+    }
+    h1 {
+      font-size: 36px;
+      margin: 36px auto;
+    }
+    p {
+      font-size: 20px;
+    }
+  }
+
+  .detail {
+    max-width: 700px;
+    margin: auto;
+  }
+
+  @media only screen and (max-width: 767px) {
+    .left {
+      padding-right: 24px;
+      padding-left: 12px;
+    }
+    .right {
+      padding-left: 24px;
+      padding-right: 12px;
+    }
   }
 }

@@ -51,8 +51,7 @@
       border-color: rgba(18, 18, 18, 0.05); }
       .me .numbers > div:hover h1,
       .me .numbers > div:hover span {
-        transition: 0.2s all ease;
-        transform: translateY(-4px); }
+        transition: 0.2s all ease; }
   .me .custom-image img {
     display: block; }
   .me .custom-card {

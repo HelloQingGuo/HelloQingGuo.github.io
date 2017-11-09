@@ -1,3 +1,4 @@
+$font-color: #40445e;
 .nav-menu {
   background: rgba(0, 0, 0, 0);
   position: fixed;
@@ -9,7 +10,7 @@
     font-size: 16px;
   }
   .ant-menu-item > a {
-    color: #fff;
+    color: $font-color;
   }
   @media (max-width: 767px) {
     & {
