@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { Row, Col, Card, Tabs, Tooltip, Icon, Carousel } from 'antd';
+import { Row, Col, Card, Tabs, Tooltip, Icon } from 'antd';
 // import QueueAnim from 'rc-queue-anim';
 // import ReactEcharts from 'echarts-for-react';
 // import 'echarts-wordcloud';
+import Gallery from 'react-photo-gallery';
 import 'font-awesome/css/font-awesome.css';
 import TabFE from './tabFE';
 import TabBE from './tabBE';
@@ -12,6 +13,17 @@ import Profile from './profile';
 import Timeline from './timeline';
 import ScrollToTopOnMount from '../widgets/scrollToTopOnMount';
 // import config2 from './config2';
+import dish1 from '../assets/cooking/1.jpg';
+import dish2 from '../assets/cooking/2.jpg';
+import dish3 from '../assets/cooking/3.jpg';
+import dish4 from '../assets/cooking/4.jpg';
+import dish5 from '../assets/cooking/5.jpg';
+import dish6 from '../assets/cooking/6.jpg';
+import dish7 from '../assets/cooking/7.jpg';
+import dish8 from '../assets/cooking/8.jpg';
+import dish9 from '../assets/cooking/9.jpg';
+import dish10 from '../assets/cooking/10.jpg';
+import dish11 from '../assets/cooking/11.jpg';
 
 import './me.css';
 
@@ -21,6 +33,63 @@ class Me extends Component {
   }
 
   render() {
+    const PHOTO_SET = [
+      {
+        src: dish1,
+        width: 1,
+        height: 1,
+      },
+      {
+        src: dish2,
+        width: 640,
+        height: 852,
+      },
+      {
+        src: dish3,
+        width: 1,
+        height: 1,
+      },
+      {
+        src: dish4,
+        width: 1,
+        height: 1,
+      },
+      {
+        src: dish5,
+        width: 1,
+        height: 1,
+      },
+      {
+        src: dish6,
+        width: 1440,
+        height: 1080,
+      },
+      {
+        src: dish7,
+        width: 1440,
+        height: 1080,
+      },
+      {
+        src: dish8,
+        width: 1084,
+        height: 1079,
+      },
+      {
+        src: dish9,
+        width: 1440,
+        height: 1080,
+      },
+      {
+        src: dish10,
+        width: 1440,
+        height: 1080,
+      },
+      {
+        src: dish11,
+        width: 1,
+        height: 1,
+      },
+    ];
     return (
       <div className="me">
         <ScrollToTopOnMount />
@@ -100,17 +169,6 @@ class Me extends Component {
           </Col>
           <Col md={24} style={{ marginBottom: '24px' }} key="d">
             <Card bodyStyle={{ padding: 0 }}>
-              <Carousel autoplay>
-                <div className="custom-image">
-                  <img alt="example" width="100%" src="http://via.placeholder.com/800x400" />
-                </div>
-                <div className="custom-image">
-                  <img alt="example" width="100%" src="http://via.placeholder.com/800x400" />
-                </div>
-                <div className="custom-image">
-                  <img alt="example" width="100%" src="http://via.placeholder.com/800x400" />
-                </div>
-              </Carousel>
               <div className="custom-card">
                 <h2>Beyond The Work</h2>
                 <p>
@@ -122,8 +180,9 @@ class Me extends Component {
                   {' '}Chinese food is my favorite and nothing beats the poached sliced beef in hot
                   chili oil with a bowl of Jasmine rice.
                 </p>
-                <p>The pictures above are all my cookings !</p>
+                <p>The following pictures are all my cookings !</p>
               </div>
+              <Gallery photos={PHOTO_SET} />
             </Card>
           </Col>
         </Row>
