@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import _ from 'lodash';
 import ScrollAnim from 'rc-scroll-anim';
 import TweenOne from 'rc-tween-one';
 import { Link } from 'react-router-dom';

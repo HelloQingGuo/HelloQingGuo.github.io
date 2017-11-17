@@ -102,17 +102,27 @@ class Me extends Component {
             <Card bodyStyle={{ padding: 0 }}>
               <Carousel autoplay>
                 <div className="custom-image">
-                  <img alt="example" width="100%" src="http://via.placeholder.com/800x350" />
+                  <img alt="example" width="100%" src="http://via.placeholder.com/800x400" />
                 </div>
                 <div className="custom-image">
-                  <img alt="example" width="100%" src="http://via.placeholder.com/800x350" />
+                  <img alt="example" width="100%" src="http://via.placeholder.com/800x400" />
                 </div>
                 <div className="custom-image">
-                  <img alt="example" width="100%" src="http://via.placeholder.com/800x350" />
+                  <img alt="example" width="100%" src="http://via.placeholder.com/800x400" />
                 </div>
               </Carousel>
               <div className="custom-card">
                 <h2>Beyond The Work</h2>
+                <p>
+                  My name is Qing Guo, grew up in China, but currently living in Raleigh - Durham
+                  area.
+                </p>
+                <p>In my free time I like to cook, read, and code.</p>
+                <p>
+                  {' '}Chinese food is my favorite and nothing beats the poached sliced beef in hot
+                  chili oil with a bowl of Jasmine rice.
+                </p>
+                <p>The pictures above are all my cookings !</p>
               </div>
             </Card>
           </Col>

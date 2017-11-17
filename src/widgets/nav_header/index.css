@@ -1,33 +1,16 @@
-.navheader {
-  background: #fff;
-  text-align: center;
-  height: 62px;
-  border-bottom: 1px solid #ddd;
-  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+.nav-menu {
+  background: transparent;
   position: fixed;
-  width: 100%;
-  top: 0; }
-  .navheader .counter {
-    color: #999;
-    font-size: 12px;
+  display: block;
+  border-bottom: none;
+  text-transform: uppercase; }
+  .nav-menu li {
     letter-spacing: 1px;
-    padding: 8px 0 0 0; }
-  .navheader .arrows {
-    font-size: 26px;
-    margin-top: -6px;
-    display: flex;
-    justify-content: space-between; }
-    .navheader .arrows .left {
-      margin-left: 15%; }
-    .navheader .arrows .right {
-      margin-right: 15%; }
-    .navheader .arrows i {
-      padding: 4px;
-      border-radius: 50%;
-      color: #777;
-      cursor: pointer;
-      font-size: 20px;
-      transition: background 0.3s ease; }
-      .navheader .arrows i:hover {
-        background: #ddd;
-        color: #fff; }
+    font-weight: bold;
+    font-size: 16px; }
+  .nav-menu .ant-menu-item-selected > a,
+  .nav-menu .ant-menu-item-selected > a:hover {
+    color: #108ee9 !important; }
+  @media (max-width: 767px) {
+    .nav-menu {
+      display: none; } }

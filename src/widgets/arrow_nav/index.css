@@ -25,3 +25,7 @@
     position: relative;
     top: 1px;
     left: 2px; }
+
+@media (max-width: 767px) {
+  .arrow-nav .arrow {
+    display: none; } }

@@ -57,7 +57,8 @@
   .me .custom-card {
     padding: 10px 16px; }
   .me .custom-card p {
-    color: #999; }
+    color: #555;
+    font-size: 14px; }
   .me .monitorParamNum {
     height: 60px;
     font-size: 50px; }

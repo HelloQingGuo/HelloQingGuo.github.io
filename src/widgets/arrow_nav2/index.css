@@ -1,0 +1,28 @@
+.navheader {
+  background: #fff;
+  text-align: center;
+  height: 50px;
+  border-top: 1px solid #ddd;
+  display: none;
+  width: 100%; }
+  .navheader .counter {
+    color: #999;
+    font-size: 12px;
+    letter-spacing: 1px;
+    padding: 2px 0 0 0; }
+  .navheader .arrows {
+    font-size: 26px;
+    font-weight: bold;
+    margin-top: -11px;
+    display: flex;
+    justify-content: space-between; }
+    .navheader .arrows .left-arrow {
+      margin-left: 14px; }
+    .navheader .arrows .right-arrow {
+      margin-right: 14px; }
+    .navheader .arrows i {
+      padding: 4px;
+      color: #777; }
+  @media (max-width: 767px) {
+    .navheader {
+      display: block; } }

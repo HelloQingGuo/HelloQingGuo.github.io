@@ -1,41 +1,22 @@
-.navheader {
-  background: #fff;
-  text-align: center;
-  height: 62px;
-  border-bottom: 1px solid #ddd;
-  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+$font-color: #40445e;
+.nav-menu {
+  background: rgba(0, 0, 0, 0);
   position: fixed;
-  width: 100%;
-  top: 0;
-  .counter {
-    color: #999;
-    font-size: 12px;
+  display: block;
+  border-bottom: none;
+  text-transform: uppercase;
+  li {
     letter-spacing: 1px;
-    padding: 8px 0 0 0;
+    font-weight: bold;
+    font-size: 16px;
   }
-
-  .arrows {
-    font-size: 26px;
-    margin-top: -6px;
-    display: flex;
-    justify-content: space-between;
-    .left {
-      margin-left: 15%;
-    }
-    .right {
-      margin-right: 15%;
-    }
-    i {
-      padding: 4px;
-      border-radius: 50%;
-      color: #777;
-      cursor: pointer;
-      font-size: 20px;
-      transition: background 0.3s ease;
-      &:hover {
-        background: #ddd;
-        color: #fff;
-      }
+  .ant-menu-item-selected > a,
+  .ant-menu-item-selected > a:hover {
+    color: #108ee9 !important;
+  }
+  @media (max-width: 767px) {
+    & {
+      display: none;
     }
   }
 }

@@ -1,0 +1,40 @@
+.navheader {
+  background: #fff;
+  text-align: center;
+  height: 50px;
+  border-top: 1px solid #ddd;
+  // box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+  display: none;
+  // position: fixed;
+  width: 100%;
+  // bottom: 0;
+  .counter {
+    color: #999;
+    font-size: 12px;
+    letter-spacing: 1px;
+    padding: 2px 0 0 0;
+  }
+
+  .arrows {
+    font-size: 26px;
+    font-weight: bold;
+    margin-top: -11px;
+    display: flex;
+    justify-content: space-between;
+    .left-arrow {
+      margin-left: 14px;
+    }
+    .right-arrow {
+      margin-right: 14px;
+    }
+    i {
+      padding: 4px;
+      color: #777;
+    }
+  }
+  @media (max-width: 767px) {
+    & {
+      display: block;
+    }
+  }
+}

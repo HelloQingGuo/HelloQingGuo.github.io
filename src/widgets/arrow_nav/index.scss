@@ -30,4 +30,9 @@
       left: 2px;
     }
   }
+  @media (max-width: 767px) {
+    .arrow {
+      display: none;
+    }
+  }
 }

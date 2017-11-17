@@ -2,9 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import QueueAnim from 'rc-queue-anim';
 import ScrollToTopOnMount from '../scrollToTopOnMount';
-import NavHeader from '../nav_header_2';
-import './index.css';
+import NavHeader from '../nav_header';
+import ArrowNav2 from '../arrow_nav2';
 import ArrowNav from '../arrow_nav';
+import './index.css';
 
 const getProjectOverview = (overview) => {
   const len = overview.length;
@@ -67,6 +68,7 @@ const Detail = ({ projectDetail }) =>
       ease="easeInSine"
       interval={250}
       duration={550}
+      style={{ backgroundColor: projectDetail.backgroundColor }}
     >
       <div className="logo-wrapper" key="logo">
         <img src={projectDetail.lg_source} alt="logo" />
@@ -96,6 +98,7 @@ const Detail = ({ projectDetail }) =>
       </div>
     </div>
     <ArrowNav />
+    <ArrowNav2 />
   </div>);
 
 Detail.propTypes = {
