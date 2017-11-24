@@ -85,8 +85,11 @@ class TabFE extends Component {
           <Tooltip title="Fast, reliable, and secure dependency management.">
             <Tag color="#e043b7">Yarn</Tag>
           </Tooltip>
-          <Tooltip title="CSS animations make it possible to animate transitions from one CSS style configuration to another.">
-            <Tag color="#3085de">CSS Animations</Tag>
+          <Tooltip title="Animations, Flexbox, CSS Grid, Responsive Design">
+            <Tag color="#3085de">Advanced CSS</Tag>
+          </Tooltip>
+          <Tooltip title="Redux-Saga is a library that aims to make application side effects easier to manage, more efficient to execute, simple to test, and better at handling failures.">
+            <Tag color="#24e1dd">Redux-Saga</Tag>
           </Tooltip>
         </div>
       </div>
