@@ -55,10 +55,14 @@
   .me .custom-image img {
     display: block; }
   .me .custom-card {
-    padding: 10px 16px; }
+    padding: 24px 32px; }
   .me .custom-card p {
     color: #555;
     font-size: 14px; }
+  .me .beyond-the-work-title {
+    text-align: center;
+    margin-top: -8px;
+    margin-bottom: 14px; }
   .me .monitorParamNum {
     height: 60px;
     font-size: 50px; }

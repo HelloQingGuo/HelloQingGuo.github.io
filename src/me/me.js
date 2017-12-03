@@ -170,7 +170,7 @@ class Me extends Component {
           <Col md={24} style={{ marginBottom: '24px' }} key="d">
             <Card bodyStyle={{ padding: 0 }}>
               <div className="custom-card">
-                <h2>Beyond The Work</h2>
+                <h1 className="beyond-the-work-title">Beyond The Work</h1>
                 <p>
                   My name is Qing Guo, grew up in China, but currently living in Raleigh - Durham
                   area.

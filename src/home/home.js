@@ -4,9 +4,10 @@ import { connect } from 'react-redux';
 import { Row, Col } from 'antd';
 import QueueAnim from 'rc-queue-anim';
 import { Link } from 'react-router-dom';
+import ReactVivus from 'react-vivus';
 import './home.css';
 import meteor from '../assets/meteor.svg';
-import ReactVivus from '../widgets/react_vivus';
+// import ReactVivus from '../widgets/react_vivus';
 import hi from '../assets/hi.svg';
 import svg from '../assets/spaceship.svg';
 import github from '../assets/github.svg';
@@ -160,11 +161,15 @@ class Home extends Component {
             <div className="logo">
               <ReactVivus
                 id="logo"
-                width="91px"
-                height="122px"
-                file={svg}
-                animTimingFunction="EASE"
-                type="oneByOne"
+                option={{
+                  file: svg,
+                  animTimingFunction: 'EASE',
+                  type: 'oneByOne',
+                }}
+                style={{
+                  width: '91px',
+                  height: '122px',
+                }}
               />
             </div>
             <Row gutter={16} className="slogan" key="slogan">
@@ -183,7 +188,7 @@ class Home extends Component {
                   className={navItem.id === curNavId ? 'curNav' : ''}
                   key={navItem.name}
                   onClick={() => this.props.setCurNav(navItem.id)}
-                 >
+                >
                   {navItem.name}
                   <span className="linethrough" />
                 </Link>),
