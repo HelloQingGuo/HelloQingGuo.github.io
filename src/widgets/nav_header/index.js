@@ -32,11 +32,13 @@ function mapStateToProps(state) {
 NavHeader.propTypes = {
   setCurNav: PropTypes.func.isRequired,
   curNavId: PropTypes.number.isRequired,
-  navItems: PropTypes.arrayOf({
-    name: PropTypes.string.isRequired,
-    id: PropTypes.number.isRequired,
-    link: PropTypes.string.isRequired,
-  }).isRequired,
+  navItems: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      id: PropTypes.number.isRequired,
+      link: PropTypes.string.isRequired,
+    }),
+  ).isRequired,
 };
 
 export default connect(mapStateToProps, { setCurNav })(NavHeader);

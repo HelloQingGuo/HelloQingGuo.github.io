@@ -117,13 +117,13 @@ class Projects extends Component {
 
 function mapStateToProps(state) {
   return {
-    curNavHeaderIdx: state.ui.curNavHeaderIdx,
+    // curNavHeaderIdx: state.ui.curNavHeaderIdx,
   };
 }
 
 Projects.propTypes = {
   setCurNavHeaderIdx: PropTypes.func.isRequired,
-  curNavHeaderIdx: PropTypes.number.isRequired,
+  // curNavHeaderIdx: PropTypes.number.isRequired,
 };
 
 export default connect(mapStateToProps, { setCurNavHeaderIdx })(Projects);

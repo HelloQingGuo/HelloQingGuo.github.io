@@ -1,3 +1,8 @@
+// import fanalytical from '../../assets/projects/fanalytical.png';
+// import fanalytical from '../../assets/projects/fanalytical.png';
+// import fanalytical from '../../assets/projects/fanalytical.png';
+// import fanalytical from '../../assets/projects/fanalytical.png';
+
 export const links = [
   {
     id: 0,
