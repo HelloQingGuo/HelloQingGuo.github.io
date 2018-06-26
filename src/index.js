@@ -8,7 +8,8 @@ import reducers from './reducers';
 import './styles/animation.css';
 import './styles/main.css';
 
-import registerServiceWorker from './registerServiceWorker';
+// import registerServiceWorker from './registerServiceWorker';
+import { unregister } from './registerServiceWorker';
 
 const createStoreWithMiddleware = applyMiddleware()(createStore);
 
@@ -25,4 +26,5 @@ ReactDOM.render(
   </Provider>,
   document.getElementById('root'),
 );
-registerServiceWorker();
+// registerServiceWorker();
+unregister();
