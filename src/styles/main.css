@@ -21,6 +21,9 @@ h5,
 h6 {
   color: #fff; }
 
+a:focus {
+  text-decoration: none; }
+
 .mr-10 {
   margin-right: 10px; }
 

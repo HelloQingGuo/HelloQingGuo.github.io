@@ -1,7 +1,11 @@
-// import fanalytical from '../../assets/projects/fanalytical.png';
-// import fanalytical from '../../assets/projects/fanalytical.png';
-// import fanalytical from '../../assets/projects/fanalytical.png';
-// import gui from '../../assets/projects/gui.svg';
+import fan from '../../assets/projects/fan.svg';
+import fanSM from '../../assets/projects/fan_sm.svg';
+import yp from '../../assets/projects/yp.svg';
+import ypSM from '../../assets/projects/yp_sm.svg';
+import hearful from '../../assets/projects/hearful.svg';
+import hearfulSM from '../../assets/projects/hearful_sm.svg';
+import gui from '../../assets/projects/gui.svg';
+import guiSM from '../../assets/projects/gui_sm.svg';
 
 export const links = [
   {
@@ -9,8 +13,11 @@ export const links = [
     name: 'YouPlea',
     desc: 'The Automated Adjudication Service',
     link: '/dashboard/projects/youplea',
-    source: 'http://kyledecker.me/content/1-work/1-swiftype/preview.svg',
-    lg_source: 'http://kyledecker.me/content/1-work/1-swiftype/banner.svg',
+    external_link: 'https://youplea.com/',
+    // source: 'http://kyledecker.me/content/1-work/1-swiftype/preview.svg',
+    // lg_source: 'http://kyledecker.me/content/1-work/1-swiftype/banner.svg',
+    source: ypSM,
+    lg_source: yp,
     backgroundColor: '#6dc6b1',
     overview: [
       {
@@ -48,8 +55,11 @@ export const links = [
     desc: 'Customer Feedback Analytics',
     backgroundColor: '#ff5b5b',
     link: '/dashboard/projects/hearful',
-    source: 'http://kyledecker.me/content/1-work/2-wintr-mx/preview.svg',
-    lg_source: 'http://kyledecker.me/content/1-work/2-wintr-mx/banner.svg',
+    external_link: 'https://www.hearfulhub.com/',
+    source: hearfulSM,
+    lg_source: hearful,
+    // source: 'http://kyledecker.me/content/1-work/2-wintr-mx/preview.svg',
+    // lg_source: 'http://kyledecker.me/content/1-work/2-wintr-mx/banner.svg',
     overview: [
       {
         item: 'context',
@@ -85,8 +95,11 @@ export const links = [
     name: 'Fanalytical',
     desc: 'Aanlytics Built for Action',
     link: '/dashboard/projects/fanalytical',
-    source: 'http://kyledecker.me/content/1-work/3-catnap/preview.svg',
-    lg_source: 'http://kyledecker.me/content/1-work/3-catnap/banner.svg',
+    external_link: 'https://fanalytical.com/',
+    source: fanSM,
+    lg_source: fan,
+    // source: 'http://kyledecker.me/content/1-work/3-catnap/preview.svg',
+    // lg_source: 'http://kyledecker.me/content/1-work/3-catnap/banner.svg',
     backgroundColor: '#ffd221',
     overview: [
       {
@@ -123,8 +136,11 @@ export const links = [
     name: 'Taxonomy GUI',
     desc: 'Interact with Your Taxonomy',
     link: '/dashboard/projects/taxonomy',
-    source: 'http://kyledecker.me/content/1-work/4-misc/preview.svg',
-    lg_source: 'http://kyledecker.me/content/1-work/4-misc/banner.svg',
+    external_link: 'https://taxonomygui.herokuapp.com/',
+    source: guiSM,
+    lg_source: gui,
+    // source: 'http://kyledecker.me/content/1-work/4-misc/preview.svg',
+    // lg_source: 'http://kyledecker.me/content/1-work/4-misc/banner.svg',
     backgroundColor: '#63aaff',
     overview: [
       {

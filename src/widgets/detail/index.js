@@ -71,14 +71,18 @@ const Detail = ({ projectDetail }) =>
       style={{ backgroundColor: projectDetail.backgroundColor }}
     >
       <div className="logo-wrapper" key="logo">
-        <img src={projectDetail.lg_source} alt="logo" />
+        <img src={projectDetail.lg_source} alt="logo" width="620px" />
       </div>
-      <h1 className="title" key="title">
-        {projectDetail.name}
-      </h1>
-      <h2 className="subtitle" key="subtitle">
-        {projectDetail.desc}
-      </h2>
+      <div className="title-wrapper">
+        <a href={projectDetail.external_link} target="_blank" rel="noopener noreferrer">
+          <h1 className="title" key="title">
+            {projectDetail.name}
+          </h1>
+        </a>
+        <h2 className="subtitle" key="subtitle">
+          {projectDetail.desc}
+        </h2>
+      </div>
     </QueueAnim>
     {getProjectOverview(projectDetail.overview)}
     <div className="detail-wrapper ">

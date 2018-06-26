@@ -28,10 +28,10 @@ class Projects extends Component {
           >
             <img src={project.source} alt={project.name} />
             <span className="desc">
-              <h2>
+              <h1>
                 {project.name}
-              </h2>
-              <span>
+              </h1>
+              <span style={{ fontSize: '16px' }}>
                 {project.desc}
               </span>
             </span>
