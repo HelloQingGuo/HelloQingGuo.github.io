@@ -1,7 +1,7 @@
 // import fanalytical from '../../assets/projects/fanalytical.png';
 // import fanalytical from '../../assets/projects/fanalytical.png';
 // import fanalytical from '../../assets/projects/fanalytical.png';
-// import fanalytical from '../../assets/projects/fanalytical.png';
+// import gui from '../../assets/projects/gui.svg';
 
 export const links = [
   {

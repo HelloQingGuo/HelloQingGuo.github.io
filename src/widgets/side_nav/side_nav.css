@@ -22,7 +22,7 @@
   right: 0;
   top: 0;
   bottom: 0;
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0);
   transition: background-color 0.3s ease; }
 
 .sidenav .bgcover.shown {
