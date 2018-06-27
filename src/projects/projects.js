@@ -23,17 +23,17 @@ class Projects extends Component {
         >
           <Link
             to={project.link}
-            className={project.name.toLowerCase()}
+            className={`${project.name.toLowerCase()} link`}
             onClick={() => this.props.setCurNavHeaderIdx(idx)}
           >
             <img src={project.source} alt={project.name} />
-            <span className="desc">
-              <h1>
+            <span className="desc-wrapper">
+              <h1 className="project-name">
                 {project.name}
               </h1>
-              <span style={{ fontSize: '16px' }}>
+              <h3 className="project-desc">
                 {project.desc}
-              </span>
+              </h3>
             </span>
           </Link>
         </TweenOne>

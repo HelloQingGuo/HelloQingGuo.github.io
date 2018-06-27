@@ -8,38 +8,63 @@
     max-width: 700px;
     width: 80%; }
   .projects .project {
-    background-color: #eaeaea;
     margin-bottom: 40px;
     border-radius: 14px; }
-    .projects .project .youplea {
-      background-color: #6dc6b1; }
-      .projects .project .youplea:hover {
-        background-color: #90d4c4; }
-    .projects .project .hearful {
-      background-color: #ff5b5b; }
-    .projects .project .fanalytical {
-      background-color: #ffd221; }
-    .projects .project .taxonomy {
-      background-color: #63aaff; }
-    .projects .project a {
+    .projects .project .link {
       display: flex;
       flex-flow: wrap;
       align-items: center;
       justify-content: space-around;
-      padding: 0 14px;
+      padding: 16px 0;
       border-radius: 14px; }
-      .projects .project a img {
+      .projects .project .link:hover .project-desc {
+        background: #fff;
+        box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1); }
+      .projects .project .link img {
         margin: 14px;
         max-width: 300px;
         max-height: 300px;
         width: 100%; }
-      .projects .project a .desc {
-        text-align: center;
-        margin: 0 14px 28px 14px; }
+    .projects .project .youplea {
+      background-color: #6dc6b1; }
+      .projects .project .youplea:hover .project-desc {
+        color: #6dc6b1; }
+    .projects .project .hearful {
+      background-color: #ff5b5b; }
+      .projects .project .hearful:hover .project-desc {
+        color: #ff5b5b; }
+    .projects .project .fanalytical {
+      background-color: #ffd221; }
+      .projects .project .fanalytical:hover .project-desc {
+        color: #ffd221; }
+    .projects .project .taxonomy {
+      background-color: #63aaff; }
+      .projects .project .taxonomy:hover .project-desc {
+        color: #63aaff; }
+    .projects .project .desc-wrapper {
+      text-align: center;
+      margin-bottom: 14px; }
+      .projects .project .desc-wrapper .project-name {
+        font-size: 34px; }
+      .projects .project .desc-wrapper .project-desc {
+        font-size: 16px;
+        font-weight: bold;
+        letter-spacing: 0.5px;
+        padding: 20px 14px;
+        background: rgba(255, 255, 255, 0.3);
+        border-radius: 4px;
+        margin-top: 20px;
+        color: rgba(0, 0, 0, 0.5);
+        transition: all 0.2s ease; }
   @media (max-width: 767px) {
     .projects {
       margin-left: 0; }
       .projects > div {
         width: 100%; }
-      .projects .project {
-        margin: 14px 4px; } }
+      .projects .project .desc-wrapper .project-name {
+        font-size: 30px; }
+      .projects .project .desc-wrapper .project-desc {
+        font-size: 14px; } }
+  @media (max-width: 414px) {
+    .projects .project .desc-wrapper .project-name {
+      font-size: 28px; } }
