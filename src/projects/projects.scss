@@ -1,3 +1,5 @@
+@import '../styles/variables.scss';
+
 .projects {
   display: flex;
   flex-direction: column;
@@ -9,44 +11,73 @@
   }
 
   .project {
-    .youplea {
-      // background-color: #9a85ff;
-      background-color: #6dc6b1;
-      &:hover {
-        background-color: #90d4c4;
-      }
-    }
+    margin-bottom: 40px;
+    border-radius: 14px;
 
-    .hearful {
-      background-color: #ff5b5b;
-    }
-    .fanalytical {
-      background-color: #ffd221;
-    }
-    .taxonomy {
-      background-color: #63aaff;
-    }
-    a {
+    .link {
       display: flex;
       flex-flow: wrap;
       align-items: center;
       justify-content: space-around;
-      padding: 0 14px;
+      padding: 16px 0;
       border-radius: 14px;
+      &:hover .project-desc {
+        background: #fff;
+        box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
+      }
       img {
         margin: 14px;
         max-width: 300px;
         max-height: 300px;
         width: 100%;
       }
-      .desc {
-        text-align: center;
-        margin: 0 14px 28px 14px;
+    }
+    .youplea {
+      background-color: $youplea;
+      &:hover .project-desc {
+        color: $youplea;
       }
     }
-    background-color: #eaeaea;
-    margin-bottom: 40px;
-    border-radius: 14px;
+
+    .hearful {
+      background-color: $hearful;
+      &:hover .project-desc {
+        color: $hearful;
+      }
+    }
+
+    .fanalytical {
+      background-color: $fanalytical;
+      &:hover .project-desc {
+        color: $fanalytical;
+      }
+    }
+
+    .taxonomy {
+      background-color: $gui;
+      &:hover .project-desc {
+        color: $gui;
+      }
+    }
+
+    .desc-wrapper {
+      text-align: center;
+      margin-bottom: 14px;
+      .project-name {
+        font-size: 34px;
+      }
+      .project-desc {
+        font-size: 16px;
+        font-weight: bold;
+        letter-spacing: 0.5px;
+        padding: 20px 14px;
+        background: rgba(255, 255, 255, 0.3);
+        border-radius: 4px;
+        margin-top: 20px;
+        color: rgba(0, 0, 0, 0.5);
+        transition: all 0.2s ease;
+      }
+    }
   }
 
   @media (max-width: 767px) {
@@ -55,14 +86,25 @@
       width: 100%;
     }
     .project {
-      margin: 14px 4px;
+      .desc-wrapper {
+        .project-name {
+          font-size: 30px;
+        }
+        .project-desc {
+          font-size: 14px;
+        }
+      }
     }
   }
 
   /* iphone 6 plus */
   @media (max-width: 414px) {
     .project {
-      // min-height: 400px;
+      .desc-wrapper {
+        .project-name {
+          font-size: 28px;
+        }
+      }
     }
   }
 }

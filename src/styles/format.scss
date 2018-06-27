@@ -1,0 +1,44 @@
+/*
+	Generate the boilerplate for margin from 5px to 35px
+	Format like below:
+
+	Format:
+	.mt-15 {
+		margin-top: 15px !important;
+	}
+	.mb-15 {
+		margin-bottom: 15px !important;
+	}
+	.ml-15 {
+		margin-left: 15px !important;
+	}
+	.mr-15 {
+		margin-right: 15px !important;
+	}
+*/
+$directions: "t", "b", "l", "r";
+
+@for $i from 1 through 4 {
+  @for $j from 5 through 35 {
+    @if nth($directions, $i) == "t" {
+      .m#{nth($directions, $i)}-#{$j} {
+        margin-top: #{$j}px !important;
+      }
+    }
+    @if nth($directions, $i) == "b" {
+      .m#{nth($directions, $i)}-#{$j} {
+        margin-bottom: #{$j}px !important;
+      }
+    }
+    @if nth($directions, $i) == "l" {
+      .m#{nth($directions, $i)}-#{$j} {
+        margin-left: #{$j}px !important;
+      }
+    }
+    @if nth($directions, $i) == "r" {
+      .m#{nth($directions, $i)}-#{$j} {
+        margin-right: #{$j}px !important;
+      }
+    }
+  }
+}
