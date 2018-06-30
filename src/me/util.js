@@ -25,6 +25,7 @@ export const skillScoresOfFE = [
   { value: 81, name: 'CSS (SASS)' },
   { value: 83, name: 'Javascript' },
   { value: 90, name: 'React / Redux' },
+  { value: 75, name: 'Angular 6' },
   { value: 71, name: 'Webpack' },
   { value: 75, name: 'CMS' },
   { value: 85, name: 'Data Visualization' },

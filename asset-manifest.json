@@ -1,8 +1,8 @@
 {
   "main.css": "static/css/main.8c328133.css",
   "main.css.map": "static/css/main.8c328133.css.map",
-  "main.js": "static/js/main.8c10bafc.js",
-  "main.js.map": "static/js/main.8c10bafc.js.map",
+  "main.js": "static/js/main.a8e5e565.js",
+  "main.js.map": "static/js/main.a8e5e565.js.map",
   "static\\media\\1.jpg": "static/media/1.c1848b12.jpg",
   "static\\media\\10.jpg": "static/media/10.735af690.jpg",
   "static\\media\\11.jpg": "static/media/11.f9ca87a8.jpg",
@@ -18,7 +18,7 @@
   "static\\media\\email.svg": "static/media/email.f10ca2ec.svg",
   "static\\media\\email0.svg": "static/media/email0.b6555f4d.svg",
   "static\\media\\email_colored.svg": "static/media/email_colored.60109ccf.svg",
-  "static\\media\\fan.svg": "static/media/fan.94a784b6.svg",
+  "static\\media\\fan.svg": "static/media/fan.0cfbc688.svg",
   "static\\media\\fan_sm.svg": "static/media/fan_sm.4fb16bd9.svg",
   "static\\media\\fontawesome-webfont.eot": "static/media/fontawesome-webfont.674f50d2.eot",
   "static\\media\\fontawesome-webfont.svg?v=4.7.0": "static/media/fontawesome-webfont.912ec66d.svg",
@@ -30,8 +30,8 @@
   "static\\media\\github_colored.svg": "static/media/github_colored.94e5b053.svg",
   "static\\media\\gui.svg": "static/media/gui.5acf052d.svg",
   "static\\media\\gui_sm.svg": "static/media/gui_sm.05c5f209.svg",
-  "static\\media\\hearful.svg": "static/media/hearful.801718bb.svg",
-  "static\\media\\hearful_sm.svg": "static/media/hearful_sm.0a898a13.svg",
+  "static\\media\\hearful.svg": "static/media/hearful.f116b1b7.svg",
+  "static\\media\\hearful_sm.svg": "static/media/hearful_sm.5cc7bdd5.svg",
   "static\\media\\hi.svg": "static/media/hi.66e26194.svg",
   "static\\media\\linkedin.svg": "static/media/linkedin.43403956.svg",
   "static\\media\\linkedin0.svg": "static/media/linkedin0.42d66e57.svg",
@@ -42,6 +42,6 @@
   "static\\media\\spaceship.svg": "static/media/spaceship.a2192509.svg",
   "static\\media\\stars-lg.svg": "static/media/stars-lg.8e79bb50.svg",
   "static\\media\\stars-sm.svg": "static/media/stars-sm.0e454a16.svg",
-  "static\\media\\yp.svg": "static/media/yp.0c8d3e78.svg",
+  "static\\media\\yp.svg": "static/media/yp.051b5cbe.svg",
   "static\\media\\yp_sm.svg": "static/media/yp_sm.bde5a3aa.svg"
 }

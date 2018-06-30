@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { Tag, Tooltip } from 'antd';
 import ReactEcharts from 'echarts-for-react';
 import echarts from 'echarts';
 import { config as config1, seriesData as seriesData1 } from './config1';
+import TagList from '../widgets/tag_list';
 import './me.css';
 
 class TabFE extends Component {
@@ -22,8 +22,6 @@ class TabFE extends Component {
   }
 
   componentDidMount() {
-    // const colorPalette = ['#dd6b66','#759aa0','#e69d87','#8dc1a9','#ea7e53','#eedd78','#73a373','#73b9bc','#7289ab', '#91ca8c','#f49f42'];
-
     let currentIndex = 0;
     const maxDataLen = seriesData1.length;
     // execute once at the beginning
@@ -79,18 +77,24 @@ class TabFE extends Component {
         />
 
         <div className="tags">
-          <Tooltip title="ES7 is the evolution of the ECMA-262 standard (commonly referred as Javascript).">
-            <Tag color="#fc4343">ES 7</Tag>
-          </Tooltip>
-          <Tooltip title="Fast, reliable, and secure dependency management.">
-            <Tag color="#e043b7">Yarn</Tag>
-          </Tooltip>
-          <Tooltip title="Animations, Flexbox, CSS Grid, Responsive Design">
-            <Tag color="#3085de">Advanced CSS</Tag>
-          </Tooltip>
-          <Tooltip title="Redux-Saga is a library that aims to make application side effects easier to manage, more efficient to execute, simple to test, and better at handling failures.">
-            <Tag color="#24e1dd">Redux-Saga</Tag>
-          </Tooltip>
+          <TagList
+            tags={[
+              {
+                name: 'ES 7',
+                content:
+                  'ES7 is the evolution of the ECMA-262 standard (commonly referred as Javascript).',
+              },
+              {
+                name: 'Advanced CSS',
+                content: 'Animations, Flexbox, CSS Grid, Responsive Design',
+              },
+              {
+                name: 'Redux-Saga',
+                content:
+                  'Redux-Saga is a library that aims to make application side effects easier to manage, more efficient to execute, simple to test, and better at handling failures.',
+              },
+            ]}
+          />
         </div>
       </div>
     );

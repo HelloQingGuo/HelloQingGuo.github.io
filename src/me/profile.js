@@ -41,7 +41,7 @@ const Profile = () =>
         <span className="monitorParamText">on-going projects</span>
       </Col>
       <Col xs={12} style={{ marginTop: '0' }}>
-        <h1 className="monitorParamNum mt-10" style={{ color: '#3085DE' }}>
+        <h1 className="monitorParamNum" style={{ color: '#3085DE' }}>
           2
         </h1>
         <span className="monitorParamText">publications</span>

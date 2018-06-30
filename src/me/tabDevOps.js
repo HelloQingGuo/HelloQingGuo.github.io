@@ -1,5 +1,6 @@
 import React from 'react';
-import { Tag, Progress, Tooltip } from 'antd';
+import { Progress } from 'antd';
+import TagList from '../widgets/tag_list';
 import { identifyProficiency, scoreMapping } from './util';
 import './me.css';
 
@@ -32,9 +33,15 @@ const TabDevOps = ({ skills }) =>
       })}
     </div>
     <div className="tags">
-      <Tooltip title="Docker is an open platform for developers and sysadmins to build, ship, and run distributed applications, whether on laptops, data center VMs, or the cloud.">
-        <Tag color="#fc4343">Docker</Tag>
-      </Tooltip>
+      <TagList
+        tags={[
+          {
+            name: 'Docker',
+            content:
+              'Docker is an open platform for developers and sysadmins to build, ship, and run distributed applications, whether on laptops, data center VMs, or the cloud.',
+          },
+        ]}
+      />
     </div>
   </div>);
 
