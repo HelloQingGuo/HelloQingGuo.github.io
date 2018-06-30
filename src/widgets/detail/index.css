@@ -63,12 +63,12 @@
   padding-top: 0; }
   .project-detail .detail-wrapper h1,
   .project-detail .detail-wrapper p {
-    color: #40445e; }
+    color: #40445e;
+    font-size: 20px;
+    margin-bottom: 20px; }
   .project-detail .detail-wrapper h1 {
     font-size: 36px;
     margin: 36px auto; }
-  .project-detail .detail-wrapper p {
-    font-size: 20px; }
 
 .project-detail .detail {
   max-width: 700px;

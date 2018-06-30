@@ -76,13 +76,12 @@ $font-color: #40445e;
     h1,
     p {
       color: $font-color;
+      font-size: 20px;
+      margin-bottom: 20px;
     }
     h1 {
       font-size: 36px;
       margin: 36px auto;
-    }
-    p {
-      font-size: 20px;
     }
   }
 
