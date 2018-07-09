@@ -43,6 +43,9 @@ class Projects extends Component {
       <div className="projects">
         <ScrollToTopOnMount />
         {projectList}
+        <div style={{ display: 'none' }}>
+          {navItems.map(project => <img src={project.lg_source} alt={project.name} />)}
+        </div>
         {/* <ScrollOverPack playScale="50px">
           <TweenOne
             key="youplea"

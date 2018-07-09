@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 import ReactVivus from 'react-vivus';
 import './home.css';
 import meteor from '../assets/meteor.svg';
+import { links } from '../widgets/constants/links';
 // import ReactVivus from '../widgets/react_vivus';
 import hi from '../assets/hi.svg';
 import svg from '../assets/spaceship.svg';
@@ -240,6 +241,9 @@ class Home extends Component {
             <img src={meteor} alt="meteor" />
           </figure>
         </QueueAnim>
+        <div style={{ display: 'none' }}>
+          {links.map(project => <img src={project.source} alt={project.name} />)}
+        </div>
       </main>
     );
   }
