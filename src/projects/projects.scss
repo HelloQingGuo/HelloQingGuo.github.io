@@ -1,4 +1,4 @@
-@import '../styles/variables.scss';
+@import "../styles/variables.scss";
 
 .projects {
   display: flex;
@@ -54,6 +54,13 @@
     }
 
     .taxonomy {
+      background-color: $gui;
+      &:hover .project-desc {
+        color: $gui;
+      }
+    }
+
+    .nggrid {
       background-color: $gui;
       &:hover .project-desc {
         color: $gui;

@@ -41,6 +41,10 @@
       background-color: #63aaff; }
       .projects .project .taxonomy:hover .project-desc {
         color: #63aaff; }
+    .projects .project .nggrid {
+      background-color: #63aaff; }
+      .projects .project .nggrid:hover .project-desc {
+        color: #63aaff; }
     .projects .project .desc-wrapper {
       text-align: center;
       margin-bottom: 14px; }

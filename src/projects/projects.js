@@ -1,25 +1,25 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
-import ScrollAnim from 'rc-scroll-anim';
-import TweenOne from 'rc-tween-one';
-import { Link } from 'react-router-dom';
-import { links as navItems } from '../widgets/constants/links';
-import { setCurNavHeaderIdx } from '../actions/action_ui';
-import ScrollToTopOnMount from '../widgets/scrollToTopOnMount';
-import './projects.css';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import ScrollAnim from "rc-scroll-anim";
+import TweenOne from "rc-tween-one";
+import { Link } from "react-router-dom";
+import { links as navItems } from "../widgets/constants/links";
+import { setCurNavHeaderIdx } from "../actions/action_ui";
+import ScrollToTopOnMount from "../widgets/scrollToTopOnMount";
+import "./projects.css";
 
 const ScrollOverPack = ScrollAnim.OverPack;
 
 class Projects extends Component {
   render() {
-    const projectList = navItems.map((project, idx) =>
-      (<ScrollOverPack key={project.name} playScale="50px">
+    const projectList = navItems.map((project, idx) => (
+      <ScrollOverPack key={project.name} playScale="50px">
         <TweenOne
           key={project.name}
           className="project"
           animation={{ y: 0, opacity: 1, duration: 600 }}
-          style={{ transform: 'translateY(25px)', opacity: 0.25 }}
+          style={{ transform: "translateY(25px)", opacity: 0.25 }}
         >
           <Link
             to={project.link}
@@ -28,23 +28,21 @@ class Projects extends Component {
           >
             <img src={project.source} alt={project.name} />
             <span className="desc-wrapper">
-              <h1 className="project-name">
-                {project.name}
-              </h1>
-              <h3 className="project-desc">
-                {project.desc}
-              </h3>
+              <h1 className="project-name">{project.name}</h1>
+              <h3 className="project-desc">{project.desc}</h3>
             </span>
           </Link>
         </TweenOne>
-      </ScrollOverPack>),
-    );
+      </ScrollOverPack>
+    ));
     return (
       <div className="projects">
         <ScrollToTopOnMount />
         {projectList}
-        <div style={{ display: 'none' }}>
-          {navItems.map(project => <img src={project.lg_source} alt={project.name} />)}
+        <div style={{ display: "none" }}>
+          {navItems.map(project => (
+            <img src={project.lg_source} alt={project.name} key={project.id} />
+          ))}
         </div>
         {/* <ScrollOverPack playScale="50px">
           <TweenOne
@@ -125,8 +123,11 @@ function mapStateToProps(state) {
 }
 
 Projects.propTypes = {
-  setCurNavHeaderIdx: PropTypes.func.isRequired,
+  setCurNavHeaderIdx: PropTypes.func.isRequired
   // curNavHeaderIdx: PropTypes.number.isRequired,
 };
 
-export default connect(mapStateToProps, { setCurNavHeaderIdx })(Projects);
+export default connect(
+  mapStateToProps,
+  { setCurNavHeaderIdx }
+)(Projects);
