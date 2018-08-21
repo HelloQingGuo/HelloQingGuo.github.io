@@ -1,46 +1,46 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
-import { Row, Col } from 'antd';
-import QueueAnim from 'rc-queue-anim';
-import { Link } from 'react-router-dom';
-import ReactVivus from 'react-vivus';
-import './home.css';
-import meteor from '../assets/meteor.svg';
-import { links } from '../widgets/constants/links';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import { Row, Col } from "antd";
+import QueueAnim from "rc-queue-anim";
+import { Link } from "react-router-dom";
+import ReactVivus from "react-vivus";
+import "./home.css";
+import meteor from "../assets/meteor.svg";
+import { links } from "../widgets/constants/links";
 // import ReactVivus from '../widgets/react_vivus';
-import hi from '../assets/hi.svg';
-import svg from '../assets/spaceship.svg';
-import github from '../assets/github.svg';
-import githubColored from '../assets/github_colored.svg';
-import linkedin from '../assets/linkedin.svg';
-import linkedinColored from '../assets/linkedin_colored.svg';
-import email from '../assets/email.svg';
-import emailColored from '../assets/email_colored.svg';
-import { setCurNav } from '../actions/action_ui';
+import hi from "../assets/hi.svg";
+import svg from "../assets/spaceship.svg";
+import github from "../assets/github.svg";
+import githubColored from "../assets/github_colored.svg";
+import linkedin from "../assets/linkedin.svg";
+import linkedinColored from "../assets/linkedin_colored.svg";
+import email from "../assets/email.svg";
+import emailColored from "../assets/email_colored.svg";
+import { setCurNav } from "../actions/action_ui";
 
 class Home extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      desc: '',
+      desc: "",
       counter: 0,
       randomPosition: [
         {
           top: 58,
-          rotate: 45,
+          rotate: 45
         },
         {
           top: 40,
-          rotate: 211,
-        },
-      ],
+          rotate: 211
+        }
+      ]
     };
   }
 
   componentDidMount() {
-    const roles = ['Developer.', 'Graduate Student.', 'Good Chef !'];
+    const roles = ["Developer.", "Graduate Student.", "Good Chef !"];
     this.meteorTimer = setInterval(() => {
       const top = Math.floor(Math.random() * 101); // [0, 100]
       const rotate = Math.floor(Math.random() * 361); // [0, 360]
@@ -50,13 +50,13 @@ class Home extends Component {
         randomPosition: [
           {
             top,
-            rotate,
+            rotate
           },
           {
             top: top2,
-            rotate: rotate2,
-          },
-        ],
+            rotate: rotate2
+          }
+        ]
       });
     }, 2500);
     const initialFrozenCounterForForwarding = 7;
@@ -68,20 +68,26 @@ class Home extends Component {
     let goBack = false;
     this.backPrinterTimer = setInterval(() => {
       const { desc } = this.state;
-      if (goBack && frozenCounterForBacking === initialFrozenCounterForBacking) {
+      if (
+        goBack &&
+        frozenCounterForBacking === initialFrozenCounterForBacking
+      ) {
         // backing mode, non frozen mode
         this.setState(
           {
-            desc: desc.substring(0, desc.length - 1),
+            desc: desc.substring(0, desc.length - 1)
           },
           () => {
             charCounter -= 1;
             if (charCounter === -1) {
               frozenCounterForBacking -= 1; // let it into frozen mode;
             }
-          },
+          }
         );
-      } else if (goBack && frozenCounterForBacking !== initialFrozenCounterForBacking) {
+      } else if (
+        goBack &&
+        frozenCounterForBacking !== initialFrozenCounterForBacking
+      ) {
         // backing mode, frozen mode
         if (frozenCounterForBacking === 0) {
           // frozen mode ends, switch to forwarding mode now
@@ -98,20 +104,26 @@ class Home extends Component {
     this.printerTimer = setInterval(() => {
       const { desc } = this.state;
       const role = roles[wordCounter];
-      if (!goBack && frozenCounterForForwarding === initialFrozenCounterForForwarding) {
+      if (
+        !goBack &&
+        frozenCounterForForwarding === initialFrozenCounterForForwarding
+      ) {
         // forwarding mode, non-frozen mode
         this.setState(
           {
-            desc: `${desc}${role.charAt(charCounter)}`,
+            desc: `${desc}${role.charAt(charCounter)}`
           },
           () => {
             charCounter += 1;
             if (charCounter === role.length) {
               frozenCounterForForwarding -= 1; // let it into frozen mode;
             }
-          },
+          }
         );
-      } else if (!goBack && frozenCounterForForwarding !== initialFrozenCounterForForwarding) {
+      } else if (
+        !goBack &&
+        frozenCounterForForwarding !== initialFrozenCounterForForwarding
+      ) {
         // forwarding mode, frozen mode
         if (frozenCounterForForwarding === 0) {
           // frozen mode ends, switch to back mode now
@@ -137,7 +149,7 @@ class Home extends Component {
 
     const meteorStyles = randomPosition.map(each => ({
       top: `${each.top}%`,
-      transform: `rotate(${each.rotate}deg)`,
+      transform: `rotate(${each.rotate}deg)`
     }));
     return (
       <main className="home">
@@ -164,12 +176,12 @@ class Home extends Component {
                 id="logo"
                 option={{
                   file: svg,
-                  animTimingFunction: 'EASE',
-                  type: 'oneByOne',
+                  animTimingFunction: "EASE",
+                  type: "oneByOne"
                 }}
                 style={{
-                  width: '91px',
-                  height: '122px',
+                  width: "91px",
+                  height: "122px"
                 }}
               />
             </div>
@@ -183,17 +195,17 @@ class Home extends Component {
               </Col>
             </Row>
             <div className="navigation" key="navigation">
-              {navItemsForHome.map(navItem =>
-                (<Link
+              {navItemsForHome.map(navItem => (
+                <Link
                   to={navItem.link}
-                  className={navItem.id === curNavId ? 'curNav' : ''}
+                  className={navItem.id === curNavId ? "curNav" : ""}
                   key={navItem.name}
                   onClick={() => this.props.setCurNav(navItem.id)}
                 >
                   {navItem.name}
                   <span className="linethrough" />
-                </Link>),
-              )}
+                </Link>
+              ))}
               {/* <Link to="/dashboard/projects" onClick={() => setCurNav(2)}>
                 PROJECT<span className="linethrough" />
                 </Link>
@@ -206,7 +218,11 @@ class Home extends Component {
             </div>
           </QueueAnim>
           <div className="footer" key="footer">
-            <a href="https://github.com/HelloQingGuo" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://github.com/HelloQingGuo"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <span className="github">
                 <img src={github} alt="github" />
                 {/* <img src={githubColored} alt="github" /> */}
@@ -230,7 +246,7 @@ class Home extends Component {
             </a>
           </div>
           <h4 className="footer-desc" key="footer-desc">
-            Code with love by Qing Guo
+            Code with 💖 by Qing Guo
           </h4>
           <div className="stars" />
           <div className="stars-lg" />
@@ -241,8 +257,10 @@ class Home extends Component {
             <img src={meteor} alt="meteor" />
           </figure>
         </QueueAnim>
-        <div style={{ display: 'none' }}>
-          {links.map(project => <img src={project.source} alt={project.name} />)}
+        <div style={{ display: "none" }}>
+          {links.map(project => (
+            <img src={project.source} alt={project.name} />
+          ))}
         </div>
       </main>
     );
@@ -251,7 +269,7 @@ class Home extends Component {
 function mapStateToProps(state) {
   return {
     curNavId: state.ui.curNavId,
-    navItemsForHome: state.ui.navItemsForHome,
+    navItemsForHome: state.ui.navItemsForHome
   };
 }
 
@@ -262,9 +280,12 @@ Home.propTypes = {
     PropTypes.shape({
       name: PropTypes.string.isRequired,
       id: PropTypes.number.isRequired,
-      link: PropTypes.string.isRequired,
-    }),
-  ).isRequired,
+      link: PropTypes.string.isRequired
+    })
+  ).isRequired
 };
 
-export default connect(mapStateToProps, { setCurNav })(Home);
+export default connect(
+  mapStateToProps,
+  { setCurNav }
+)(Home);
