@@ -8,7 +8,6 @@ import ReactVivus from "react-vivus";
 import "./home.css";
 import meteor from "../assets/meteor.svg";
 import { links } from "../widgets/constants/links";
-// import ReactVivus from '../widgets/react_vivus';
 import hi from "../assets/hi.svg";
 import svg from "../assets/spaceship.svg";
 import github from "../assets/github.svg";

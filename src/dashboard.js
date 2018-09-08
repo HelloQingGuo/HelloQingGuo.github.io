@@ -1,11 +1,23 @@
-import React, { Component } from 'react';
-import { Route } from 'react-router-dom';
-import meteor from './assets/meteor.svg';
-import Sidebar from './widgets/sidebar/sidebar';
-import Me from './me/me';
-import Projects from './projects/projects';
-import Resume from './resume/resume';
-import './dashboard.css';
+import React, { Component } from "react";
+import { Route } from "react-router-dom";
+
+import { default as Loadable } from "./widgets/my_loadable";
+import Sidebar from "./widgets/sidebar/sidebar";
+import meteor from "./assets/meteor.svg";
+
+import "./dashboard.css";
+
+const Projects = Loadable({
+  loader: () => import(/* webpackChunkName: "projects" */ "./projects/projects")
+});
+
+const Me = Loadable({
+  loader: () => import(/* webpackChunkName: "me" */ "./me/me")
+});
+
+const Resume = Loadable({
+  loader: () => import(/* webpackChunkName: "resume" */ "./resume/resume")
+});
 
 class Dashboard extends Component {
   constructor(props) {
@@ -15,13 +27,13 @@ class Dashboard extends Component {
       randomPosition: [
         {
           top: 58,
-          rotate: 45,
+          rotate: 45
         },
         {
           top: 40,
-          rotate: 211,
-        },
-      ],
+          rotate: 211
+        }
+      ]
     };
   }
   componentDidMount() {
@@ -34,13 +46,13 @@ class Dashboard extends Component {
         randomPosition: [
           {
             top,
-            rotate,
+            rotate
           },
           {
             top: top2,
-            rotate: rotate2,
-          },
-        ],
+            rotate: rotate2
+          }
+        ]
       });
     }, 2500);
   }
@@ -54,7 +66,7 @@ class Dashboard extends Component {
     const { curNav, navItems, handleClickOnNavbutton, setCurNav } = this.props;
     const meteorStyles = randomPosition.map(each => ({
       top: `${each.top}%`,
-      transform: `rotate(${each.rotate}deg)`,
+      transform: `rotate(${each.rotate}deg)`
     }));
     return (
       <div className="dashboard">

@@ -1,14 +1,42 @@
 import React, { Component } from "react";
 import { Route, Switch, Redirect } from "react-router-dom";
-import Home from "./home/home";
-import Dashboard from "./dashboard";
-import Fanalytical from "./projects/fanalytical";
-import Hearful from "./projects/hearful";
-import Taxonomy from "./projects/taxonomy";
-import Youplea from "./projects/youplea";
-import NgGrid from "./projects/nggrid";
-import SideNav from "./widgets/side_nav";
+
+import { default as Loadable } from "./widgets/my_loadable";
+
 import "./app.css";
+
+const Home = Loadable({
+  loader: () => import(/* webpackChunkName: "home" */ "./home/home")
+});
+
+const Dashboard = Loadable({
+  loader: () => import(/* webpackChunkName: "dashboard" */ "./dashboard")
+});
+
+const Fanalytical = Loadable({
+  loader: () =>
+    import(/* webpackChunkName: "fanalytical" */ "./projects/fanalytical")
+});
+
+const Hearful = Loadable({
+  loader: () => import(/* webpackChunkName: "hearful" */ "./projects/hearful")
+});
+
+const Taxonomy = Loadable({
+  loader: () => import(/* webpackChunkName: "taxonomy" */ "./projects/taxonomy")
+});
+
+const Youplea = Loadable({
+  loader: () => import(/* webpackChunkName: "youplea" */ "./projects/youplea")
+});
+
+const NgGrid = Loadable({
+  loader: () => import(/* webpackChunkName: "nggrid" */ "./projects/nggrid")
+});
+
+const SideNav = Loadable({
+  loader: () => import(/* webpackChunkName: "side_nav" */ "./widgets/side_nav")
+});
 
 class App extends Component {
   render() {
