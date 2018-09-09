@@ -399,7 +399,7 @@
   box-sizing: border-box; }
 
 body {
-  font-family: SF Pro Text, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif !important;
+  font-family: SF Pro Text, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif !important;
   font-size: 14px;
   color: #fff; }
 
@@ -410,6 +410,9 @@ h4,
 h5,
 h6 {
   color: #fff; }
+
+ul li {
+  list-style: none; }
 
 a:focus {
   text-decoration: none; }
