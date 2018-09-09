@@ -1,5 +1,5 @@
 import React from "react";
-import { Steps, Icon } from "antd";
+import { Steps } from "antd";
 import "./me.css";
 import "font-awesome/css/font-awesome.css";
 import cool from "../assets/cool.svg";

@@ -11,12 +11,13 @@ import { links } from "../widgets/constants/links";
 import hi from "../assets/hi.svg";
 import svg from "../assets/spaceship.svg";
 import github from "../assets/github.svg";
-import githubColored from "../assets/github_colored.svg";
+// import githubColored from "../assets/github_colored.svg";
 import linkedin from "../assets/linkedin.svg";
-import linkedinColored from "../assets/linkedin_colored.svg";
+// import linkedinColored from "../assets/linkedin_colored.svg";
 import email from "../assets/email.svg";
-import emailColored from "../assets/email_colored.svg";
+// import emailColored from "../assets/email_colored.svg";
 import { setCurNav } from "../actions/action_ui";
+import qing from "../assets/qing.jpg";
 
 class Home extends Component {
   constructor(props) {
@@ -245,7 +246,11 @@ class Home extends Component {
             </a>
           </div>
           <h4 className="footer-desc" key="footer-desc">
-            Code with 💖 by Qing Guo
+            Code with{" "}
+            <span role="img" aria-label="Heart">
+              💖
+            </span>{" "}
+            by Qing Guo
           </h4>
           <div className="stars" />
           <div className="stars-lg" />
@@ -258,8 +263,9 @@ class Home extends Component {
         </QueueAnim>
         <div style={{ display: "none" }}>
           {links.map(project => (
-            <img src={project.source} alt={project.name} />
+            <img key={project.name} src={project.source} alt={project.name} />
           ))}
+          <img key="qing" src={qing} alt="Qing avatar" />
         </div>
       </main>
     );

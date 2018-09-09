@@ -20,30 +20,49 @@ export const links = [
     overview: [
       {
         item: "context",
-        desc: "Moving fast, rapid-chanage requirements"
+        desc:
+          "First time to use React, from scratch, pivotal role of the first release, global brand customers, 2 major iteration"
       },
       {
         item: "my role",
         desc:
-          "Lead the front end development, communication between the back end team and business team"
+          "Lead the front end development, including design, development, deployment, testing, mentoring juniors"
       },
       {
         item: "technologies",
         desc:
-          "React for POC, Angular for MVP, Serveless, Kanban agile methodology"
+          "React/Redux, Redux-saga, Echarts, Jest/Enzyme, React-puppeteer, React-loadable, SASS, Ant Design"
       },
       {
         item: "the challenge",
         desc:
-          "The reality of wide difference of plea process between the jurisdictions in US forces us to put more effort on designing an one-size-fits-all hierarchy in the front end, meaningwhile keep it as simple and fast as possible. There is always a trade-off between them, and things are getting even harder since requirements change rapidly"
+          "Explored the best practices of React technologies, integrated with third party library which was not React compatible"
       }
     ],
     detail: [
       {
-        item: "Lorem a ipsum",
+        item: "Introduction",
         desc: [
-          "Proin nibh elit, consectetur eu ullamcorper nec, luctus eget augue. Donec nec elit nisi. Donec a placerat massa. Suspendisse pretium vitae libero at eleifend. Sed eu ante velit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce placerat tristique mollis. Donec vitae ullamcorper dolor. Duis faucibus ac sapien vitae elementum. Donec posuere lacinia consectetur. Vestibulum interdum mollis purus, sed imperdiet odio dictum sed. Duis convallis arcu id purus suscipit commodo. Donec mi nunc, euismod pharetra tempus a, venenatis id dolor. Pellentesque eleifend, enim vel vehicula suscipit, eros lectus vestibulum erat, vitae pharetra ligula mauris eu justo.",
-          "Proin nibh elit, consectetur eu ullamcorper nec, luctus eget augue. Donec nec elit nisi. Donec a placerat massa."
+          "Hearful provides smart-signals as a software as a service to consumer brand and retail decision-makers about their products and their competitors' products.",
+          "Our product intelligence is used across the enterprise to spot early signs of product risks, opportunities, and trends that can better inform decisions on product management, design and development, merchandising, demand and supply chain management, marketing and branding, pricing, sales, and forecasting.",
+          "We deliver intelligence, answers and data over the cloud as a subscription. Clients can choose to interact with the data directly or simply subscribe to answers as a service."
+        ]
+      },
+      {
+        item: "What did I do",
+        desc: [
+          "Designed, developed the front end using React/Redux tech stack, proactively applied best practices in every iteration, continuously improved the product quality",
+          "Built various highly interactive charts to help customers better understand their product insights",
+          "Rewrote the Hearful front end with all the best practices applied and a better project structure",
+          "Constructed the boilerplate, wrote thorough documentations, adopted async user-flow middleware to help manage complex async tasks",
+          "Did E2E tests by JEST, Puppeteer to validate the whole system by simulating a real user, did unit tests by JEST, Enzyme and ReduxSaga to ensure components functionality"
+        ]
+      },
+      {
+        item: "Conclusion",
+        desc: [
+          "Harful is a game changer for brands and retailers since it figures out exactly what shoppers think about products in your market and what matters most to them.",
+          "We believe the code to success is understanding, in real-time, exactly what customers expect and want from your products and being able to deliver on that."
         ]
       }
     ]
@@ -60,39 +79,49 @@ export const links = [
     overview: [
       {
         item: "context",
-        desc: "Moving fast, rapid-chanage requirements."
+        desc: "Moving fast, rapid-chanage requirements, B2C, Agile methodology"
       },
       {
         item: "my role",
         desc:
-          "Lead the front end development, communication between the back end team and business team."
+          "Led the front end development, also took part in the back end development."
       },
       {
         item: "technologies",
         desc:
-          "React for POC, Angular for MVP, Serveless, Kanban agile methodology."
+          "React for POC, Angular 6 for production release, Material Design, Highly-modularized front end architecture, Serveless."
       },
       {
         item: "the challenge",
         desc:
-          "Jurisdictions don’t all operate the same way and they serve different communities with different caseloads and through different processes. The reality forces us to put more effort on designing an one-size-fits-all hierarchy in the front end, to meet the current and potential clients needs meaningwhile keep it as simple as possible. There is always a trade-off between them, and things are getting even harder since requirements change rapidly."
+          "YouPlea's jurisdiction based clients serve different communities through different processes. The reality led us putting more efforts on designing an one-size-fits-all hierarchy in the front end, to meet the current and potential clients needs. Since YouPlea provides citizen portal, we also need to optimize the browser compatibility and accessibility."
       }
     ],
     detail: [
       {
         item: "Introduction",
         desc: [
-          "Youplea helps issue plea agreements and diversion contracts more efficiently and provides valuable analytics that can improve the process.",
-          "It is designed for cases with clear criteria for a pretrial resolution, think criminal traffic, drug and alcohol offenses, and other low-level misdemeanors."
+          "YouPlea's online platform connects prosecutors, judges, and citizens to make the pretrial resolution process more efficient for everyone involved and provides valuable analytics that can improve the process.",
+          "YouPlea is the result of collaboration between several North Carolina attorneys and Quantworks. Together they recognized inefficiencies in the pretrial resolution process and developed a revolutionary solution."
         ]
       },
       {
         item: "What did I do",
-        desc: []
+        desc: [
+          "Designed and developed the uniform front end of two platforms (for citizens and prosecutors) using Angular tech stack.",
+          "Architected and optimized configurable mechanism to construct highly self-adjustable components dynamicly to provide personalized experience for clients from different jurisdictions.",
+          "Built reusable plugins used widely in the team, for example, Form-Builder and Grid-System.",
+          // "Developed the back-end service using Node.js, Serverless Framework, AWS-Lambda and AWS-DynamoDB.",
+          "Led the testing cycle, did unit testing by Karma and Jasmine, did the browser compatibility testing, proactively applied optimizations to ensure the products' usability and reliability.",
+          "Built the Gitlab CI/CD pipeline to automatically set up environment, test, build and deploy apps with a simple git-push to remote repository."
+        ]
       },
       {
-        item: "Result",
-        desc: []
+        item: "Conclusion",
+        desc: [
+          "We are developing the applications with the mind of applying appropriate industry best practices as always, after the first release, YouPlea reached to a phenomenal stage where it is highly accessable, available and easily to be extended to support new clients.",
+          'We will never say it is perfect, instead, we always target at the "perfect" !'
+        ]
       }
     ]
   },
