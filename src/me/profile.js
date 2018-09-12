@@ -24,10 +24,10 @@ const Profile = () => (
     >
       Quantworks, Inc
     </a>
-    <h3 className="address">
+    <h4 className="address">
       <i className="fa fa-map-marker" aria-hidden="true" />
-      Raleigh-Durham, North Carolina Area
-    </h3>
+      Raleigh-Durham, NC
+    </h4>
     <hr className="horizontal-divider" />
     <Row gutter={8} className="numbers">
       <Col xs={12}>

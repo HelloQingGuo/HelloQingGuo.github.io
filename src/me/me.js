@@ -23,7 +23,7 @@ class Me extends Component {
       <div className="me">
         <ScrollToTopOnMount />
         <Row gutter={24}>
-          <Col md={10} style={{ marginBottom: "24px" }} key="a">
+          <Col xl={10} style={{ marginBottom: "24px" }} key="a">
             <Card
               style={{
                 minHeight: "500px",
@@ -34,7 +34,7 @@ class Me extends Component {
               <Profile />
             </Card>
           </Col>
-          <Col md={14} style={{ marginBottom: "24px" }} key="b">
+          <Col xl={14} style={{ marginBottom: "24px" }} key="b">
             <Card style={{ minHeight: "500px", overflow: "hidden" }}>
               <h1 className="skill-set">Skill Proficiency</h1>
               <h3 className="skill-set-score">
@@ -112,12 +112,12 @@ class Me extends Component {
               </Tabs>
             </Card>
           </Col>
-          <Col md={24} style={{ marginBottom: "24px" }} key="c">
+          <Col span={24} style={{ marginBottom: "24px" }} key="c">
             <Card>
               <Timeline />
             </Card>
           </Col>
-          <Col md={24} style={{ marginBottom: "24px" }} key="d">
+          <Col span={24} style={{ marginBottom: "24px" }} key="d">
             <Card bodyStyle={{ padding: 0 }}>
               <div className="custom-card">
                 <h1 className="beyond-the-work-title">Beyond The Work</h1>
