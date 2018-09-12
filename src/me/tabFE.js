@@ -1,23 +1,24 @@
-import React, { Component } from 'react';
-import ReactEcharts from 'echarts-for-react';
-import echarts from 'echarts';
-import { config as config1, seriesData as seriesData1 } from './config1';
-import TagList from '../widgets/tag_list';
-import './me.css';
+import React, { Component } from "react";
+import ReactEcharts from "echarts-for-react";
+import echarts from "echarts";
+import { config as config1, seriesData as seriesData1 } from "./config1";
+import TagList from "../widgets/tag_list";
+import "./me.css";
 
 class TabFE extends Component {
   componentWillMount() {
-    echarts.registerTheme('theme_FE', {
+    echarts.registerTheme("theme_FE", {
       // color: colorPalette,
       tooltip: {
         textStyle: {
-          fontSize: 12,
+          fontSize: 12
         },
-        backgroundColor: 'rgba(0, 0, 0, 0.75)',
+        backgroundColor: "rgba(0, 0, 0, 0.75)"
       },
       textStyle: {
-        fontFamily: 'SF Pro Text, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif',
-      },
+        fontFamily:
+          "SF Pro Text, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif"
+      }
     });
   }
 
@@ -28,31 +29,31 @@ class TabFE extends Component {
     this.chart = this.react_echart.getEchartsInstance();
     setTimeout(() => {
       this.chart.dispatchAction({
-        type: 'showTip',
+        type: "showTip",
         seriesIndex: 0,
-        position: 'inside',
-        dataIndex: currentIndex,
+        position: "inside",
+        dataIndex: currentIndex
       });
     }, 0);
     this.timerOfFE = setInterval(() => {
       // Cancel highlighted current scatter
       this.chart.dispatchAction({
-        type: 'downplay',
+        type: "downplay",
         seriesIndex: 0,
-        dataIndex: currentIndex,
+        dataIndex: currentIndex
       });
       currentIndex = (currentIndex + 1) % maxDataLen;
       // Highlight current scatter
       this.chart.dispatchAction({
-        type: 'highlight',
+        type: "highlight",
         seriesIndex: 0,
-        dataIndex: currentIndex,
+        dataIndex: currentIndex
       });
       this.chart.dispatchAction({
-        type: 'showTip',
+        type: "showTip",
         seriesIndex: 0,
-        position: 'inside',
-        dataIndex: currentIndex,
+        position: "inside",
+        dataIndex: currentIndex
       });
     }, 1500);
   }
@@ -65,7 +66,7 @@ class TabFE extends Component {
     return (
       <div className="frontend">
         <ReactEcharts
-          ref={(e) => {
+          ref={e => {
             this.react_echart = e;
           }}
           option={config1}
@@ -73,26 +74,26 @@ class TabFE extends Component {
           lazyUpdate={false}
           onChartReady={this.onChartReadyCallback}
           theme="theme_FE"
-          style={{ height: '286px' }}
+          style={{ height: "286px" }}
         />
 
         <div className="tags">
           <TagList
             tags={[
               {
-                name: 'ES 7',
+                name: "A11Y",
                 content:
-                  'ES7 is the evolution of the ECMA-262 standard (commonly referred as Javascript).',
+                  "Accessibility (a11y) is a measure of a computer system's accessibility is to all people, including those with disabilities or impairments."
               },
               {
-                name: 'Advanced CSS',
-                content: 'Animations, Flexbox, CSS Grid, Responsive Design',
+                name: "Advanced CSS",
+                content: "Animations, Flexbox, CSS Grid, Responsive Design"
               },
               {
-                name: 'Redux-Saga',
+                name: "Cross browser testing",
                 content:
-                  'Redux-Saga is a library that aims to make application side effects easier to manage, more efficient to execute, simple to test, and better at handling failures.',
-              },
+                  "Cross browser testing is the practice of making sure that the web sites and web apps you create work across an acceptable number of web browsers."
+              }
             ]}
           />
         </div>

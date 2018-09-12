@@ -100,7 +100,7 @@ class Me extends Component {
                         value: 60
                       },
                       {
-                        name: "Heroku",
+                        name: "CI/CD",
                         value: 66
                       }
                     ]}
