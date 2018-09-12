@@ -202,44 +202,44 @@ export const links = [
         ]
       }
     ]
-  },
-  {
-    id: 4,
-    name: "NgGrid",
-    desc: "24 Grid Responsive System",
-    link: "/dashboard/projects/nggrid",
-    external_link: "https://helloqingguo.github.io/ng-grid/",
-    source: guiSM,
-    lg_source: gui,
-    backgroundColor: "#63aaff",
-    overview: [
-      {
-        item: "context",
-        desc: "Design, develop, write copy, and manage affairs."
-      },
-      {
-        item: "my role",
-        desc:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-      },
-      {
-        item: "technologies",
-        desc: "Lorem, Ipsum, Dolor, Sit, Amet."
-      },
-      {
-        item: "the challenge",
-        desc:
-          "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
-      }
-    ],
-    detail: [
-      {
-        item: "Lorem a ipsum",
-        desc: [
-          "Proin nibh elit, consectetur eu ullamcorper nec, luctus eget augue. Donec nec elit nisi. Donec a placerat massa. Suspendisse pretium vitae libero at eleifend. Sed eu ante velit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce placerat tristique mollis. Donec vitae ullamcorper dolor. Duis faucibus ac sapien vitae elementum. Donec posuere lacinia consectetur. Vestibulum interdum mollis purus, sed imperdiet odio dictum sed. Duis convallis arcu id purus suscipit commodo. Donec mi nunc, euismod pharetra tempus a, venenatis id dolor. Pellentesque eleifend, enim vel vehicula suscipit, eros lectus vestibulum erat, vitae pharetra ligula mauris eu justo.",
-          "Proin nibh elit, consectetur eu ullamcorper nec, luctus eget augue. Donec nec elit nisi. Donec a placerat massa."
-        ]
-      }
-    ]
   }
+  // {
+  //   id: 4,
+  //   name: "NgGrid",
+  //   desc: "24 Grid Responsive System",
+  //   link: "/dashboard/projects/nggrid",
+  //   external_link: "https://helloqingguo.github.io/ng-grid/",
+  //   source: guiSM,
+  //   lg_source: gui,
+  //   backgroundColor: "#63aaff",
+  //   overview: [
+  //     {
+  //       item: "context",
+  //       desc: "Design, develop, write copy, and manage affairs."
+  //     },
+  //     {
+  //       item: "my role",
+  //       desc:
+  //         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+  //     },
+  //     {
+  //       item: "technologies",
+  //       desc: "Lorem, Ipsum, Dolor, Sit, Amet."
+  //     },
+  //     {
+  //       item: "the challenge",
+  //       desc:
+  //         "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+  //     }
+  //   ],
+  //   detail: [
+  //     {
+  //       item: "Lorem a ipsum",
+  //       desc: [
+  //         "Proin nibh elit, consectetur eu ullamcorper nec, luctus eget augue. Donec nec elit nisi. Donec a placerat massa. Suspendisse pretium vitae libero at eleifend. Sed eu ante velit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce placerat tristique mollis. Donec vitae ullamcorper dolor. Duis faucibus ac sapien vitae elementum. Donec posuere lacinia consectetur. Vestibulum interdum mollis purus, sed imperdiet odio dictum sed. Duis convallis arcu id purus suscipit commodo. Donec mi nunc, euismod pharetra tempus a, venenatis id dolor. Pellentesque eleifend, enim vel vehicula suscipit, eros lectus vestibulum erat, vitae pharetra ligula mauris eu justo.",
+  //         "Proin nibh elit, consectetur eu ullamcorper nec, luctus eget augue. Donec nec elit nisi. Donec a placerat massa."
+  //       ]
+  //     }
+  //   ]
+  // }
 ];

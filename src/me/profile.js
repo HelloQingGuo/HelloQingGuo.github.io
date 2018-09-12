@@ -31,27 +31,27 @@ const Profile = () => (
     <hr className="horizontal-divider" />
     <Row gutter={8} className="numbers">
       <Col xs={12}>
-        <h1 className="monitorParamNum" style={{ color: "#FC4343" }}>
+        <div className="monitorParamNum" style={{ color: "#FC4343" }}>
           5
-        </h1>
+        </div>
         <span className="monitorParamText">years coding exp</span>
       </Col>
       <Col xs={12}>
-        <h1 className="monitorParamNum" style={{ color: "#E043B7" }}>
+        <div className="monitorParamNum" style={{ color: "#E043B7" }}>
           4
-        </h1>
+        </div>
         <span className="monitorParamText">on-going projects</span>
       </Col>
       <Col xs={12} style={{ marginTop: "0" }}>
-        <h1 className="monitorParamNum" style={{ color: "#3085DE" }}>
+        <div className="monitorParamNum" style={{ color: "#3085DE" }}>
           2
-        </h1>
+        </div>
         <span className="monitorParamText">publications</span>
       </Col>
       <Col xs={12} style={{ marginTop: "0" }}>
-        <h1 className="monitorParamNum" style={{ color: "#24e1dd" }}>
+        <div className="monitorParamNum" style={{ color: "#24e1dd" }}>
           2
-        </h1>
+        </div>
         <span className="monitorParamText">certificates</span>
       </Col>
     </Row>
