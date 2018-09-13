@@ -26,7 +26,7 @@ export const links = [
       {
         item: "my role",
         desc:
-          "Lead the front end development, including design, development, deployment, testing, mentoring juniors"
+          "Led the front end development, including design, development, deployment, testing, mentoring juniors"
       },
       {
         item: "technologies",
@@ -137,31 +137,48 @@ export const links = [
     overview: [
       {
         item: "context",
-        desc: "Design, develop, write copy, and manage affairs."
+        desc:
+          "Heavy lift on the integration with other platforms, first time to build CI/CD pipeline"
       },
       {
         item: "my role",
         desc:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          "Led the front end development, including design, development, deployment"
       },
       {
         item: "technologies",
-        desc: "Lorem, Ipsum, Dolor, Sit, Amet."
+        desc: "React/Redux, Webpack, CSS Module"
       },
       {
         item: "the challenge",
         desc:
-          "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+          "Developed a highly interactive Seat Map which I haven't done before by reading the Engineering blog of other matured tech companies, also encapsulated API module for integration with Tableau based on inadequate documentations"
       }
     ],
     detail: [
       {
-        item: "Lorem a ipsum",
+        item: "Introduction",
         desc: [
-          "Proin nibh elit, consectetur eu ullamcorper nec, luctus eget augue. Donec nec elit nisi. Donec a placerat massa. Suspendisse pretium vitae libero at eleifend. Sed eu ante velit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce placerat tristique mollis. Donec vitae ullamcorper dolor. Duis faucibus ac sapien vitae elementum. Donec posuere lacinia consectetur. Vestibulum interdum mollis purus, sed imperdiet odio dictum sed. Duis convallis arcu id purus suscipit commodo. Donec mi nunc, euismod pharetra tempus a, venenatis id dolor. Pellentesque eleifend, enim vel vehicula suscipit, eros lectus vestibulum erat, vitae pharetra ligula mauris eu justo.",
-          "Proin nibh elit, consectetur eu ullamcorper nec, luctus eget augue. Donec nec elit nisi. Donec a placerat massa."
+          "Fanalytical helps college athletic departments turn casual audiences into passionate, engaged fans.",
+          "Our advanced and visual analytics helps to boost fan engagement, grow donations and increase top-line revenues in ticketing and merchandise."
+        ]
+      },
+      {
+        item: "What did I do",
+        desc: [
+          "Designed and developed the role-based front-end system using React/Redux tech stack and Ant Design",
+          "Built the boilerplate by webpack, researched and applied the best bundling practices",
+          "Encapsulated a reusable API module to make the system integration much easier with external platforms like Tableau (data visualization dashboard) and MailChimp (marketing automation platform)",
+          "Designed and developed a powerful seat map to visualize analytical data of ticket holders which became a highlight sale point",
+          "Dockerized the front-end resources, built and hosted the image on AWS-ECR"
         ]
       }
+      // {
+      //   item: "Conclusion",
+      //   desc: [
+      //     "As a partner with leading universities, Fanalytical has identified the common challenges universities face when starting the journey toward winning with analytics.",
+      //   ]
+      // }
     ]
   },
   {
