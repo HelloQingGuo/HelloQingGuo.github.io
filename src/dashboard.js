@@ -4,7 +4,6 @@ import { Route } from "react-router-dom";
 import { default as Loadable } from "./widgets/my_loadable";
 import Sidebar from "./widgets/sidebar/sidebar";
 import meteor from "./assets/meteor.svg";
-import Me from "./me/me";
 
 import "./dashboard.css";
 
@@ -12,9 +11,9 @@ const Projects = Loadable({
   loader: () => import(/* webpackChunkName: "projects" */ "./projects/projects")
 });
 
-// const Me = Loadable({
-//   loader: () => import(/* webpackChunkName: "me" */ "./me/me")
-// });
+const Me = Loadable({
+  loader: () => import(/* webpackChunkName: "me" */ "./me/me")
+});
 
 const Resume = Loadable({
   loader: () => import(/* webpackChunkName: "resume" */ "./resume/resume")
