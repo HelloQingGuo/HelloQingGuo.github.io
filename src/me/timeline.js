@@ -18,7 +18,7 @@ const Timeline = props => (
             Chemical Technology
           </span>
         }
-        icon={<i className="fa fa-graduation-cap" aria-hidden="true" />}
+        icon={<i className="fa fa-star-cap" aria-hidden="true" />}
       />
       <Step
         title={<span className="timeline-title">2014 - 2015</span>}

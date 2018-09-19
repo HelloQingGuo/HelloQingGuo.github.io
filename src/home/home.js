@@ -18,6 +18,7 @@ import email from "../assets/email.svg";
 // import emailColored from "../assets/email_colored.svg";
 import { setCurNav } from "../actions/action_ui";
 import qing from "../assets/qing.jpg";
+import photo_set from "../me/photo_set";
 
 class Home extends Component {
   constructor(props) {
@@ -261,11 +262,15 @@ class Home extends Component {
             <img src={meteor} alt="meteor" />
           </figure>
         </QueueAnim>
+        {/* Pre-loading the images */}
         <div style={{ display: "none" }}>
           {links.map(project => (
             <img key={project.name} src={project.source} alt={project.name} />
           ))}
           <img key="qing" src={qing} alt="Qing avatar" />
+          {photo_set.map((photo, idx) => (
+            <img key={photo.src} src={photo.src} alt={photo.idx} />
+          ))}
         </div>
       </main>
     );

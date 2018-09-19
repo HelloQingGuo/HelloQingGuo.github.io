@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Row, Col, Card, Tabs, Tooltip, Icon } from "antd";
 import Gallery from "react-photo-gallery";
-import "font-awesome/css/font-awesome.css";
 
 import TabFE from "./tabFE";
 import TabBE from "./tabBE";

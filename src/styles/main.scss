@@ -1,4 +1,5 @@
 @import "format.scss";
+@import "animation.scss";
 
 * {
   margin: 0;
@@ -98,5 +99,10 @@ a:focus {
   font-weight: bold;
   letter-spacing: 1px;
   font-size: 15px;
+  color: #108ee9;
+}
+
+.spin {
+  animation: rotate 1600ms linear infinite;
   color: #108ee9;
 }
