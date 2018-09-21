@@ -25,7 +25,7 @@ class Me extends Component {
           <Col xl={10} style={{ marginBottom: "24px" }} key="a">
             <Card
               style={{
-                minHeight: "500px",
+                minHeight: "543px",
                 textAlign: "center",
                 paddingTop: "35px"
               }}
@@ -34,7 +34,7 @@ class Me extends Component {
             </Card>
           </Col>
           <Col xl={14} style={{ marginBottom: "24px" }} key="b">
-            <Card style={{ minHeight: "500px", overflow: "hidden" }}>
+            <Card style={{ minHeight: "543px", overflow: "hidden" }}>
               <h1 className="skill-set">Skill Proficiency</h1>
               <h3 className="skill-set-score">
                 <Tooltip
