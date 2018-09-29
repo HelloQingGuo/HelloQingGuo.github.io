@@ -1,7 +1,7 @@
 import React from "react";
 
 import ScrollToTopOnMount from "../widgets/scrollToTopOnMount";
-import resume_pdf from "../assets/resume/QingGuo_DukeUniversity_SoftwareDevelopment.pdf";
+import resume_pdf from "../assets/resume/QingGuo_FrontEnd_SoftwareDevelopment.pdf";
 import "./resume.css";
 
 const Resume = () => {
