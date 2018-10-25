@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Row, Col, Card, Tabs, Tooltip, Icon } from "antd";
+import { Row, Col, Card, Tabs, Tooltip, Icon, Popover } from "antd";
 import Gallery from "react-photo-gallery";
 
 import TabFE from "./tabFE";
@@ -10,6 +10,7 @@ import Profile from "./profile";
 import Timeline from "./timeline";
 import ScrollToTopOnMount from "../widgets/scrollToTopOnMount";
 import photo_set from "./photo_set";
+import animal2 from "../assets/life/animal2.jpg";
 import "./me.css";
 
 class Me extends Component {
@@ -129,7 +130,24 @@ class Me extends Component {
                   studying at JB Hunt Library! If you see a guy sitting near the
                   giant picture windows, with a grand cup of Starbucks, focusing
                   and typing fast on his laptop on which there are all kinds of
-                  stickers (Docker, Gitlab, Nginx ...), it is me!
+                  stickers (Docker, Gitlab, Nginx ...),
+                  <Popover
+                    placement="right"
+                    title={<div className="text-center">Hi there!</div>}
+                    content={
+                      <img className="easter-egg" src={animal2} alt="me" />
+                    }
+                    trigger="hover"
+                  >
+                    <span className="btn-link">
+                      &nbsp;it is me!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      <Icon
+                        type="arrow-left"
+                        className="point-left"
+                        theme="outlined"
+                      />
+                    </span>
+                  </Popover>
                 </p>
                 <p>
                   {" "}

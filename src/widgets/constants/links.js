@@ -4,8 +4,8 @@ import yp from "../../assets/projects/yp.svg";
 import ypSM from "../../assets/projects/yp_sm.svg";
 import hearful from "../../assets/projects/hearful.svg";
 import hearfulSM from "../../assets/projects/hearful_sm.svg";
-import gui from "../../assets/projects/gui.svg";
-import guiSM from "../../assets/projects/gui_sm.svg";
+// import gui from "../../assets/projects/gui.svg";
+// import guiSM from "../../assets/projects/gui_sm.svg";
 
 export const links = [
   {

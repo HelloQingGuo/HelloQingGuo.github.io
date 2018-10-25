@@ -387,3 +387,10 @@
 
 .mr-35 {
   margin-right: 35px !important; }
+
+.text-center {
+  text-align: center; }
+
+.btn-link {
+  color: #108ee9;
+  cursor: pointer; }
