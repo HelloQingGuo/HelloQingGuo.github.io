@@ -119,18 +119,27 @@ class Me extends Component {
           <Col span={24} style={{ marginBottom: "24px" }} key="d">
             <Card bodyStyle={{ padding: 0 }}>
               <div className="custom-card">
-                <h1 className="beyond-the-work-title">Beyond The Work</h1>
+                <h1 className="beyond-the-work-title">Beyond the Work</h1>
                 <p>
                   My name is Qing Guo, grew up in China, but currently living in
-                  Raleigh - Durham area.
+                  Raleigh - Durham area in North Carolina.
                 </p>
-                <p>In my free time I like to cook, read, and code.</p>
+                <p>
+                  In my free time I love working out, cooking, and of course
+                  studying at JB Hunt Library! If you see a guy sitting near the
+                  giant picture windows, with a grand cup of Starbucks, focusing
+                  and typing fast on his laptop on which there are all kinds of
+                  stickers (Docker, Gitlab, Nginx ...), it is me!
+                </p>
                 <p>
                   {" "}
                   Chinese food is my favorite and nothing beats the poached
                   sliced beef in hot chili oil with a bowl of Jasmine rice.
                 </p>
-                <p>The following pictures are all my cookings !</p>
+                <p>
+                  Take a look at the pictures I took to better know who I am and
+                  my cookings!!!
+                </p>
               </div>
               <Gallery photos={photo_set} />
             </Card>

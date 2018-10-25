@@ -61,7 +61,7 @@ export const links = [
       {
         item: "Conclusion",
         desc: [
-          "Harful is a game changer for brands and retailers since it figures out exactly what shoppers think about products in your market and what matters most to them.",
+          "Hearful is a game changer for brands and retailers since it figures out exactly what shoppers think about products in your market and what matters most to them.",
           "We believe the code to success is understanding, in real-time, exactly what customers expect and want from your products and being able to deliver on that."
         ]
       }

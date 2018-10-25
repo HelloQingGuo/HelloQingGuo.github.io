@@ -23,7 +23,7 @@ export const scoreMapping = [
 export const skillScoresOfFE = [
   { value: 82, name: "HTML" },
   { value: 81, name: "CSS (SASS)" },
-  { value: 83, name: "Javascript" },
+  { value: 83, name: "Javascript / TypeScript" },
   { value: 90, name: "React / Redux" },
   { value: 85, name: "Angular 6" },
   { value: 71, name: "Webpack" },
@@ -35,8 +35,8 @@ export const skillScoresOfFE = [
 
 export const skillScoresOfDevTools = [
   { value: 80, name: "GIT" },
-  { value: 56, name: "EMACS" },
   { value: 69, name: "VI / VIM" },
+  { value: 80, name: "VS Code" },
   { value: 85, name: "ATOM" },
   { value: 70, name: "Sublime" },
   { value: 68, name: "Eclipse" },
